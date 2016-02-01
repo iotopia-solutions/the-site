@@ -1,0 +1,91 @@
+extends ./layout.jade
+
+head
+  block title
+    title= projectTitle
+
+body.inner-pages
+  block content
+    div#sb-site
+      - var html = "<div class=\"page-intro\"><div class=\"header-space\" style=\"height: 72px;\"></div><div id=\"portfolio-single\" class=\"page-top page-section parallax-section\"><div class=\"parallax-bg\" data-bottom-top=\"background-position: 50% 0px;\" data-top-bottom=\"background-position: 50% -100px;\" data-anchor-target=\"#portfolio-single\" style=\"background-image: url('/img/Fenway-Park.jpg');\"><div class=\"container\"><div class=\"row\"><div class=\"col-md-12 text-center\"><h2 class=\"title\">Get in touch!</h2></div></div></div></div></div></div>"
+
+      !{html}
+      
+      include ./includes/contact/contact-header.jade
+      include ./includes/contact/contact-wrapper.jade
+
+  block page-js
+    script.
+      $(document).ready(function() {
+        $('#contact-form #submit').click(function(evt) {
+          evt.preventDefault();
+          var currentEl = $(evt.currentTarget);
+          var currentForm = $(currentEl).closest('form#contact-form');
+          var inputs = $(currentForm).find('input');
+          var textarea = $(currentForm).find('textarea');
+          var errors = [];
+
+          clearErrors(currentForm);
+
+          inputs.each(function(index, el) {
+            if ($(el).attr('required') === 'required' 
+              && $(el).val().trim().length === 0) {
+              var tempObj = {};
+              tempObj.thisEl = el;
+              tempObj.errMsg = 'This field is required.'
+
+              errors.push(tempObj);
+            }
+
+            if ($(el).attr('name') === 'email' 
+              && $(el).val().trim().length > 0 
+              && $(el).val().trim().indexOf('@') === -1) {
+              var tempObj = {};
+              tempObj.thisEl = el;
+              tempObj.errMsg = 'Please enter a valid email'
+
+              errors.push(tempObj);
+            }
+          });
+
+          if (textarea.val().trim().length === 0) {
+            var tempObj = {};
+            tempObj.thisEl = textarea;
+            tempObj.errMsg = 'This field is required.'
+
+            errors.push(tempObj);
+          }
+
+          if (errors.length > 0) {
+            errors.forEach(function(el, index) {
+              var thisEl = $(el.thisEl);
+              var thisElLabel = thisEl.siblings('label');
+
+              var newErrEl = $('<div/>', {
+                'class': 'error-msg',
+                text: el.errMsg
+              });
+
+              newErrEl.appendTo(thisElLabel);
+              thisEl.addClass('error');
+            });
+          } else {
+            // Submit the form
+            $('#submit').attr({'disabled' : 'true', 'value' : 'Sending' });
+            /* Post Ajax function of jQuery to get all the data from the submission of the form as soon as the form sends the values to email.php*/
+            $.post("/email", $("#contact-form").serialize(), function(response){
+              if(response.result === 'sent'){
+                  //If the email is sent successfully, remove the submit button
+                $('#submit').attr({'disabled' : 'true', 'value' : 'Thank you!' });
+              } else {
+                $('#submit').removeAttr('disabled').attr('value', 'Submit');
+              }
+            });
+          }
+        });
+
+        function clearErrors(formEl) {
+          $(formEl).find('.error-msg').remove();
+          $(formEl).find('input.error, textarea.error').removeClass('error');
+        }      
+      })      

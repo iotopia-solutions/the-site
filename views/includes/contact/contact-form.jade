@@ -1,0 +1,21 @@
+div.row
+  div.col-md-10.col-md-offset-1
+    div.contact-respond
+      form.contact-form.form-group#contact-form(novalidate="")
+        div.row
+          fieldset.col-sm-6.col-md-4
+            label(for="name") Name 
+              span.required *
+            input#name(name="name", type="text", required="required")
+          fieldset.col-sm-6.col-md-4
+            label(for="email") Email 
+              span.required *
+            input#email(name="email", type="email", required="required")
+          fieldset.col-sm-12.col-md-4
+            label(for="url") Website
+            input#url(name="url", type="url")
+          fieldset.col-sm-12
+            label(for="description") Description
+            textarea#description(name="description", cols="45", rows="5", required="required")
+          fieldset.col-sm-12
+            input#submit.t-btn.t-btn-default(name="submit", type="submit",  value="Submit")

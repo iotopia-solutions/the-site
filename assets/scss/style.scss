@@ -1,0 +1,44 @@
+/*
+Theme Name: Modesty
+Theme URI: http://html.todrr.com/modesty/index.html
+Author: Todrr
+Author URI: www.todrr.com
+Description: Creative One-Page Responsive Template
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+*/
+
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+	General Styling
+	Header
+	Footer
+	About Us
+	Blog
+	Contact
+	Portfolio
+	Sidebar
+	Elements [Forms, buttons etc..]
+	
+[/Table of contents]
+-------------------------------------------------------------------*/
+
+
+
+@import 'compass';
+@import 'reset';
+
+@import 'vars';
+@import 'base';
+@import 'elements';
+@import 'helpers';
+@import 'layout';
+@import 'posts';
+@import 'pages';
+@import 'sidebar';
+@import 'comments';
+@import 'wp';

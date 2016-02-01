@@ -1,0 +1,427 @@
+//typography, buttons, forms, tables
+
+// typography 
+h1, h2, h3, h4, h5, h6 {
+  color: $heading-color;
+  font-weight: normal;
+  font-family: $heading-font;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: $h1-size;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: $h2-size;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: $h3-size;
+  font-weight: 100;
+}
+
+h4 {
+  font-size: $h4-size;
+}
+
+h5 {
+  font-size: $h5-size;
+}
+
+h6 {
+  font-size: $h6-size;
+}
+
+
+h3.heading {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+p {
+  margin-bottom: $baseline;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  &.intro {
+    font-size: 17px;
+    // line-height: 28px;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+
+
+
+// buttons 
+.t-btn {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 12px 20px;
+  font-size: 12px;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  display: inline-block;
+}
+
+.t-btn-default {
+  background: $dark-bg;
+  color: $white;
+  &:hover,
+  &:focus {
+    color: $white;
+    background: rgba($dark-bg, 0.9);
+  }
+}
+
+.t-btn-primary {
+  background: $accent;
+  color: $white;
+  &:hover {
+    color: $white;
+    background: $secondary-accent;
+  }
+}
+
+.t-btn-secondary {
+  background: $secondary-accent;
+  color: $white;
+  &:hover {
+    color: $white;
+    background: $accent;
+  }
+}
+
+.t-btn-light {
+  background: $light-bg;
+  color: $heading-color;
+  &:hover {
+    color: $heading-color;
+  }
+}
+
+.t-btn-outline {
+  background-color: transparent;
+  @include box-shadow(0 0 2px $white);
+}
+
+.t-btn-rounded {
+  border-radius: 21px;
+}
+
+
+
+
+// forms (input, textarea, select) 
+.form-group {
+  input, 
+  textarea,
+  select,
+  option {
+    width: 100%;
+  }
+  input[type="submit"] {
+    width: auto;
+  }
+}
+
+input[type="text"], 
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+textarea {
+  max-width: 100%;
+  color: $base-color;
+  padding: 10px;
+  margin-bottom: 15px;
+  outline: 0;
+  border: 1px solid $border-color;
+  @include transition(all .2s);
+  @include input-placeholder {
+    color: $base-color;
+  }
+  &:focus {
+    border-color: darken($border-color, 20%);
+  }
+  &.error {
+    border: 1px solid $error-color;
+  }
+}
+
+.error-msg {
+  color: $error-color;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+
+// Lists
+ul {
+  margin: 20px 0;
+  list-style: square;
+  list-style-position: inside;
+
+  li {
+    padding: 5px 0;
+    ul {
+      padding-left:30px;
+    }
+  }
+
+  &.border-list {
+    list-style: none;
+    li {
+      border-bottom: 1px solid $border-color;
+      padding: 10px 0;
+    }
+  }
+
+  a {
+    color: $heading-color;
+    &:hover {
+      color: $accent;
+    }
+  }
+
+}
+
+ol {
+  margin: 20px 0;
+  list-style: decimal;
+  list-style-position: inside;
+  li {
+    padding: 5px 0;
+    ol {
+      margin: 0;
+      padding-left: 30px;
+    }
+  }
+}
+
+
+
+
+// preformatted
+pre {
+  display: block;
+    line-height: 1.75em;
+    padding: 30px 30px 10px 30px;
+    overflow-x: auto;
+    color: $light-color;
+    background: $light-bg;
+    border-radius: 0;
+}
+
+
+
+// blockquote
+blockquote {
+  font-family: $serif;
+  padding: 10px 15px 10px 30px;
+  font-size: 17px;
+  color: $light-color;
+  border-left: 4px solid $border-color;
+  font-weight: 300;
+  a {
+    color: $light-color !important;
+  }
+}
+
+
+
+// tables
+table {
+  margin: 0 0 $baseline 0;
+    width: 100%;
+    border: 1px solid $border-color;
+
+  tbody {
+  
+    tr {
+      border: 1px solid $border-color;
+        border-left: 0;
+        border-right: 0;
+    }
+
+  }
+
+  th {
+    color: $heading-color;
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-left: 1px solid $border-color;
+  }
+
+  td {
+    padding: 15px;
+    border-left: 1px solid $border-color;
+  }
+
+}
+
+
+
+
+// pagination 
+
+.pagination > li > a, 
+.pagination > li > span {
+  color: $base-color;
+  padding: 10px 15px;
+  margin-right: 4px;
+  border-color: $border-color;
+  @include transition(all, 0.2s);
+  &:focus {
+    color: $base-color;
+    background: inherit;
+    border-color: $border-color;
+  }
+  &:hover {
+    background: inherit;
+    border-color: $accent;
+    color: $accent;
+  }
+}
+
+.pagination > li {
+  &:first-child {
+    a, span {
+      border-radius: 0;
+    }
+  }
+  &:last-child {
+    a, span {
+      border-radius: 0;
+    }
+  }
+  &.active {
+    a, span {
+      background: inherit;
+      border-color: $accent;
+      color: $accent;
+      &:hover,
+      &:focus {
+        background: inherit;
+        border-color: $accent;
+        color: $accent;
+      }
+    }
+  }
+}
+
+
+// drop cap
+.drop-cap {
+  display: block;
+  float: left;
+  text-align: center;
+  margin: 5px 10px 8px 0;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+
+
+// bannner (call to action)
+.call-to-action {
+  padding: 50px 0 !important;
+  .banner {
+    text-align: center;
+    padding: 0 30px;
+    .banner-heading {
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 300;
+      color: #fff;
+      margin: 20px 0;
+      margin-top: 0;
+    }
+    .banner-description {
+      color: #fff;
+      margin: 20px 0;
+    }
+    .banner-button {
+      margin-top: 40px;
+    }
+  }
+}
+
+
+
+
+// progress bars
+.progress {
+  background: rgba($black, 0.1);
+  box-shadow: none;
+  border-radius: 0;
+  height: 3px;
+}
+
+.progress-bar {
+  background: $accent;
+  box-shadow: none;
+}
+
+.progress-info {
+  margin-bottom: 5px;
+  @extend %clearfix;
+}
+
+.skill {
+  float: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skill-value {
+  float: right;
+  font-size: 12px;
+}
+
+
+
+// count factors
+.fact-item {
+
+  .count-icon {
+    display: inline-block;
+    margin: 8px;
+    font-size: 20px;
+  }
+
+  .count-focus {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 300;
+    display: inline-block;
+    margin: 8px;
+
+  }
+
+  .fact-role {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    display: block;
+  }
+
+}

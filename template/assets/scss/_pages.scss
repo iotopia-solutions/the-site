@@ -1,0 +1,150 @@
+/* Custom Page
+-------------------------------------------------------------- */
+.post-navigation {
+	@extend %clearfix;
+
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+
+	.nav-prev {
+		width: 50%;
+		float: left;
+	}
+
+	.nav-next {
+		width: 50%;
+		float: right;
+		text-align: right;
+	}
+
+	em {
+		text-transform: uppercase;
+		color: $light-color;
+		display: block;
+		font-size: 12px;
+		// font-weight: 600;
+		// margin-bottom: 10px;
+	}
+
+	span {
+		display: block;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 18px;
+		color: $heading-color;
+	}
+
+}
+
+
+/* Portfolio
+-------------------------------------------------------------- */
+.portfolio-filter {
+	text-align: center;
+	margin-bottom: 60px;
+	a {
+		font-size: 11px;
+		text-transform: uppercase;
+		display: inline-block;
+		color: $light-color;
+		letter-spacing: 2px;
+		margin: 10px 5px;
+		border: 1px solid $border-color;
+		padding: 10px 20px;
+		&.active {
+			// background: $accent;
+			color: $accent;
+			border-color: $accent;
+		}
+	}
+}
+
+.post-slider {
+	background: $dark-bg;
+
+	.bx-wrapper {
+		margin-bottom: 0;
+	}
+
+	.bx-wrapper .bx-pager {
+	  position: absolute;
+	  width: 100%;
+	  bottom: 20px;
+	}
+
+	img {
+		width: 100%;
+	}
+
+}
+
+.portfolio-header {
+	.portfolio-title {
+		font-size: 45px;
+		font-weight: 100;
+		margin-bottom: 30px;
+		letter-spacing: 6px;
+	}
+}
+
+.post-share {
+	a {
+		display: inline-block;
+		color: $light-color;
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+		text-align: center;
+		border-radius: 18px;
+		border: 1px solid $border-color;
+		margin: 0 5px;
+		&:hover {
+			color: $accent;
+		}
+		&:first-of-type {
+			margin-left: 0;
+		}
+	}
+}
+
+
+
+/* Contact
+-------------------------------------------------------------- */
+.show-map-button {
+	text-align: center;
+	background: $accent;
+	padding: 30px 0;
+	a {
+		cursor: pointer;
+		display: block;
+		font-size: 16px;
+		color: #fff;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-family: $heading-font;
+	}
+}
+
+#map-holder {
+	width: 100%;
+	height: 410px;
+	z-index: 0;
+	position: relative;
+	display: none;
+	@include filter(grayscale(100%));
+}
+
+.map-tooltip {
+	padding: 10px;
+	h6 {
+		font-size: 18px;
+		margin-bottom: 5px;
+		text-transform: uppercase;
+		font-weight: 500;
+		letter-spacing: 2px;
+		color: $heading-color;
+	}
+}

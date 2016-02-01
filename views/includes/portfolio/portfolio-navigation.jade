@@ -1,0 +1,15 @@
+div.row.mt-4
+  div.col-md-12
+    div.post-navigation
+      if navigation.prev
+        div.nav-prev
+          a(href="#{navigation.prev.url}")
+            em
+              i.fa.fa-angle-left.icon-left Previous Project
+            span.hidden-xs= navigation.prev.label
+      if navigation.next
+        div.nav-next
+          a(href="#{navigation.next.url}")
+            em Next Project
+              i.fa.fa-angle-right.icon-right
+            span.hidden-xs= navigation.next.label

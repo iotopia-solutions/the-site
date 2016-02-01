@@ -1,0 +1,74 @@
+// google fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,600,300,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
+
+// font family
+$body-font:				  'Open Sans', sans-serif;
+$heading-font:			'Open Sans', sans-serif;
+$serif:             'Roboto Slab', serif;
+
+
+// color variables
+$white:             #fff;
+$black:             #000;
+
+$accent:            #99ccff;
+$secondary-accent:  #eb7a5c;
+$base-color:        #444;
+$heading-color:     #000;
+$light-color:       #a2a2a2;
+$light-bg:          #f3f3f3;
+$dark-bg:           #000;
+$body-bg:           #fff;
+$gray-bg:           darken($white, 25%);
+
+$border-color:      #ddd;
+$error-color:       #960210;
+
+// Baseline
+$base:					  20px;
+$baseline:				30px;
+
+
+
+// Breakpoint
+$small:					  768px;
+$medium:				  992px;
+$large:					  1200px;
+
+
+
+// Headings
+$h1-size:				 36px !default;
+$h2-size:				 30px !default;
+$h3-size:				 24px !default;
+$h4-size:				 20px !default;
+$h5-size:				 16px !default;
+$h6-size:				 14px !default;
+
+
+
+@mixin clearfix() {
+	*zoom: 1;
+  	&:before,
+  	&:after {
+    	content: " "; // 1
+    	display: table; // 2
+  	}
+  	&:after {
+   		clear: both;
+  	}
+}
+
+
+// placeholders
+%clearfix,
+.clearfix {
+	@include clearfix();
+}
+
+%vertical-align {
+	position: relative;
+	top: 50%;
+	@include transform(translateY(-50%));
+}

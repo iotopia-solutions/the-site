@@ -1,0 +1,98 @@
+/* Homepage Widgets
+-------------------------------------------------------------- */
+
+
+/* Sidebar Widgets
+-------------------------------------------------------------- */
+.sidebar {
+
+	.widget-title {
+		background: $light-bg; 
+		font-size: 13px;
+		font-weight: normal;
+		padding: 10px 15px;
+		margin-bottom: 30px;
+	}
+
+	.widget {
+		margin-bottom: 70px;
+	}
+
+}
+
+.tag-link {
+	margin: 0 7px 7px 0;
+	border: 1px solid $border-color;
+	color: $base-color !important;
+	display: inline-block;
+	padding: 4px 7px;
+	&:hover {
+		border-color: darken($border-color, 15%);
+	}
+}
+
+.latest-posts {
+
+	.post {
+		@extend %clearfix;
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid $border-color;
+	}
+
+	.post-thumb {
+		width: 60px;
+		float: left;
+		margin-right: 15px;
+		img {
+			width: 100%;
+			display: block;
+		}
+	}
+
+	.post-content {
+		overflow: hidden;
+		a {
+			text-transform: uppercase;
+			color: $heading-color;
+			// font-size: 14px;
+			letter-spacing: 2px;
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+
+	.post-meta {
+		span {
+			font-size: 12px;
+			text-transform: uppercase;
+			color: $light-color;
+			i {
+				margin-right: 8px;
+			}
+		}
+	}
+}
+
+
+.search-widget {
+	input[type="submit"] {
+		display: none;
+	}
+	.form-group,
+	input {
+		margin-bottom: 0;
+	}
+}
+
+.categories {
+	ul {
+		margin: 0;
+	}
+}
+
+
+
+/* Footer Widgets
+-------------------------------------------------------------- */
