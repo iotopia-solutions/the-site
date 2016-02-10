@@ -56,8 +56,8 @@ router.post('/email', function (req, res) {
     service: 'gmail',
     auth: {
       // xoauth2: generator
-      user: 'info@cieloconcepts.com',
-      pass: 'C!eloC0ncepts2015'
+      user: 'hello@iotopia-solutions.com',
+      pass: 'uSyiKT;d49=:rXb.'
     }
   }));
 
@@ -67,7 +67,7 @@ router.post('/email', function (req, res) {
   console.log(emailMsg);
 
   gmailTransport.sendMail({
-    to: 'Cielo Concepts Inc <info@cieloconcepts.com>',
+    to: 'Iotopia Solutions Inc <hello@iotopia-solutions.com>',
     subject: 'Inquiry from ' + req.body.name,
     html: emailMsg
   }, function (err, info) {
@@ -78,10 +78,10 @@ router.post('/email', function (req, res) {
     }
 
     gmailTransport.sendMail({
-      from: 'Cielo Concepts Inc <info@cieloconcepts.com>',
+      from: 'Iotopia Solutions Inc <hello@iotopia-solutions.com>',
       to: req.body.email,
       subject: 'Thank you for your inquiry',
-      html: 'Dear ' + req.body.name + ',<br/><br/><p>Thank you for your inquiry to Cielo Concepts Inc. We have receive the following message:</p><blockquote>' + req.body.description + '</blockquote><p>Someone will be in touch in with you shortly.</p> <p>Cheers, <br/><br/>Kianosh Pourian<br/>CEO and President</p>'
+      html: 'Dear ' + req.body.name + ',<br/><br/><p>Thank you for your inquiry to Iotopia Solutions Inc. We have receive the following message:</p><blockquote>' + req.body.description + '</blockquote><p>Someone will be in touch in with you shortly.</p> <p>Cheers, <br/><br/>Kianosh Pourian<br/>CEO and President</p>'
     }, function (err, info) {
       console.log(info);
       if (err) {
