@@ -368,6 +368,45 @@ let portfolio = {
       "prev": {
         "label": "Pattern Lab Course",
         "url": "/portfolio/pattern-lab-course"
+      },
+      "next": {
+        "label": "American Student Assistant",
+        "url": "/portfolio/asa"
+      }
+    }
+  },
+  "asa": {
+    "seo": {
+      "description": "Technical evaluation interviews and recommendations"
+    },
+    "titleImage": {
+      "src": "../img/clients/asa/asa-title-image.png",
+      "label": "American Student Assistant technical evaluation",
+      "subLabel": "Are we on the right track?"
+    },
+    "projectTitle": "Stakeholder interview and evalautions",
+    "topParagraph": "American Student Assistance® (ASA) is a private nonprofit dedicated to opening the gateway to opportunity by revolutionizing the way students approach, finance, and repay their higher education. ASA does this by providing student loan education, and enabling the development of financial competencies through the use of innovative web-based tools and trusted, neutral advice—all free of charge to students and alumni.",
+    "client": {
+      "name": "American Student Assistant",
+      "category": "Technical evaluation",
+      "url": "http://saltmoney.org"
+    },
+    "images": ["../img/clients/asa/asa-home.png","../img/clients/asa/asa-courses.png", "../img/clients/asa/asa-forms.png"],
+    "paragraph1": "<strong>Problem to Solve</strong><br/>ASA needed help evaluating one their new products, <a href=\"http://saltmoney.org\">saltmoney.org</a>, for areas of improvement. Upon evaluation of the technical stakc and interviewing of all stakeholders, we were able to identify areas of concern.",
+    "paragraph2": "<strong>How We Can Help</strong><br/>After gathering all the infomration from development contributors and stakeholders, we created a report that outlined all the areas of concern, our recommendations, and the cost in time and resources to address each individual issue.",
+    "technology": ["Technical discovery"],
+    "relatedItems": [
+      {
+        "image": "../img/projects/hbr-org-small.png",
+        "url": "/portfolio/hbr",
+        "label": "Harvard Business Review Redesign",
+        "subLabel": "Development"
+      }
+    ],
+    "navigation": {
+      "prev": {
+        "label": "Pattern Lab Course",
+        "url": "/portfolio/pattern-lab-course"
       }
     }
   }
