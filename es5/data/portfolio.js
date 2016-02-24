@@ -381,6 +381,100 @@ var portfolio = {
         "url": "/portfolio/pattern-lab-course"
       }
     }
+  },
+  "farmobile": {
+    "seo": {
+      "description": ""
+    },
+    "titleImage": {
+      "src": "../img/clients/farmobile/farmobile-title-image.png",
+      "label": "Farmobile hardware development",
+      "subLabel": "Hardware & Software Development"
+    },
+    "projectTitle": "Work in progress",
+    "topParagraph": "This project is in the final stages of development. We will have more details in the near future.",
+    "client": {
+      "name": "Farmobile",
+      "category": "TBD",
+      "url": "https://farmobile.com/"
+    },
+    "images": ["../img/b-1.png"],
+    "paragraph1": "<strong>Problem to Solve</strong><br/>Coming soon",
+    "paragraph2": "<strong>How We Can Help</strong><br/>Coming soon",
+    "technology": ["TBD"],
+    "relatedItems": [{
+      "image": "../img/projects/dogwatch-small.png",
+      "url": "/portfolio/dogwatch",
+      "label": "Dogwatch hardware development",
+      "subLabel": "Hardware & Software Development"
+    }, {
+      "image": "../img/projects/hbr-org-small.png",
+      "url": "/portfolio/hbr",
+      "label": "Harvard Business Review Redesign",
+      "subLabel": "Development"
+    }, {
+      "image": "../img/projects/perkin-elmer.png",
+      "url": "/portfolio/perkin-elmer",
+      "label": "Perkin Elmer \"Elements\"",
+      "subLabel": "Development, Design"
+    }],
+    "navigation": {
+      "prev": {
+        "label": "Pattern Lab Course",
+        "url": "/portfolio/pattern-lab-course"
+      },
+      "next": {
+        "label": "Dogwatch hardware & software development",
+        "url": "/portfolio/dogwatch"
+      }
+    }
+  },
+  "dogwatch": {
+    "seo": {
+      "description": ""
+    },
+    "titleImage": {
+      "src": "../img/clients/dogwatch/dogwatch-title-image.png",
+      "label": "Dogwatch hardware and software development",
+      "subLabel": "Hardware & Software Development"
+    },
+    "projectTitle": "Work in progress",
+    "topParagraph": "This project is in the final stages of development. We will have more details in the near future.",
+    "client": {
+      "name": "Dogwatch",
+      "category": "TBD",
+      "url": "https://dogwatch.com/"
+    },
+    "images": ["../img/b-1.png"],
+    "paragraph1": "<strong>Problem to Solve</strong><br/>Coming soon",
+    "paragraph2": "<strong>How We Can Help</strong><br/>Coming soon",
+    "technology": ["TBD"],
+    "relatedItems": [{
+      "image": "../img/projects/farmobile-small.png",
+      "url": "/portfolio/farmobile",
+      "label": "Farmobile hardware development",
+      "subLabel": "Hardware & Software Development"
+    }, {
+      "image": "../img/projects/hbr-org-small.png",
+      "url": "/portfolio/hbr",
+      "label": "Harvard Business Review Redesign",
+      "subLabel": "Development"
+    }, {
+      "image": "../img/projects/perkin-elmer.png",
+      "url": "/portfolio/perkin-elmer",
+      "label": "Perkin Elmer \"Elements\"",
+      "subLabel": "Development, Design"
+    }],
+    "navigation": {
+      "prev": {
+        "label": "Farmobile hardware development",
+        "url": "/portfolio/farmobile"
+      },
+      "next": {
+        "label": "Harvard Business Review",
+        "url": "/portfolio/hbr"
+      }
+    }
   }
 };
 
