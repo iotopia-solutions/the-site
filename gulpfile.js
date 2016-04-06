@@ -2,6 +2,11 @@ var gulp = require('gulp');
 var sourcemaps = require('gulp-sourcemaps');
 var babel = require('gulp-babel');
 var compass = require('gulp-compass');
+var csso = require('gulp-csso');
+var rename = require('gulp-rename');
+var minifyHTML = require('gulp-minify-html');
+var changed = require('gulp-changed');
+var imagemin = require('gulp-imagemin');
 var nodemon = require('gulp-nodemon');
 
 var path = require('path');
@@ -22,7 +27,19 @@ gulp.task('babel', function () {
         presets: ['es2015']
     }))
     .pipe(sourcemaps.write('.', { sourceRoot: paths.sourceRoot }))
+    .on('error', console.error.bind(console))
     .pipe(gulp.dest(paths.es5));
+});
+
+gulp.task('csso', function () {
+    return gulp.src('assets/css/*.css.uncompressed.css')
+      .pipe(rename(function(path){
+        path.basename = path.basename.slice(0, -17);
+        return path;
+      }))
+      .pipe(csso())
+      .on('error', console.error.bind(console))
+      .pipe(gulp.dest('assets/css'));
 });
 
 gulp.task('compass', function() {
@@ -32,7 +49,31 @@ gulp.task('compass', function() {
       css: 'assets/css',
       sass: 'assets/scss'
     }))
+    .pipe(rename(function(path){
+      console.log(path);
+      path.extname = 'css.uncompressed.css';
+      return path;
+    }))
+    .on('error', console.error.bind(console))
     .pipe(gulp.dest('assets/css'));
+});
+
+gulp.task('minifyhtml', function() {
+  return gulp.src('views/*.html.uncompressed.html')
+    .pipe(rename(function(path){
+      path.basename = path.basename.slice(0, -18);
+      return path.basename + '.html';
+    }))
+    .pipe(minifyHTML())
+    .on('error', console.error.bind(console))
+    .pipe(gulp.dest('views'));
+});
+
+gulp.task('imagemin', function() {
+  return gulp.src('assets/img/*')
+    .pipe(changed('assets/img'))
+    .pipe(imagemin())
+    .pipe(gulp.dest('assets/img'));
 });
 
 gulp.task('serve', ['babel'], function() {
@@ -44,8 +85,10 @@ gulp.task('serve', ['babel'], function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(paths.es6, ['babel'])
+  gulp.watch(paths.es6, ['babel']);
   gulp.watch('assets/scss/*.scss', ['compass']);
+  gulp.watch('assets/css/*.css.uncompressed.css', ['csso']);
+  gulp.watch('views/*.html.uncompressed.html', ['minifyhtml']);
 });
 
 gulp.task('default', ['serve', 'watch']);
