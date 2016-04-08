@@ -5,7 +5,6 @@ var compass = require('gulp-compass');
 var csso = require('gulp-csso');
 var rename = require('gulp-rename');
 var minifyHTML = require('gulp-minify-html');
-var changed = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
 var nodemon = require('gulp-nodemon');
 
@@ -49,11 +48,7 @@ gulp.task('compass', function() {
       css: 'assets/css',
       sass: 'assets/scss'
     }))
-    .pipe(rename(function(path){
-      console.log(path);
-      path.extname = 'css.uncompressed.css';
-      return path;
-    }))
+    .pipe(csso())
     .on('error', console.error.bind(console))
     .pipe(gulp.dest('assets/css'));
 });
@@ -71,8 +66,12 @@ gulp.task('minifyhtml', function() {
 
 gulp.task('imagemin', function() {
   return gulp.src('assets/img/*')
-    .pipe(changed('assets/img'))
-    .pipe(imagemin())
+    .pipe(imagemin({
+      progressive: true,
+      optimizationLevel: 5,
+      interlaced: true
+    }))
+    .on('error', console.error.bind(console))
     .pipe(gulp.dest('assets/img'));
 });
 
