@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-15" ?>
+<?xml-stylesheet type="text/xml" href="/rdf.xsl"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
+         xml:lang="en">
+
+  <rdf:Description rdf:about="https://iotopia-solutions.com/">
+    <dc:title>Iotopia Solutions, Inc</dc:title>
+    <dc:description>The Home Page for Iotopia Solutions</dc:description>
+    <dc:subject>
+      <rdf:Bag>
+        <dc:li rdf:resource="Software"/>
+        <dc:li rdf:resource="JavaScript"/>
+        <dc:li rdf:resource="Python"/>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:date>2016-04-26 21:19:11</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-US</dc:language>
+    <dc:creator>Eric W. Brown</dc:creator>
+    <dc:publisher>Iotopia Solutions, Inc.</dc:publisher>
+    <dc:rights>Copyright 2016 Iotopia Solutions, Inc.</dc:rights>
+    <prism:location>Boston, Massachusetts</prism:location>
+    <foaf:Organization>
+      <foaf:name>Iotopia Solutions, Inc.</foaf:name>
+      <foaf:nick>Iotopia</foaf:nick>
+      <foaf:page>https://iotopia-solutions.com/</foaf:page>
+      <foaf:logo rdf:resource="https://static.iotopia-solutions.com/IotopiaSquareLogo.png" />
+      <foaf:member>
+        <foaf:Person>
+          <foaf:name>Eric W. Brown</foaf:name>
+          <foaf:workplaceHomepage>https://thoughtsynth.com/~eric/</foaf:workplaceHomepage>
+          <foaf:nick>Feneric</foaf:nick>
+          <rdfs:seeAlso rdf:resource="https://thoughtsynth.com/~eric/metadata.rdf" />
+          <rdfs:seeAlso rdf:resource="http://shelltown.net/~eric/metadata.rdf" />
+        </foaf:Person>
+      </foaf:member>
+      <foaf:member>
+        <foaf:Person>
+          <foaf:name>Martin E. Bures</foaf:name>
+          <foaf:workplaceHomepage>https://thoughtsynth.com/~martin/</foaf:workplaceHomepage>
+          <rdfs:seeAlso rdf:resource="https://thoughtsynth.com/~martin/metadata.rdf" />
+        </foaf:Person>
+      </foaf:member>
+      <foaf:holdsAccount>
+        <foaf:OnlineAccount>
+          <foaf:accountServiceHomepage>https://www.twitter.com</foaf:accountServiceHomepage>
+          <foaf:accountName>iotopia_sol</foaf:accountName>
+        </foaf:OnlineAccount>
+      </foaf:holdsAccount>
+    </foaf:Organization>
+  </rdf:Description>
+</rdf:RDF>
+
