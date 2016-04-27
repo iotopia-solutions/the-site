@@ -3,6 +3,9 @@
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:dc="http://purl.org/dc/elements/1.1/"
          xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:doap="http://usefulinc.com/ns/doap#"
          xml:lang="en">
 
   <rdf:Description rdf:about="https://iotopia-solutions.com/">
@@ -28,7 +31,7 @@
       <foaf:page>https://iotopia-solutions.com/</foaf:page>
       <foaf:logo rdf:resource="https://static.iotopia-solutions.com/IotopiaSquareLogo.png" />
       <foaf:member>
-        <foaf:Person>
+        <foaf:Person nodeID="Eric">
           <foaf:name>Eric W. Brown</foaf:name>
           <foaf:workplaceHomepage>https://thoughtsynth.com/~eric/</foaf:workplaceHomepage>
           <foaf:nick>Feneric</foaf:nick>
@@ -37,19 +40,38 @@
         </foaf:Person>
       </foaf:member>
       <foaf:member>
-        <foaf:Person>
+        <foaf:Person nodeID="Martin">
           <foaf:name>Martin E. Bures</foaf:name>
           <foaf:workplaceHomepage>https://thoughtsynth.com/~martin/</foaf:workplaceHomepage>
           <rdfs:seeAlso rdf:resource="https://thoughtsynth.com/~martin/metadata.rdf" />
         </foaf:Person>
       </foaf:member>
+      <foaf:member>
+        <foaf:Person nodeID="Kianosh">
+          <foaf:name>Kianosh Pourian</foaf:name>
+        </foaf:Person>
+      </foaf:member>
       <foaf:holdsAccount>
         <foaf:OnlineAccount>
           <foaf:accountServiceHomepage>https://www.twitter.com</foaf:accountServiceHomepage>
-          <foaf:accountName>iotopia_sol</foaf:accountName>
+          <foaf:accountName>@iotopia_sol</foaf:accountName>
         </foaf:OnlineAccount>
       </foaf:holdsAccount>
     </foaf:Organization>
+    <doap:Project>
+      <name>redux-catalyst</name>
+      <doap:shortdesc xml:lang="en">
+        A collection of components that are built around ReactJS
+        and Redux (Flux Framework)
+      </doap:shortdesc>
+      <doap:maintainer rdf:nodeID="Kianosh" />
+      <doap:repository>
+        <doap:GitRepository>
+          <doap:location rdf:resource="https://github.com/iotopia-solutions/redux-catalyst.git"/>
+          <doap:browse rdf:resource="https://github.com/iotopia-solutions/redux-catalyst"/>
+        </doap:GitRepository>
+      </doap:repository>
+    </doap:Project>
   </rdf:Description>
 </rdf:RDF>
 
