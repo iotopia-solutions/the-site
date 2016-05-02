@@ -4,7 +4,7 @@ var babel = require('gulp-babel');
 var compass = require('gulp-compass');
 var csso = require('gulp-csso');
 var rename = require('gulp-rename');
-var minifyHTML = require('gulp-minify-html');
+var minifyHTML = require('gulp-htmlmin');
 var imagemin = require('gulp-imagemin');
 var nodemon = require('gulp-nodemon');
 
@@ -59,13 +59,14 @@ gulp.task('minifyhtml', function() {
       path.basename = path.basename.slice(0, -18);
       return path.basename + '.html';
     }))
-    .pipe(minifyHTML())
+    .pipe(minifyHTML({collapseWhitespace: true}))
     .on('error', console.error.bind(console))
     .pipe(gulp.dest('views'));
 });
 
 gulp.task('imagemin', function() {
-  return gulp.src('assets/img/*')
+  return gulp.src(['assets/img/*', 'assets/img/projects/*',
+                   'assets/img/clients/*', 'assets/img/clients/*/*'])
     .pipe(imagemin({
       progressive: true,
       optimizationLevel: 5,
