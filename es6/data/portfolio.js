@@ -511,6 +511,51 @@ let portfolio = {
         "url": "/portfolio/hbr"
       }
     }
+  },
+  "confer": {
+    "seo": {
+      "description": ""
+    },
+    "titleImage": {
+      "src": "../img/clients/confer/confer-title-image.png",
+      "label": "Confer Technologies Startup",
+      "subLabel": "Software Development"
+    },
+    "projectTitle": "Going from concept to prototype",
+    "topParagraph": "Confer Technologies is the developer of the first “Converged Endpoint,” integrating prevention, detection and incident response in a single lightweight sensor. This patented technology gathers endpoint telemetry from across the enterprise and leverages data science to analyze attacker behavior and automatically adapt in response.",
+    "client": {
+      "name": "Confer Technologies",
+      "category": "Development",
+      "url": "https://www.confer.net/"
+    },
+    "images": [],
+    "paragraph1": "<strong>Problem to Solve</strong><br/>In 2012 Confer Technologies (previously named SCargo), was a fledgeling startup looking to take their product idea, providing online security through the prism of behaviorial aspect of online threats, and creating a prototype. The work needed was to create a dashboard that will outline all the activities surrounding the interactions of an operating system of a computer for example and display that to administrators and system analysts. Our goal was provide an infrastructure to build this interface upon.",
+    "paragraph2": "<strong>How We Can Help</strong><br/>Coming soon",
+    "technology": ["BackboneJS", "NodeJS", "Sass CSS"],
+    "relatedItems": [
+      {
+        "image": "../img/projects/hbr-org-small.png",
+        "url": "/portfolio/hbr",
+        "label": "Harvard Business Review Redesign",
+        "subLabel": "Development"
+      },
+      {
+        "image": "../img/projects/perkin-elmer.png",
+        "url": "/portfolio/perkin-elmer",
+        "label": "Perkin Elmer \"Elements\"",
+        "subLabel": "Development, Design"
+      }
+    ],
+    "navigation": {
+      "prev": {
+        "label": "Farmobile hardware development",
+        "url": "/portfolio/farmobile"
+      },
+      "next": {
+        "label": "Harvard Business Review",
+        "url": "/portfolio/hbr"
+      }
+    }    
   }
 };
 
