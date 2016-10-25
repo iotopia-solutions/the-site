@@ -47,10 +47,10 @@ app.use((0, _cookieParser2.default)());
 app.use(_express2.default.static(_path2.default.join(__dirname, '../assets')));
 
 app.use('/', _index2.default);
-app.use('/portfolio/:name', _index2.default);
-app.use('/email', _index2.default);
-app.use('/blog', _index2.default);
-app.use('/blog/:id', _index2.default);
+// app.use('/portfolio/:name', routes);
+// app.use('/email', routes);
+// app.use('/blog', routes);
+// app.use('/blog/:id', routes);
 
 // using arrow syntax
 app.use(function (req, res, next) {

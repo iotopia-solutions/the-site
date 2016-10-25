@@ -1,12 +1,14 @@
+"use strict";
+
 var gulp = require('gulp');
 var sourcemaps = require('gulp-sourcemaps');
 var babel = require('gulp-babel');
-var compass = require('gulp-compass');
 var csso = require('gulp-csso');
 var rename = require('gulp-rename');
 var minifyHTML = require('gulp-htmlmin');
 var imagemin = require('gulp-imagemin');
 var nodemon = require('gulp-nodemon');
+var sass = require('gulp-sass');
 
 var path = require('path');
 
@@ -41,17 +43,23 @@ gulp.task('csso', function () {
       .pipe(gulp.dest('assets/css'));
 });
 
-gulp.task('compass', function() {
-  return gulp.src('assets/scss/*.scss')
-    .pipe(compass({
-      config_file: './config.rb',
-      css: 'assets/css',
-      sass: 'assets/scss'
-    }))
-    .pipe(csso())
-    .on('error', console.error.bind(console))
+gulp.task('sass', function() {
+  return gulp.src('assets/css/sass/style.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('assets/css'));
 });
+
+// gulp.task('compass', function() {
+//   return gulp.src('assets/scss/*.scss')
+//     .pipe(compass({
+//       config_file: './config.rb',
+//       css: 'assets/css',
+//       sass: 'assets/scss'
+//     }))
+//     .pipe(csso())
+//     .on('error', console.error.bind(console))
+//     .pipe(gulp.dest('assets/css'));
+// });
 
 gulp.task('minifyhtml', function() {
   return gulp.src('views/*.html.uncompressed.html')
@@ -86,7 +94,7 @@ gulp.task('serve', ['babel'], function() {
 
 gulp.task('watch', function() {
   gulp.watch(paths.es6, ['babel']);
-  gulp.watch('assets/scss/*.scss', ['compass']);
+  gulp.watch('assets/scss/*.scss', ['sass']);
   gulp.watch('assets/css/*.css.uncompressed.css', ['csso']);
   gulp.watch('views/*.html.uncompressed.html', ['minifyhtml']);
 });

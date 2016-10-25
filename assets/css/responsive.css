@@ -303,6 +303,10 @@
   .sidenav .container {
     width: 100%;
   }
+  .tp-caption.hero-text.huge_nocaps {
+    font-size: 36px;
+    text-transform: none;
+  }
 }
 
 @media (max-width: 640px) {

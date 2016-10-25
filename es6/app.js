@@ -23,10 +23,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../assets')));
 
 app.use('/', routes);
-app.use('/portfolio/:name', routes);
-app.use('/email', routes);
-app.use('/blog', routes);
-app.use('/blog/:id', routes);
+// app.use('/portfolio/:name', routes);
+// app.use('/email', routes);
+// app.use('/blog', routes);
+// app.use('/blog/:id', routes);
 
 // using arrow syntax
 app.use((req, res, next) => {
