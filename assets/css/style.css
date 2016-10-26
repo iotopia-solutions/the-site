@@ -1659,6 +1659,10 @@ p {
 #contact-form .message.success {
   background-color: #4CAF50; }
 
+#contact-form input.error,
+#contact-form textarea.error {
+  border-color: #f44336; }
+
 /* Owl Carousel
 -------------------------------------------------------*/
 .owl-pagination {

@@ -1097,8 +1097,9 @@
                   <i class="icon icon-Pointer"></i>
                 </div>
                 <h6>Address</h6>
-                <p>Philippines,<br>
-                Greenwich st. 256/6, 62058</p>
+                <p>USA,<br>
+                711 Atlantic Avenue<br>
+                Boston, MA 02111</p>
               </div> <!-- end address -->
 
               <div class="contact-item">
@@ -1106,7 +1107,7 @@
                   <i class="icon icon-Phone"></i>
                 </div>
                 <h6>Call Us</h6>
-                <span>+1 888 5146 3269</span>
+                <span>+1 617 870 4574</span>
               </div> <!-- end phone number -->
 
               <div class="contact-item">
@@ -1114,7 +1115,7 @@
                   <i class="icon icon-Mail"></i>
                 </div>
                 <h6>E-mail</h6>
-                <a href="mailto:enigmasupport@gmail.com">enigmasupport@gmail.com</a>
+                <a href="mailto:hello@iotopia-solutions.com">hello@iotopia-solutions.com</a>
               </div> <!-- end email -->
 
             </div>
@@ -1124,17 +1125,17 @@
 
                 <div class="row contact-row">
                   <div class="col-md-6 contact-name">
-                    <input name="name" id="name" type="text" placeholder="Name*">
+                    <input name="name" id="name" type="text" placeholder="Name*" required="required">
                   </div>
                   <div class="col-md-6 contact-email">
-                    <input name="mail" id="mail" type="email" placeholder="E-mail*">
+                    <input name="email" id="email" type="email" placeholder="E-mail*" required="required">
                   </div>
                 </div>
 
                 <input name="subject" id="subject" type="text" placeholder="Subject"> 
-                <textarea name="comment" id="comment" placeholder="Message"></textarea>
+                <textarea name="description" id="description" placeholder="Message*" required="required"></textarea>
                   <input type="submit" class="btn btn-lg btn-color btn-submit" value="Send Message" id="submit-message">
-                  <div id="msg" class="message"></div>
+                  <!--div id="msg" class="message"></div-->
                 </form>
             </div> <!-- end col -->
 
@@ -1144,7 +1145,7 @@
 
 
       <!-- Google Map -->
-      <div id="google-map" class="gmap" data-address="V Tytana St, Manila, Philippines"></div>
+      <div id="google-map" class="gmap" data-address="711 Atlantic Avenue, Boston MA 02111 USA"></div>
 
 
       <!-- Footer -->
@@ -1223,7 +1224,7 @@
         icon: "img/map_pin.png"
       })
       .infowindow({
-        content: "V Tytana St, Manila, Philippines"
+        content: "711 Atlantic Avenue, Boston MA 02111, USA"
       })
       .then(function (infowindow) {
         var map = this.get(0);
@@ -1232,6 +1233,79 @@
           infowindow.open(map, marker);
         });
       });
+
+      $('#contact-form #submit-message').click(function(evt) {
+        evt.preventDefault();
+        var currentEl = $(evt.currentTarget);
+        var currentForm = $(currentEl).closest('form#contact-form');
+        var inputs = $(currentForm).find('input');
+        var textarea = $(currentForm).find('textarea');
+        var errors = [];
+
+        clearErrors(currentForm);
+
+        inputs.each(function(index, el) {
+          if ($(el).attr('required') === 'required' 
+            && $(el).val().trim().length === 0) {
+            var tempObj = {};
+            tempObj.thisEl = el;
+            tempObj.errMsg = 'This field is required.'
+
+            errors.push(tempObj);
+          }
+
+          if ($(el).attr('name') === 'email' 
+            && $(el).val().trim().length > 0 
+            && $(el).val().trim().indexOf('@') === -1) {
+            var tempObj = {};
+            tempObj.thisEl = el;
+            tempObj.errMsg = 'Please enter a valid email'
+
+            errors.push(tempObj);
+          }
+        });
+
+        if (textarea.val().trim().length === 0) {
+          var tempObj = {};
+          tempObj.thisEl = textarea;
+          tempObj.errMsg = 'This field is required.'
+
+          errors.push(tempObj);
+        }
+
+        if (errors.length > 0) {
+          errors.forEach(function(el, index) {
+            var thisEl = $(el.thisEl);
+            var thisElLabel = thisEl.siblings('label');
+
+            var newErrEl = $('<div/>', {
+              'class': 'message error',
+              text: el.errMsg
+            });
+
+            newErrEl.insertBefore(thisEl).fadeIn('slow');
+            thisEl.addClass('error');
+          });
+        } else {
+          // Submit the form
+          $('#submit-message').attr({'disabled' : 'true', 'value' : 'Sending' });
+          /* Post Ajax function of jQuery to get all the data from the submission of the form as soon as the form sends the values to email.php*/
+          $.post("/email", $("#contact-form").serialize(), function(response){
+            if(response.result === 'sent'){
+                //If the email is sent successfully, remove the submit button
+              $('#submit-message').attr({'disabled' : 'true', 'value' : 'Thank you!' });
+            } else {
+              $('#submit-message').removeAttr('disabled').attr('value', 'Submit');
+            }
+          });
+        }
+      });
+
+      function clearErrors(formEl) {
+        $(formEl).find('.message.error').remove();
+        $(formEl).find('input.error, textarea.error').removeClass('error');
+      }      
+
     });
   </script>
 
