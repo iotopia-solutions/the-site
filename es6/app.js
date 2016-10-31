@@ -1,20 +1,21 @@
 "use strict";
-import express      from 'express';
-import path         from 'path';
-import favicon      from 'serve-favicon';
-import logger       from 'morgan';
-import cookieParser from 'cookie-parser';
-import bodyParser   from 'body-parser';
-import fs           from 'fs';
-
-import routes       from './routes/index';
+import express          from 'express';
+import path             from 'path';
+import favicon          from 'serve-favicon';
+import logger           from 'morgan';
+import cookieParser     from 'cookie-parser';
+import bodyParser       from 'body-parser';
+import fs               from 'fs';
+import { createEngine } from 'express-react-views';
+import routes           from './routes/index';
 
 //using let
 let app = express();
 
 
 app.set('views', path.join(__dirname, '../views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'jsx');
+app.engine('jsx', createEngine());
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -53,12 +54,16 @@ app.use((err, req, res, next) => {
   });
 });
 
-let server_port = process.env.PORT || 5001;
-let server_host = '0.0.0.0';
+const server_port = process.env.PORT || 5001;
+const server_host = '0.0.0.0';
 
 app.set('port', server_port);
 app.set('host', server_host);
 
-let server = app.listen(app.get('port'), app.get('host'), () => console.log('Express is listening on port ' + server.address().port));
+const server = app.listen(
+  app.get('port'),
+  app.get('host'),
+  () => console.log('Express is listening on port ' + server.address().port)
+);
 
-module.exports = app;
+export app;

@@ -28,6 +28,8 @@ var _fs = require('fs');
 
 var _fs2 = _interopRequireDefault(_fs);
 
+var _expressReactViews = require('express-react-views');
+
 var _index = require('./routes/index');
 
 var _index2 = _interopRequireDefault(_index);
@@ -37,8 +39,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //using let
 var app = (0, _express2.default)();
 
+// TODO: 1) move html to an ./html folder, 2) use ReactDOMServer.renderToStaticMarkup to inject blogs into index.html 
 app.set('views', _path2.default.join(__dirname, '../views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'jsx');
+app.engine('jsx', (0, _expressReactViews.createEngine)());
 
 app.use((0, _morgan2.default)('dev'));
 app.use(_bodyParser2.default.json());
