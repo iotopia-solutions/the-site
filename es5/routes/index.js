@@ -6,8 +6,6 @@ var _express2 = _interopRequireDefault(_express);
 
 var _pages = require('./pages');
 
-var _pages2 = _interopRequireDefault(_pages);
-
 var _fs = require('fs');
 
 var _fs2 = _interopRequireDefault(_fs);
@@ -29,7 +27,7 @@ var router = _express2.default.Router();
 // import blog       from './blog';
 
 
-router.get('/', _pages2.default.index);
+router.get('/', _pages.index);
 // router.get('/portfolio/:name', portfolio.index);
 // router.get('/portfolio/detail/:name', portfolio.detail);
 // router.get('/contact', pages.contact);

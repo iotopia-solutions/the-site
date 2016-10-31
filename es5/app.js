@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
@@ -39,7 +43,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //using let
 var app = (0, _express2.default)();
 
-// TODO: 1) move html to an ./html folder, 2) use ReactDOMServer.renderToStaticMarkup to inject blogs into index.html 
 app.set('views', _path2.default.join(__dirname, '../views'));
 app.set('view engine', 'jsx');
 app.engine('jsx', (0, _expressReactViews.createEngine)());
@@ -91,5 +94,5 @@ var server = app.listen(app.get('port'), app.get('host'), function () {
   return console.log('Express is listening on port ' + server.address().port);
 });
 
-module.exports = app;
+exports.default = app;
 //# sourceMappingURL=app.js.map
