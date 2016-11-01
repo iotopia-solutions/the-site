@@ -37,6 +37,8 @@ var index = exports.index = function index(req, res) {
   });
 };
 
+// ------------------------------------------------------------
+
 // Extract the blog posts json data from the wordpress api response.
 var extractPosts = function extractPosts(resp) {
   return JSON.parse(resp[0].body).posts;

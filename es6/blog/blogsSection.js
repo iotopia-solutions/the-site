@@ -25,6 +25,8 @@ export default (blogInfo) =>
       </div>
     </div>;
 
+// ------------------------------------------------------------
+
 const toDate
   = string => new Date(string)
 

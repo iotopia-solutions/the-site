@@ -25,6 +25,8 @@ export const index
       }
     );
 
+// ------------------------------------------------------------
+
 // Extract the blog posts json data from the wordpress api response.
 const extractPosts
   = resp => JSON.parse(resp[0].body).posts;

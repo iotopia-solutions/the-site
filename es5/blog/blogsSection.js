@@ -77,6 +77,8 @@ exports.default = function (blogInfo) {
   );
 };
 
+// ------------------------------------------------------------
+
 var toDate = function toDate(string) {
   return new Date(string);
 };
