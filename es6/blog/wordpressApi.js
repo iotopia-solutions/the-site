@@ -5,7 +5,7 @@ import request from 'request';
 export const getPosts
   = () =>
     promiseForRequest(
-      configRequest(config, blogPostsUrl, 'GET')
+      createConfig(config, blogPostsUrl, 'GET')
     );
 
 // ------------------------------------------------------------
@@ -23,22 +23,26 @@ const config = { timeout };
 
 // ------------------------------------------------------------
 
+// Creates a promise for a request.
+// Could be useful for other http calls.
 const promiseForRequest
   = (config) =>
     new Promise(
       (resolve, reject) => request(config, resolveRequest(resolve, reject))
   );
 
+// Converts request's node-style callback to a Promise's constructor args.
 const resolveRequest
   = (resolve, reject) => (err, resp, body) => {
     if (err) {
       reject(err);
     }
     else {
-      resolve([ resp, body ]);
+      resolve([ resp, JSON.parse(body) ]);
     }
   };
 
-const configRequest
-  = (config, url, method) =>
-    Object.assign({}, config, { url, method });
+// Constructs a request config from a common config and specific url and method.
+const createConfig
+  = (common, url, method) =>
+    Object.assign({}, common, { url, method });

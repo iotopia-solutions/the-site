@@ -15,7 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // Fetches blog posts from wordpress api.
 var getPosts = exports.getPosts = function getPosts() {
-  return promiseForRequest(configRequest(config, blogPostsUrl, 'GET'));
+  return promiseForRequest(createConfig(config, blogPostsUrl, 'GET'));
 };
 
 // ------------------------------------------------------------
@@ -32,23 +32,27 @@ var config = { timeout: timeout };
 
 // ------------------------------------------------------------
 
+// Creates a promise for a request.
+// Could be useful for other http calls.
 var promiseForRequest = function promiseForRequest(config) {
   return new Promise(function (resolve, reject) {
     return (0, _request2.default)(config, resolveRequest(resolve, reject));
   });
 };
 
+// Converts request's node-style callback to a Promise's constructor args.
 var resolveRequest = function resolveRequest(resolve, reject) {
   return function (err, resp, body) {
     if (err) {
       reject(err);
     } else {
-      resolve([resp, body]);
+      resolve([resp, JSON.parse(body)]);
     }
   };
 };
 
-var configRequest = function configRequest(config, url, method) {
-  return Object.assign({}, config, { url: url, method: method });
+// Constructs a request config from a common config and specific url and method.
+var createConfig = function createConfig(common, url, method) {
+  return Object.assign({}, common, { url: url, method: method });
 };
 //# sourceMappingURL=wordpressApi.js.map
