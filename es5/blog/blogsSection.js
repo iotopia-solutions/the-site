@@ -1,75 +1,76 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// A React element that displays a single blog post.
 exports.default = function (blogInfo) {
   return _react2.default.createElement(
-    "div",
-    { className: "blog-col" },
+    'div',
+    { className: "blog-col" + (blogInfo.isLast ? ' last' : '') },
     _react2.default.createElement(
-      "div",
-      { className: "entry-img" },
+      'div',
+      { className: 'entry-img' },
       _react2.default.createElement(
-        "a",
-        { href: "blog-single.html" },
-        _react2.default.createElement("img", { src: blogInfo.featured_image, alt: "" })
+        'a',
+        { href: 'blog-single.html' },
+        _react2.default.createElement('img', { src: blogInfo.featured_image, alt: '' })
       )
     ),
     _react2.default.createElement(
-      "div",
-      { className: "entry-box" },
+      'div',
+      { className: 'entry-box' },
       _react2.default.createElement(
-        "div",
-        { className: "entry-title" },
+        'div',
+        { className: 'entry-title' },
         _react2.default.createElement(
-          "h4",
+          'h4',
           null,
           _react2.default.createElement(
-            "a",
-            { href: "blog-single.html" },
+            'a',
+            { href: 'blog-single.html' },
             blogInfo.title
           )
         )
       ),
       _react2.default.createElement(
-        "ul",
-        { className: "entry-meta" },
+        'ul',
+        { className: 'entry-meta' },
         _react2.default.createElement(
-          "li",
+          'li',
           null,
-          "by ",
+          'by ',
           _react2.default.createElement(
-            "a",
-            { href: "blog-single" },
+            'a',
+            { href: 'blog-single' },
             blogInfo.author.name
           )
         ),
         _react2.default.createElement(
-          "li",
+          'li',
           null,
           _react2.default.createElement(
-            "a",
-            { href: "#" },
+            'a',
+            { href: '#' },
             formatDate(toDate(blogInfo.date))
           )
         )
       ),
       _react2.default.createElement(
-        "div",
-        { className: "entry-content" },
-        _react2.default.createElement("p", { dangerouslySetInnerHTML: { __html: blogInfo.excerpt } }),
+        'div',
+        { className: 'entry-content' },
+        _react2.default.createElement('p', { dangerouslySetInnerHTML: { __html: blogInfo.excerpt } }),
         _react2.default.createElement(
-          "a",
-          { href: "blog-single.html", className: "read-more" },
-          "Read More"
+          'a',
+          { href: 'blog-single.html', className: 'read-more' },
+          'Read More'
         )
       )
     )

@@ -1,7 +1,8 @@
 import React from 'react';
 
+// A React element that displays a single blog post.
 export default (blogInfo) =>
-    <div className="blog-col">
+    <div className={"blog-col" + (blogInfo.isLast ? ' last' : '')}>
       <div className="entry-img">
         <a href="blog-single.html">
           <img src={blogInfo.featured_image} alt=""/>
