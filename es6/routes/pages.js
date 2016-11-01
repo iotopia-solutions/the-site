@@ -19,7 +19,7 @@ export const index
             // TODO: somehow get an aditional className, "last", onto last post
             post => renderToStaticMarkup(blogsSection(post))
           ))
-          .then(sections => res.send(parts[0] + sections + parts[1]))
+          .then(sections => res.send(parts[0] + sections.join('') + parts[1]))
           // TODO: handle more errors and log this, too.
           .catch(err => res.send('No blog posts found.' + err));
       }

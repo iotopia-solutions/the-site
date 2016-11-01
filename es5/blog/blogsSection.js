@@ -20,7 +20,7 @@ exports.default = function (blogInfo) {
       _react2.default.createElement(
         "a",
         { href: "blog-single.html" },
-        _react2.default.createElement("img", { src: blogInfo.featured_image, alt: "See post for image description." })
+        _react2.default.createElement("img", { src: blogInfo.featured_image, alt: "" })
       )
     ),
     _react2.default.createElement(

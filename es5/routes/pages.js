@@ -33,7 +33,7 @@ var index = exports.index = function index(req, res) {
         return (0, _server.renderToStaticMarkup)((0, _blogsSection2.default)(post));
       });
     }).then(function (sections) {
-      return res.send(parts[0] + sections + parts[1]);
+      return res.send(parts[0] + sections.join('') + parts[1]);
     })
     // TODO: handle more errors and log this, too.
     .catch(function (err) {

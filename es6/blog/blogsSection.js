@@ -4,7 +4,7 @@ export default (blogInfo) =>
     <div className="blog-col">
       <div className="entry-img">
         <a href="blog-single.html">
-          <img src={blogInfo.featured_image} alt="See post for image description."/>
+          <img src={blogInfo.featured_image} alt=""/>
         </a>
       </div>
       <div className="entry-box">
