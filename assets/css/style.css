@@ -1438,6 +1438,11 @@ p {
     line-height: 1.5; }
   .blog-col h4 a {
     color: #111; }
+  .blog-col .entry-content p {
+    max-height: 200px;
+    overflow: hidden; }
+  .blog-col .entry-img {
+    height: 150px; }
 
 .from-blog .customNavigation > a {
   color: #111; }

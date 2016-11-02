@@ -25,7 +25,7 @@ gulp.task('babel', function () {
   return gulp.src(paths.es6)
     .pipe(sourcemaps.init())
     .pipe(babel({
-        presets: ['es2015']
+        presets: ['es2015', 'react']
     }))
     .pipe(sourcemaps.write('.', { sourceRoot: paths.sourceRoot }))
     .on('error', console.error.bind(console))

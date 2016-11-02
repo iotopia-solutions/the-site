@@ -1,7 +1,7 @@
 'use strict';
 
-import express    from 'express';
-import pages      from './pages';
+import express from 'express';
+import { index } from './pages';
 // import portfolio  from './portfolio';
 // import blog       from './blog';
 import fs         from 'fs';
@@ -11,7 +11,7 @@ import smtpTransport from 'nodemailer-smtp-transport';
 
 let router = express.Router();
 
-router.get('/', pages.index);
+router.get('/', index);
 // router.get('/portfolio/:name', portfolio.index);
 // router.get('/portfolio/detail/:name', portfolio.detail);
 // router.get('/contact', pages.contact);
@@ -51,7 +51,7 @@ router.post('/email', (req, res) => {
       from: 'Iotopia Solutions Inc <hello@iotopia-solutions.com>',
       to: req.body.email,
       subject: 'Thank you for your inquiry',
-      html: 'Dear ' + req.body.name + ',<br/><br/><p>Thank you for your inquiry to Iotopia Solutions Inc. We have receive the following message:</p><blockquote>' + req.body.description + '</blockquote><p>Someone will be in touch in with you shortly.</p> <p>Cheers, <br/><br/>Kianosh Pourian<br/>Principal Partner</p>' 
+      html: 'Dear ' + req.body.name + ',<br/><br/><p>Thank you for your inquiry to Iotopia Solutions Inc. We have receive the following message:</p><blockquote>' + req.body.description + '</blockquote><p>Someone will be in touch in with you shortly.</p> <p>Cheers, <br/><br/>Kianosh Pourian<br/>Principal Partner</p>'
     }, (err, info) => {
         console.log(info);
       if (err) {
@@ -60,7 +60,7 @@ router.post('/email', (req, res) => {
 
       res.send(returnObj);
     })
-  });  
+  });
 });
 
 module.exports = router;

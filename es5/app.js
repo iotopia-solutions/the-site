@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
@@ -28,6 +32,8 @@ var _fs = require('fs');
 
 var _fs2 = _interopRequireDefault(_fs);
 
+var _expressReactViews = require('express-react-views');
+
 var _index = require('./routes/index');
 
 var _index2 = _interopRequireDefault(_index);
@@ -38,7 +44,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var app = (0, _express2.default)();
 
 app.set('views', _path2.default.join(__dirname, '../views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'jsx');
+app.engine('jsx', (0, _expressReactViews.createEngine)());
 
 app.use((0, _morgan2.default)('dev'));
 app.use(_bodyParser2.default.json());
@@ -87,5 +94,5 @@ var server = app.listen(app.get('port'), app.get('host'), function () {
   return console.log('Express is listening on port ' + server.address().port);
 });
 
-module.exports = app;
+exports.default = app;
 //# sourceMappingURL=app.js.map
