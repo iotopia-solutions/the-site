@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { getPosts } from '../blog/wordpressApi';
 import { renderToStaticMarkup } from 'react-dom/server';
-import blogsSection from '../blog/blogsSection';
+import blogsSection from '../blog/excerptView';
 
 // TODO: read and process the template index file at load time.
 // TODO: Use a React Component to process last blog post and default text ("<p>no blogs</p>").
