@@ -14,10 +14,12 @@ var path = require('path');
 
 // ====== Variables =================
 var paths = {
-  es6: ['es6/**/*.js'],
-  es5: 'es5',
+  src: ['src/**/*.*'],
+  es6: ['src/**/*.js'],
+  html: ['src/**/*.html'],
+  build: 'build',
   // Must be absolute or relative to source map
-  sourceRoot: path.join(__dirname, 'es6'),
+  sourceRoot: path.join(__dirname, 'src'),
 };
 
 // ======== Tasks ====================
@@ -29,7 +31,7 @@ gulp.task('babel', function () {
     }))
     .pipe(sourcemaps.write('.', { sourceRoot: paths.sourceRoot }))
     .on('error', console.error.bind(console))
-    .pipe(gulp.dest(paths.es5));
+    .pipe(gulp.dest(paths.build));
 });
 
 gulp.task('csso', function () {
@@ -62,19 +64,19 @@ gulp.task('sass', function() {
 // });
 
 gulp.task('minifyhtml', function() {
-  return gulp.src('views/*.html.uncompressed.html')
-    .pipe(rename(function(path){
-      path.basename = path.basename.slice(0, -18);
-      return path.basename + '.html';
-    }))
+  return gulp.src(paths.html)
     .pipe(minifyHTML({collapseWhitespace: true}))
     .on('error', console.error.bind(console))
-    .pipe(gulp.dest('views'));
+    .pipe(gulp.dest(paths.build));
 });
 
 gulp.task('imagemin', function() {
-  return gulp.src(['assets/img/*', 'assets/img/projects/*',
-                   'assets/img/clients/*', 'assets/img/clients/*/*'])
+  return gulp.src([
+      'assets/img/*',
+      'assets/img/projects/*',
+      'assets/img/clients/*',
+      'assets/img/clients/*/*'
+    ])
     .pipe(imagemin({
       progressive: true,
       optimizationLevel: 5,
@@ -84,10 +86,10 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest('assets/img'));
 });
 
-gulp.task('serve', ['babel'], function() {
+gulp.task('serve', ['babel', 'minifyhtml'], function() {
   return nodemon({
-    script: 'es5/app.js',
-    ext: 'js jade',
+    script: path.join(paths.build, 'app.js'),
+    ext: 'js html',
     env: {'NODE_ENV': 'development'}
   })
 });
@@ -96,7 +98,7 @@ gulp.task('watch', function() {
   gulp.watch(paths.es6, ['babel']);
   gulp.watch('assets/scss/*.scss', ['sass']);
   gulp.watch('assets/css/*.css.uncompressed.css', ['csso']);
-  gulp.watch('views/*.html.uncompressed.html', ['minifyhtml']);
+  gulp.watch(paths.html, ['minifyhtml']);
 });
 
 gulp.task('default', ['serve', 'watch']);

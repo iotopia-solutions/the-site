@@ -1,23 +1,21 @@
 'use strict';
 
 import express from 'express';
-import { index } from './pages';
-// import portfolio  from './portfolio';
-// import blog       from './blog';
+import indexService from './index/service';
 import fs         from 'fs';
+import compile from './template/compile';
 import mailer     from 'nodemailer';
 import smtpTransport from 'nodemailer-smtp-transport';
-// import oauth  from 'xoauth2';
+import { join } from 'path';
 
-let router = express.Router();
+const router = express.Router();
 
-router.get('/', index);
-// router.get('/portfolio/:name', portfolio.index);
-// router.get('/portfolio/detail/:name', portfolio.detail);
-// router.get('/contact', pages.contact);
-// router.get('/blog', blog.index);
-// router.get('/blog/:id', blog.posts);
+// TODO: refactor app so this can be async.
+const indexHtml = fs.readFileSync(join(__dirname, 'index/index.html'), 'utf8');
 
+router.get('/', indexService(compile(indexHtml)));
+
+// TODO: move this code into its own component.
 router.post('/email', (req, res) => {
   let returnObj = {
       result: 'sent'
@@ -63,4 +61,4 @@ router.post('/email', (req, res) => {
   });
 });
 
-module.exports = router;
+export default router;

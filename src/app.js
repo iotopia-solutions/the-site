@@ -7,11 +7,9 @@ import cookieParser     from 'cookie-parser';
 import bodyParser       from 'body-parser';
 import fs               from 'fs';
 import { createEngine } from 'express-react-views';
-import routes           from './routes/index';
+import router           from './router';
 
-//using let
-let app = express();
-
+const app = express();
 
 app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'jsx');
@@ -23,11 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../assets')));
 
-app.use('/', routes);
-// app.use('/portfolio/:name', routes);
-// app.use('/email', routes);
-// app.use('/blog', routes);
-// app.use('/blog/:id', routes);
+app.use('/', router);
 
 // using arrow syntax
 app.use((req, res, next) => {
@@ -39,19 +33,13 @@ app.use((req, res, next) => {
 if (app.get('env') === 'development') {
   app.use((err, req, res, next) => {
     res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
+    res.send(err.message + '\n' + JSON.stringify(err.stack));
   });
 }
 
 app.use((err, req, res, next) => {
   res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
+  res.send(err.message);
 });
 
 const server_port = process.env.PORT || 5001;
