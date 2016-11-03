@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-// A React element that displays a single blog post.
+// A React element that displays a single blog post excerpt.
 export default (blogInfo) =>
     <div className={"blog-col" + (blogInfo.isLast ? ' last' : '')}>
       <div className="entry-img">
@@ -23,7 +23,7 @@ export default (blogInfo) =>
           <a href="blog-single.html" className="read-more">Read More</a>
         </div>
       </div>
-    </div>;
+    </div>
 
 // ------------------------------------------------------------
 
@@ -31,4 +31,4 @@ const toDate
   = string => new Date(string)
 
 const formatDate
-  = date => date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+  = date => date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
