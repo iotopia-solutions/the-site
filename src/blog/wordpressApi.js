@@ -1,23 +1,31 @@
 import { resolve, parse, format } from 'url'
 import request from 'request'
 
-// Fetches blog posts from wordpress api.
+// Fetches latest blog posts from the wordpress api.
 export const getPosts
   = () =>
-    promiseForRequest(
-      createConfig(config, blogPostsUrl, 'GET')
-    )
+    promiseForRequest(createConfig(config, blogPostsUrl, 'GET'))
+
+// Fetches a single blog post from the wordpress api.
+export const getPost
+  = id =>
+    promiseForRequest(createConfig(config, blogPostUrl(id), 'GET'))
 
 // ------------------------------------------------------------
 
 // Urls.  We might consider moving these to a config file.
 const rootUrl = 'https://public-api.wordpress.com/rest/v1.1/sites/innovatorylife.com/'
-const postsUrl = resolve(rootUrl, 'posts')
+const postsUrl = resolve(rootUrl, 'posts/')
 const filterQueries = { category: 'company', number: 5 }
 const blogPostsUrl
   = format(Object.assign(parse(postsUrl), { query: filterQueries }))
 
-// Request config. These should be injected into `promiseForRequest` from a config file.
+// Returns the endpoint url for a blog post, given its id.
+const blogPostUrl
+  = id => resolve(postsUrl, String(id))
+
+// Request config.
+// TODO: These should be injected into `promiseForRequest` from a config file.
 const timeout = 5000 // msecs
 const config = { timeout }
 

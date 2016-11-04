@@ -1,19 +1,16 @@
 'use strict';
 
-import express from 'express';
+import { Router } from 'express';
 import indexService from './index/service';
-import fs         from 'fs';
-import compile from './template/compile';
-import mailer     from 'nodemailer';
+import blogService from './blog/service';
+import mailer from 'nodemailer';
 import smtpTransport from 'nodemailer-smtp-transport';
-import { join } from 'path';
 
-const router = express.Router();
+const router = Router();
 
-// TODO: refactor app so this can be async.
-const indexHtml = fs.readFileSync(join(__dirname, 'index/index.html'), 'utf8');
-
-router.get('/', indexService(compile(indexHtml)));
+// TODO: inject config
+router.get('/', indexService({}));
+router.get('/blog/:id', blogService({}));
 
 // TODO: move this code into its own component.
 router.post('/email', (req, res) => {
