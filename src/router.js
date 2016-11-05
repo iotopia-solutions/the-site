@@ -1,23 +1,18 @@
 'use strict';
 
-import express from 'express';
-import { index } from './pages';
-// import portfolio  from './portfolio';
-// import blog       from './blog';
-import fs         from 'fs';
-import mailer     from 'nodemailer';
+import { Router } from 'express';
+import indexService from './index/service';
+import blogService from './blog/service';
+import mailer from 'nodemailer';
 import smtpTransport from 'nodemailer-smtp-transport';
-// import oauth  from 'xoauth2';
 
-let router = express.Router();
+const router = Router();
 
-router.get('/', index);
-// router.get('/portfolio/:name', portfolio.index);
-// router.get('/portfolio/detail/:name', portfolio.detail);
-// router.get('/contact', pages.contact);
-// router.get('/blog', blog.index);
-// router.get('/blog/:id', blog.posts);
+// TODO: inject config
+router.get('/', indexService({}));
+router.get('/blog/:id', blogService({}));
 
+// TODO: move this code into its own component.
 router.post('/email', (req, res) => {
   let returnObj = {
       result: 'sent'
@@ -63,4 +58,4 @@ router.post('/email', (req, res) => {
   });
 });
 
-module.exports = router;
+export default router;
