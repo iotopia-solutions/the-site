@@ -2,7 +2,7 @@
 
 import { Router } from 'express';
 import indexService from './index/service';
-import blogService from './blog/service';
+import { single as singleBlog, multi as multiBlog } from './blog/service';
 import mailer from 'nodemailer';
 import smtpTransport from 'nodemailer-smtp-transport';
 
@@ -10,7 +10,8 @@ const router = Router();
 
 // TODO: inject config
 router.get('/', indexService({}));
-router.get('/blog/:id', blogService({}));
+router.get('/blog', multiBlog({}));
+router.get('/blog/:id', singleBlog({}));
 
 // TODO: move this code into its own component.
 router.post('/email', (req, res) => {
