@@ -1,3 +1,4 @@
+// This is a composition plan for the service that handles the email endpoint.
 import { createTransport } from 'nodemailer'
 import smtpTransport from 'nodemailer-smtp-transport'
 import compile from '../template/compile'
@@ -8,7 +9,7 @@ const requireTemplate = requireText(__dirname)
 const inquiryHtml = requireTemplate('./inquiryMessage.html')
 const thankyouHtml = requireTemplate('./thankyouMessage.html')
 
-// This is a composition plan for the service that handles the email endpoint.
+// Handles a POST request to the /email endpoint.
 export default
   ({ email }) => {
 
