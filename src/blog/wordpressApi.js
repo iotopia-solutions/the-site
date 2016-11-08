@@ -6,14 +6,14 @@ const requestP = nodeToPromise(request)
 
 // Fetches latest blog posts from the wordpress api.
 export const getPosts
-  = (count=20) =>
+  = config => (count=20) =>
     requestP(createConfig(config, blogPostsUrl(count), 'GET'))
       .then(parseResponse)
       // .then(x => (console.log(x[0].body), x))
 
 // Fetches a single blog post from the wordpress api.
 export const getPost
-  = id =>
+  = config => id =>
     requestP(createConfig(config, blogPostUrl(id), 'GET'))
       .then(parseResponse)
 
@@ -31,11 +31,6 @@ const blogPostsUrl
 // Returns the endpoint url for a blog post, given its id.
 const blogPostUrl
   = id => resolve(postsUrl, String(id))
-
-// Request config.
-// TODO: These should be injected into exported functions from a config file.
-const timeout = 5000 // msecs
-const config = { timeout }
 
 // ------------------------------------------------------------
 

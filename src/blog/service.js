@@ -14,11 +14,12 @@ const multiPostHtml = requireTemplate('./multiPost.html')
 // Handles a GET request to single blog post endpoint.
 // TODO: containing page needs to be handled separately from blog post since it has different error handling
 export const single
-  = config => {
+  = ({ wordpress }) => {
+    const get = getPost(wordpress)
     const renderPage = compile(singlePageHtml)
     const renderPost = compile(singlePostHtml)
     return (req, res) =>
-      getPost(extractId(req))
+      get(extractId(req))
         .then(extractPost)
         .then(transformToViewData)
         .then(transformToPageData(renderPost))
@@ -28,11 +29,12 @@ export const single
   }
 
 export const multi
-  = config => {
+  = ({ wordpress }) => {
+    const get = getPosts(wordpress)
     const renderPage = compile(multiPageHtml)
     const renderPost = compile(multiPostHtml)
     return (req, res) =>
-      getPosts()
+      get()
         .then(extractPosts)
         .then(map(transformToViewData))
         .then(map(transformToPageData(renderPost)))

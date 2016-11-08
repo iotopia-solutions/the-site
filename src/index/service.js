@@ -14,11 +14,11 @@ const indexViewHtml = requireTemplate('./index.html')
 
 // Handles a GET request to the index endpoint.
 export default
-  config => {
+  ({ wordpress }) => {
+    const get = getPosts(wordpress)
     const renderPage = compile(indexViewHtml)
-    return (req, res) => {
-      // render blog posts from WP data
-      const postsP = getPosts(5)
+    return (req, res) =>
+      get(5)
         .then(extractPosts)
         // .then(x => (console.log(x), x))
         .then(transformToViewData)
@@ -27,7 +27,6 @@ export default
         .then(renderPage)
         .catch(formatError)
         .then(pageHtml => res.send(pageHtml))
-    }
   }
 
 // ------------------------------------------------------------
