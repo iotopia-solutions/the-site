@@ -30,7 +30,7 @@ export default
       // TODO: sanitize form input (description, subject)
       const msgToUs
         = {
-          to: 'john.hann@iotopia-solutions.com', //'Iotopia Solutions Inc <hello@iotopia-solutions.com>',
+          to: 'Iotopia Solutions Inc <hello@iotopia-solutions.com>',
           from: 'Iotopia Web Inquiry <hello@iotopia-solutions.com>',
           subject: renderInquirySubject(data),
           html: renderInquiry(data)
