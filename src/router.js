@@ -3,7 +3,7 @@
 import { Router } from 'express';
 import indexService from './index/service';
 import { single as singleBlog, multi as multiBlog } from './blog/service'
-import email from './email/service'
+import emailService from './email/service'
 
 export default
   config => {
@@ -12,7 +12,7 @@ export default
     router.get('/', indexService(config))
     router.get('/blog', multiBlog(config))
     router.get('/blog/:id', singleBlog(config))
-    router.post('/email', email(config))
+    router.post('/email', emailService(config))
 
     return router
   }

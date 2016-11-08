@@ -4,6 +4,7 @@ import smtpTransport from 'nodemailer-smtp-transport'
 import compile from '../template/compile'
 import requireText from '../requireText'
 import nodeToPromise from '../nodeToPromise'
+import { fromString as toText } from 'html-to-text'
 
 const requireTemplate = requireText(__dirname)
 const inquiryHtml = requireTemplate('./inquiryMessage.html')
@@ -14,41 +15,47 @@ export default
   ({ email }) => {
 
     const { service, user, pass } = email
+
     const gmailTransport
       = createTransport(smtpTransport({ service, auth: { user, pass } }))
+    // TODO: According to the nodemailer 2.x docs, sendMail will return a promise if the callback is omitted
     const sendMailP = nodeToPromise(msg => gmailTransport.sendMail(msg))
-    const renderInquiry = compile(inquiryHtml)
-    const renderConfirm = compile(thankyouHtml)
+    const emailData = formToEmailData(toText)
+    
+    const renderInquiryHtml = compile(inquiryHtml)
+    const renderConfirmHtml = compile(thankyouHtml)
+    const renderInquiryText = compile(toText(inquiryHtml))
+    const renderConfirmText = compile(toText(thankyouHtml))
     const renderInquirySubject = compile('Inquiry from ${name}')
     const renderConfirmSubject = compile('Thank you for your inquiry')
 
     return (req, res) => {
-      const { service, user, pass } = email
 
-      const data = formData(req.body)
+      // Prepare and sanitize data
+      const data = emailData(req.body)
 
       // TODO: put more of these values into config
-      // TODO: sanitize form input (description, subject)
-      const msgToUs
+      const msgToIotopia
         = {
           to: 'Iotopia Solutions Inc <hello@iotopia-solutions.com>',
           from: 'Iotopia Web Inquiry <hello@iotopia-solutions.com>',
           subject: renderInquirySubject(data),
-          html: renderInquiry(data)
+          html: renderInquiryHtml(data),
+          text: renderInquiryText(data)
         }
 
-      const msgToThem
+      const msgToUser
         = {
-          from: 'Iotopia Solutions Inc <hello@iotopia-solutions.com>',
           to: data.email,
+          from: 'Iotopia Solutions Inc <hello@iotopia-solutions.com>',
           subject: renderConfirmSubject(data),
-          html: renderConfirm(data)
+          html: renderConfirmHtml(data),
+          text: renderConfirmText(data)
         }
 
-      const inquiryP = sendMailP(msgToUs)
-      const confirmP = sendMailP(msgToThem)
+      const inquiryP = sendMailP(msgToIotopia)
+      const confirmP = sendMailP(msgToUser)
 
-      // TODO: log errors
       return Promise.all([ inquiryP, confirmP ])
         .then(results => {
           console.log('emails sent')
@@ -61,11 +68,11 @@ export default
     }
   }
 
-const formData
-  = ({ subject, description, email, name }) =>
+const formToEmailData
+  = sanitize => ({ subject, description, email, name }) =>
     ({
-      name,
-      subject: subject || 'N/A',
-      description,
-      email
+      name: sanitize(name),
+      subject: subject ? sanitize(subject) : 'N/A',
+      description: sanitize(description),
+      email: sanitize(email)
     })

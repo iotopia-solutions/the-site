@@ -1,17 +1,18 @@
 "use strict"
 import express          from 'express'
 import path             from 'path'
-import favicon          from 'serve-favicon'
+import favicon          from 'serve-favicon' // TODO: are we using this?
 import logger           from 'morgan'
 import cookieParser     from 'cookie-parser'
 import bodyParser       from 'body-parser'
-import fs               from 'fs'
-import { createEngine } from 'express-react-views'
 import router           from './router'
 
 // TODO: get config from a file, password from env var.
 
+const server_port = process.env.PORT || 5001
+const server_host = '0.0.0.0'
 const wordpressTimeout = 5000 // msecs
+
 const wordpressConfig = { timeout: wordpressTimeout }
 const emailConfig
   = {
@@ -27,10 +28,6 @@ const config
 
 const app = express()
 
-app.set('views', path.join(__dirname, '../views'))
-app.set('view engine', 'jsx')
-app.engine('jsx', createEngine())
-
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -39,7 +36,6 @@ app.use(express.static(path.join(__dirname, '../assets')))
 
 app.use('/', router(config))
 
-// using arrow syntax
 app.use((req, res, next) => {
   let err = new Error('Not Found: ' + req.url)
   err.status = 404
@@ -60,15 +56,9 @@ app.use((err, req, res, next) => {
   res.send(err.message)
 })
 
-const server_port = process.env.PORT || 5001
-const server_host = '0.0.0.0'
-
-app.set('port', server_port)
-app.set('host', server_host)
-
-const server = app.listen(
-  app.get('port'),
-  app.get('host'),
+const server = app.listen(server_port, server_host)
+server.on(
+  'listening',
   () => console.log('Express is listening on port ' + server.address().port)
 )
 
