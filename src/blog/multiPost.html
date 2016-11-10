@@ -1,0 +1,39 @@
+<div class="entry-item">
+  <div class="entry-img">
+    <a href="blog-single.html">
+      <img src="${featuredImage}" alt="">
+    </a>
+  </div>
+
+  <div class="entry-date hidden-sm hidden-xs">
+    <span>${date}</span>
+  </div>
+
+  <div class="entry-title">
+    <h2>
+      <a href="blog/${id}">${title}</a>
+    </h2>
+  </div>
+  <ul class="entry-meta">
+    <li class="entry-date">
+      <a>${date}</a>
+    </li>
+    <li class="entry-author">
+      by <a>${author}</a>
+    </li>
+    <!-- <li class="entry-category">
+      in <a href="#">Photography</a>
+    </li> -->
+    <!-- <li>
+      <a href="blog-single.html" class="entry-comments">10 Comments</a>
+    </li> -->
+  </ul>
+
+  <div class="entry">
+    <div class="entry-content">
+      ${excerpt}
+      <a href="blog/${id}" class="read-more">Read More</a>
+      <i class="icon arrow_right"></i>
+    </div>
+  </div>
+</div> <!-- end entry item -->

@@ -3,39 +3,36 @@
 import { getPosts } from '../blog/wordpressApi'
 import { renderToStaticMarkup } from 'react-dom/server'
 import excerptView from '../blog/excerptView'
-import compile from '../template/compile';
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import compile from '../template/compile'
+import requireText from '../requireText'
+
+// Load this early and sync, just like module dependencies.
+const requireTemplate = requireText(__dirname)
+const indexViewHtml = requireTemplate('./index.html')
 
 // TODO: Use a React Component to process last blog post and default text ("<p>no blogs</p>").
 
 // Handles a GET request to the index endpoint.
 export default
-  config => {
-    const render = renderPage(config)
+  ({ wordpress }) => {
+    const get = getPosts(wordpress)
+    const renderPage = compile(indexViewHtml)
     return (req, res) =>
-      // render blog posts from WP data
-      getPosts()
-        .then(extractExcerpts)
+      get(5)
+        .then(extractPosts)
+        // .then(x => (console.log(x), x))
         .then(transformToViewData)
         .then(renderViewData)
         .then(text => ({ blogPostExcerpts: text }))
-        .then(render)
+        .then(renderPage)
         .catch(formatError)
         .then(pageHtml => res.send(pageHtml))
   }
 
 // ------------------------------------------------------------
 
-const renderPage
-  = config => {
-    // TODO: refactor app so this can be async.
-    const pageHtml = readFileSync(join(__dirname, 'index.html'), 'utf8')
-    return compile(pageHtml)
-  }
-
 // Extract the blog posts json data from the wordpress api response.
-const extractExcerpts
+const extractPosts
   = ([ resp, body ]) => body.posts
 
 // Convert the blog excerpts to data that the view expects.

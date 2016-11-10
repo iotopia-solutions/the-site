@@ -1,41 +1,50 @@
 // This is a composition plan for the service that handles requests to the
 // site's blog posts.
-import { getPost } from '../blog/wordpressApi'
-import compile from '../template/compile';
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { getPost, getPosts } from '../blog/wordpressApi'
+import compile from '../template/compile'
+import requireText from '../requireText'
+
+// Load these early and sync, just like module dependencies.
+const requireTemplate = requireText(__dirname)
+const singlePageHtml = requireTemplate('./singlePage.html')
+const singlePostHtml = requireTemplate('./singlePost.html')
+const multiPageHtml = requireTemplate('./multiPage.html')
+const multiPostHtml = requireTemplate('./multiPost.html')
 
 // Handles a GET request to single blog post endpoint.
 // TODO: containing page needs to be handled separately from blog post since it has different error handling
-export default
-  config => {
-    const renderPage = compilePage(config)
-    const renderPost = compilePost(config)
+export const single
+  = ({ wordpress }) => {
+    const get = getPost(wordpress)
+    const renderPage = compile(singlePageHtml)
+    const renderPost = compile(singlePostHtml)
     return (req, res) =>
-    getPost(extractId(req))
-      .then(extractPost)
-      .then(transformToViewData)
-      .then(transformToPageData(renderPost))
-      .catch(formatError)
-      .then(renderPage)
-      .then(pageHtml => res.send(pageHtml))
+      get(extractId(req))
+        .then(extractPost)
+        .then(transformToViewData)
+        .then(transformToPageData(renderPost))
+        .catch(handleError)
+        .then(renderPage)
+        .then(pageHtml => res.send(pageHtml))
+  }
+
+export const multi
+  = ({ wordpress }) => {
+    const get = getPosts(wordpress)
+    const renderPage = compile(multiPageHtml)
+    const renderPost = compile(multiPostHtml)
+    return (req, res) =>
+      get()
+        .then(extractPosts)
+        .then(map(transformToViewData))
+        .then(map(transformToPageData(renderPost)))
+        .then(joinBlogs)
+        .catch(handleError)
+        .then(renderPage)
+        .then(pageHtml => res.send(pageHtml))
   }
 
 // ------------------------------------------------------------
-
-const compilePage
-  = config => {
-    // TODO: refactor app so this can be async.
-    const pageHtml = readFileSync(join(__dirname, 'singlePage.html'), 'utf8')
-    return compile(pageHtml)
-  }
-
-const compilePost
-  = config => {
-    // TODO: refactor app so this can be async.
-    const viewHtml = readFileSync(join(__dirname, 'singlePost.html'), 'utf8')
-    return compile(viewHtml)
-  }
 
 // Extract the id from the request.
 const extractId
@@ -46,26 +55,38 @@ const extractId
 const extractPost
   = ([ resp, body ]) => body
 
+// Extract the blog posts json data from the wordpress api response.
+const extractPosts
+  = ([ resp, body ]) => body.posts
+
 const transformToViewData
-  = ({ ID, title, author, date, content }) =>
+  = ({ ID, title, author, date, content, excerpt, featured_image }) =>
     ({
       id: ID,
       title,
       author: author.name,
       date: formatDate(toDate(date)),
-      content
+      content,
+      excerpt,
+      featuredImage: featured_image
     })
 
 const transformToPageData
   = renderPost => data =>
-  ({
-    title: data.title,
-    blogPost: renderPost(data)
-  })
+    ({
+      title: data.title,
+      blogPost: renderPost(data)
+    })
 
-// Output error into page with details hidden in a comment.
-// TODO: reuse this?
-const formatError
+const joinBlogs
+  = data =>
+    ({
+      blogPosts: data && data.length > 0
+        ? data.reduce((html, single) => html + single.blogPost, '')
+        : '<p>No blog posts found.</p>'
+    })
+
+const handleError
   = err =>
     ({
       title: 'A problem occurred.',
@@ -78,3 +99,6 @@ const toDate
 
 const formatDate
   = date => date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
+
+const map
+  = func => array => array.map(func)
