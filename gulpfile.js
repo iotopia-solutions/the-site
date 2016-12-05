@@ -46,7 +46,7 @@ gulp.task('csso', function () {
 });
 
 gulp.task('sass', function() {
-  return gulp.src('assets/css/sass/style.scss')
+  return gulp.src('assets/css/sass/[^_]*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('assets/css'));
 });
