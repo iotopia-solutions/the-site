@@ -116,7 +116,6 @@
   & img {
     @include transition ($all);
     height: 66px;
-    border: 1px solid #111;
   }
 
   &.shrink img {
@@ -193,7 +192,11 @@
     padding: 10px 0;
     line-height: 30px;
   }
+}
 
+.logo-block {
+  border: 1px solid #111;
+  padding: 4px;
 }
 
 
