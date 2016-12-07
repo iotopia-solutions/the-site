@@ -29,7 +29,7 @@
     text-transform: uppercase;
     padding: 0 20px;
     line-height: 90px;
-    color: #fff;
+    color: #111;
     font-size: 13px;
     letter-spacing: 0.02em;
     font-weight: bold;
@@ -38,13 +38,14 @@
 }
 
 .navigation-overlay {
-  background-color: rgba(17,17,17,.5);
+  background-color: #fff;
   width: 100%;
   line-height: 0;
+  box-shadow: 0 2px 2px -3px #111;
   @include transition ($all);
 
   &.sticky {
-    background-color: rgba(17,17,17,1);
+    background-color: #fff;
     visibility: visible;
     opacity: 1;
   }
@@ -115,6 +116,7 @@
   & img {
     @include transition ($all);
     height: 66px;
+    border: 1px solid #111;
   }
 
   &.shrink img {
@@ -155,7 +157,7 @@
 
   .navigation-overlay,
   .navigation-overlay.sticky {
-    background-color: rgba(17,17,17,.9);
+    background-color: #fff;
   }
 
   .nav-wrap {
