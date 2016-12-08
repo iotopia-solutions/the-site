@@ -393,6 +393,15 @@
     width: 100%;
   }
 
+  .subheading_text {
+    font-size: 12px !important;
+  }
+  
+  .tp-caption.hero-text {
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
+  }
+
 }
 
 
@@ -446,7 +455,6 @@
   }
 
 }
-
 
 @media (max-width: 380px) {
 
