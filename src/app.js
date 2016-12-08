@@ -6,25 +6,13 @@ import logger           from 'morgan'
 import cookieParser     from 'cookie-parser'
 import bodyParser       from 'body-parser'
 import router           from './router'
+import
+  configure, { show as showConfig }
+  from './app/configure'
 
-// TODO: get config from a file, password from env var.
+const config = configure(process.env)
 
-const server_port = process.env.PORT || 5001
-const server_host = '0.0.0.0'
-const wordpressTimeout = 5000 // msecs
-
-const wordpressConfig = { timeout: wordpressTimeout }
-const emailConfig
-  = {
-    service: 'gmail',
-    user: 'hello@iotopia-solutions.com',
-    pass: 'uSyiKT;d49=:rXb.'
-  }
-const config
-  = {
-    wordpress: wordpressConfig,
-    email: emailConfig
-  }
+console.log(`App started with configuration: ${showConfig(config)}`)
 
 const app = express()
 
@@ -56,10 +44,12 @@ app.use((err, req, res, next) => {
   res.send(err.message)
 })
 
-const server = app.listen(server_port, server_host)
+const server = app.listen(config.webserver.port, config.webserver.host)
 server.on(
   'listening',
-  () => console.log('Express is listening on port ' + server.address().port)
+  () => {
+    console.log(`Express started ${JSON.stringify(server.address())}`)
+  }
 )
 
 export default app
