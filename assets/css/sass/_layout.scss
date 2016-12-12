@@ -462,23 +462,23 @@
 
 
 .socials {
-
+  font-size: 14px;
+  font-family: $heading-font;
   & a {
-    display: inline-block;
-    width: 37px;
-    height: 37px;
+    margin-left: 2px;
+    margin-right: 15px;
     background-color: transparent;
 
     &:hover i {
       color: #fff;
       background-color: $main-color;
+      cursor: pointer;
     }
   }
 
   & i {
     line-height: 37px;
     color: #616161;
-    font-size: 14px;
     width: 37px;
     height: 37px;
     border-radius: 50%;
@@ -1044,6 +1044,9 @@
   margin-bottom: 60px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  padding: 12px;
 }
 
 .blog-standard {
@@ -1066,7 +1069,6 @@
     font-family: $heading-font;
     color: #3b3b3b;
     font-weight: bold;
-    text-align: center;
   }
 
   & .blog-content .entry-date span {
