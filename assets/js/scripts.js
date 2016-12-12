@@ -402,6 +402,16 @@
             
             });
 
+            // Team Carousel
+            var owlTeam = $("#owl-team");
+            owlTeam.owlCarousel({
+            
+                slideSpeed: 300,
+                pagination: false,
+                paginationSpeed: 400,
+                items: 3,
+            
+            });
 
             var owlRelated = $("#owl-related-works"); 
             owlRelated.owlCarousel({
@@ -420,11 +430,13 @@
                 owlPromo.trigger('owl.next');
                 owlBlog.trigger('owl.next');
                 owlRelated.trigger('owl.next');
+                owlTeam.trigger('owl.next');
             })
             $(".prev").on('click',function(){
                 owlPromo.trigger('owl.prev');
                 owlBlog.trigger('owl.prev');
                 owlRelated.trigger('owl.prev');
+                owlTeam.trigger('owl.prev');
             });
             
 
