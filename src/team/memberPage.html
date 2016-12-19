@@ -42,50 +42,83 @@
   </div>
 
   <!-- Navigation -->
-  <header class="nav-type-3">
+<header class="nav-type-1" id="home">
 
-    <div class="fs-menu" id="overlay">
-      <nav class="overlay-menu">
-        <ul>
-          <li><a href="index-portfolio.html">Works</a></li>
-          <li class="active"><a href="portfolio-about-me.html">About Me</a></li>
-          <li><a href="portfolio-contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>    
+    <nav class="navbar navbar-fixed-top">
+      <div class="navigation-overlay">
+        <div class="container-fluid relative">
+          <div class="row">
 
-    <div class="container-fluid nav-wrap clearfix">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
 
-      <div class="logo-container">
-        <a href="index-portfolio.html" class="logo">
-          <img src="img/logo_dark.png" alt="logo">
-        </a>
-      </div>
-
-      <div id="nav-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-    </div> <!-- end container -->
-
-  </header>
+              <!-- Logo -->
+              <div class="logo-container">
+                <div class="logo-wrap local-scroll">
+                  <a href="/">
+                    <img class="logo logo-block" src="img/logo-block.png" alt="logo">
+                  </a>
+                </div>
+              </div>
+            </div> <!-- end navbar-header -->
 
 
-  <div class="main-wrapper pt-100 oh">
+            <div class="col-md-8 col-xs-12 nav-wrap">
+              <div class="collapse navbar-collapse text-center" id="navbar-collapse">
 
-    <!-- Page Title -->
-    <section class="page-title style-2">
-      <div class="container relative clearfix">
-        <div class="title-holder">
-          <div class="title-text text-center">
-            <h1>About Me</h1>
-          </div>
-        </div>
-      </div>
-    </section> <!-- end page title -->
+                <ul class="nav navbar-nav local-scroll text-center">
+
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li>
+                    <a href="index.html#services">Services</a>
+                  </li>
+                  <li>
+                    <a href="index.html#portfolio">Works</a>
+                  </li>
+                  <li>
+                    <a href="index.html#about-us">About</a>
+                  </li>
+                  <li class="active">
+                    <a href="/blog">Blog</a>
+                  </li>
+                  <li>
+                    <a href="index.html#contact">Contact</a>
+                  </li>
+
+                </ul>
+              </div>
+            </div> <!-- end col -->
+
+            <div class="menu-socials hidden-sm hidden-xs">
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-behance"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+
+          </div> <!-- end row -->
+        </div> <!-- end container -->
+      </div> <!-- end navigation -->
+    </nav> <!-- end navbar -->
+
+  </header> 
+
+
+  <div class="main-wrapper pt-50 oh">
   
     <!-- About Me -->
     <section class="section-wrap about-me">
@@ -299,30 +332,28 @@
 
 
     <!-- Footer -->
-    <footer class="footer footer-type-3">
+    <footer class="footer minimal bg-dark">
       <div class="container">
         <div class="row">
+          <div class="col-md-12">
+            <div class="footer-logo local-scroll mb-30 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s">
+              <h2>
+                <a href="#home" class="color-white">Iotopia Solutions</a>
+              </h2>
+            </div>
 
-          <div class="col-sm-4 col-xs-12">
-            <span class="copyright">
-              ©2015 Enigma  |  Made by <a href="http://deothemes.com/">DeoThemes</a>
+            <span class="text-center color-white socials">
+              <i class="fa fa-phone"></i>Phone: <a href="tel:617-870-4574">617-870-4574</a>
+                  |  
+              <i class="fa fa-map-marker"></i>Location: <a href="https://www.google.com/maps/place/711+Atlantic+Ave,+Boston,+MA+02111/@42.3510407,-71.0587627,17z/data=!3m1!4b1!4m2!3m1!1s0x89e37a78b9d73a09:0x9179a991e5b4132b" target="_blank">711 Atlantic Avenue Boston, MA 02111</a>
+                  |  
+              <i class="fa fa-envelope"></i>Email: <a href="mailto: hello@iotopia-solutions.com">hello@iotopia-solutions.com</a>
+            </span>
+
+            <span class="copyright text-center">
+              © Full Rights Reserved. Created with DeoThemes by Iotopia Solutions Inc
             </span>
           </div>
-
-          <div class="col-sm-3 col-xs-12">
-            <a href="mailto:enigma@smap.com">enigma@gmail.com</a>
-          </div>
-
-          <div class="col-sm-5 col-xs-12">
-            <div class="socials footer-socials">
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-google-plus"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-behance"></i></a>
-            </div>
-          </div>
-
         </div>
       </div>
     </footer> <!-- end footer -->
