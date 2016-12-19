@@ -4,7 +4,7 @@ import { Router } from 'express';
 import indexService from './index/service';
 import { single as singleBlog, multi as multiBlog } from './blog/service'
 import emailService from './email/service'
-import {team as team, member as teamMember} from './team/service'
+import {team, member as teamMember} from './team/service'
 
 
 
