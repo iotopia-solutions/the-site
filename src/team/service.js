@@ -1,6 +1,8 @@
 // This is a composition plan for the service that handles requests to the
 // site's team
 import requireText from '../requireText'
+import compile from '../template/compile'
+import TeamMembersObj from './teamMembers.js'
 
 // Load these early and sync, just like module dependencies.
 const requireTemplate = requireText(__dirname)
@@ -16,6 +18,15 @@ export const team
 
 export const member
   = () => {
-    return (req, res) =>
-      res.send(memberPageHtml)
+    const render = compile(memberPageHtml)
+    return (req, res) => {
+      res.send(render(transformToViewData(req.params.id)))
+    }
   }
+
+const transformToViewData
+  = (id) => ({
+    memberFullName: TeamMembersObj[id].memberFullName,
+    memberBio: TeamMembersObj[id].memberBio
+  })
+

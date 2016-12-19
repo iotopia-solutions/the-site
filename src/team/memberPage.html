@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Enigma | Portfolio About Me</title>
+  <base href="../">
+  <title>Iotopia Solutions Inc Blog &amp; News - ${title}</title>
 
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <meta name="description" content="">
+  <meta name="description" content="" />
 
   <!-- Google Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet'>
@@ -15,6 +16,8 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/magnific-popup.css" />
   <link rel="stylesheet" href="css/font-icons.css" />
+  <link rel="stylesheet" href="revolution/css/settings.css" />
+  <link rel="stylesheet" href="css/rev-slider.css" />
   <link rel="stylesheet" href="css/sliders.css">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
@@ -95,10 +98,10 @@
 
           <div class="col-lg-6 col-md-5">
             <div class="info mt-40">
-              <h2>Alex Murphy.</h2>
-              <p class="subheading mt-20">Hello, my name is Alex Murphy. I'm designer focused on identity. Based in Melbourne, Australia.</p>
+              <h2>${memberFullName}</h2>
+              <p class="subheading mt-20">Hello, my name is ${memberFullName}.</p>
 
-              <p class="mb-40 mt-20">For over a decade, we've helped businesses to craft honest, emotional experiences through strategy, brand development, graphic design, web design. Our team hand picked to provide the right balance of skills to work. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa  deserunt mollit anim id est laborum unde.</p>
+              <p class="mb-40 mt-20">Member Bio: ${memberBio}</p>
 
               <div class="skills-progress">
                 <h6>Design <span>85%</span></h6>
