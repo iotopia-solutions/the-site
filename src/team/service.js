@@ -2,7 +2,7 @@
 // site's team
 import requireText from '../requireText'
 import compile from '../template/compile'
-import TeamMembersObj from './teamMembers'
+import teamMembersObj from './teamMembers'
 import testFunction from './memberView'
 import { renderToStaticMarkup } from 'react-dom/server'
 
@@ -22,7 +22,7 @@ export const team
   = () => {
     const renderTeam = compile(teamPageHtml)
     return (req, res) =>
-      res.send(renderTeam(transformTeam(TeamMembersObj)))
+      res.send(renderTeam(transformTeam(teamMembersObj)))
   }
 
 export const member
@@ -35,11 +35,11 @@ export const member
 
 const transformToViewData
   = (id) => ({
-    memberFullName: TeamMembersObj[id].memberFullName,
-    memberBio: TeamMembersObj[id].memberBio
+    memberFullName: teamMembersObj[id].memberFullName,
+    memberBio: teamMembersObj[id].memberBio
   })
 
 const transformTeam 
-  = (TeamMembersObj) => ({
-    teamMembers: renderToStaticMarkup(testFunction(TeamMembersObj))
+  = (teamMembersObj) => ({
+    teamMembers: renderToStaticMarkup(testFunction(teamMembersObj))
     })
