@@ -8,7 +8,7 @@ export default (member)  =>
       <div className="work-container">
        <a href={"/team/" + member}>
         <div className="work-img">
-          <img src="img/project_1.jpg" alt=""/>
+          <img src={teamMembersObj[member].memberImg} alt=""/>
         </div>
         </a>
         <div className="work-description">

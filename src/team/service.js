@@ -36,7 +36,8 @@ export const member
 const transformToViewData
   = (id) => ({
     memberFullName: teamMembersObj[id].memberFullName,
-    memberBio: teamMembersObj[id].memberBio
+    memberBio: teamMembersObj[id].memberBio,
+    memberImg: teamMembersObj[id].memberImg
   })
 
 const transformTeam 
