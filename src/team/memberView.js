@@ -11,8 +11,8 @@ export default (teamMembersObj)  =>
         </div>
         </a>
         <div className="work-description">
-          <h3><a href="#">{teamMembersObj["john"].memberBio}</a></h3>
-          <span><a href="#">{teamMembersObj["john"].memberFullName}</a></span>
+          <h3><a href="/team/john">{teamMembersObj["john"].memberFullName}</a></h3>
+          <span><a href="/team/john">{teamMembersObj["john"].memberRole}</a></span>
         </div>
       </div>
     </div>
