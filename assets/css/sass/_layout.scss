@@ -228,7 +228,7 @@
 .work-img {
   position: relative;
   overflow: hidden;
-
+  max-height: 360px;
   & img {
     overflow: hidden;
     width: 100%;
