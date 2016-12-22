@@ -3,8 +3,8 @@
 import requireText from '../requireText'
 import compile from '../template/compile'
 import teamMembersObj from './teamMembers'
-import testFunction from './memberView'
-import { renderToStaticMarkup } from 'react-dom/server'
+import teamView from './teamView'
+import { renderToStaticMarkup} from 'react-dom/server'
 
 // Load these early and sync, just like module dependencies.
 const requireTemplate = requireText(__dirname)
@@ -41,5 +41,5 @@ const transformToViewData
 
 const transformTeam 
   = (teamMembersObj) => ({
-    teamMembers: renderToStaticMarkup(testFunction(teamMembersObj))
+    teamMembers: renderToStaticMarkup(teamView(teamMembersObj))
     })
