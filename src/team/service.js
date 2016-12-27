@@ -12,12 +12,6 @@ const teamPageHtml = requireTemplate('./teamPage.html')
 const memberPageHtml = requireTemplate('./memberPage.html')
 
 // Handles a GET request
-// export const team
-//   = () => {
-//     return (req, res) =>
-//       res.send(teamPageHtml)
-//   }
-
 export const team
   = () => {
     const renderTeam = compile(teamPageHtml)
