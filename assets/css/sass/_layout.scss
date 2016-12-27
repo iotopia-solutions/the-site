@@ -173,10 +173,11 @@
 }
 
 .promo-section .customNavigation > a,
-.from-blog .customNavigation > a {
+.from-blog .customNavigation > a, 
+.our-team .customNavigation > a {
   background-color: transparent;
   cursor: pointer;
-  color: #fff;
+  color: #111;
   font-size: 24px;
 
   &:first-child,
@@ -186,7 +187,7 @@
 
   &:hover,
   &:hover {
-    opacity: .8;
+    color: $main-color;
   }
 }
 
