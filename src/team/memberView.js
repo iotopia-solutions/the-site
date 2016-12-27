@@ -1,6 +1,7 @@
 import React from 'react'
 import teamMembersObj from './teamMembers'
-// A React element that displays all team members
+
+// A React element that displays a team member
 
 export default (member, styles)  => 
   (
