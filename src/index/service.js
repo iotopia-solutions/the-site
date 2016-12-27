@@ -6,7 +6,7 @@ import excerptView from '../blog/excerptView'
 import compile from '../template/compile'
 import requireText from '../requireText'
 import teamView from '../team/teamView'
-import teamMembersObj from '../team/teamMembers'
+import {teamMembersObj} from '../team/teamMembers'
 
 // Load this early and sync, just like module dependencies.
 const requireTemplate = requireText(__dirname)

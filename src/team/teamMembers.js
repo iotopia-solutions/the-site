@@ -1,4 +1,4 @@
-const TeamMembersObj = {
+export const teamMembersObj = {
   "eric":
   {
     memberFullName: "Eric Brown",
@@ -48,6 +48,4 @@ const TeamMembersObj = {
     memberBio: "Camilia is finishing her final semester at Northeastern University, where she majors in marketing and communications. She has co-oped in investment banking sales and at Puma. Her rich French, Brazilian, and American family background and well-traveled past helps her bring international expertise to the Iotopia team. When she's not out scouting for clients abroad, she can be found on the yoga mat or with her trusty pencil and paper in hand, drawing whatever she see around her. Camilia is a business development partner at Iotopia.",
     memberImg: "img/team/camilia.png"
   }
-};
-
-module.exports = TeamMembersObj
+}

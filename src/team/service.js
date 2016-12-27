@@ -2,7 +2,7 @@
 // site's team
 import requireText from '../requireText'
 import compile from '../template/compile'
-import teamMembersObj from './teamMembers'
+import {teamMembersObj} from './teamMembers'
 import teamView from './teamView'
 import { renderToStaticMarkup} from 'react-dom/server'
 

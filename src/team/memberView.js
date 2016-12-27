@@ -1,5 +1,5 @@
 import React from 'react'
-import teamMembersObj from './teamMembers'
+import {teamMembersObj} from './teamMembers'
 
 // A React element that displays a team member
 
