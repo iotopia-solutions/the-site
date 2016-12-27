@@ -265,35 +265,26 @@
 }
 
 .work-description {
-  position: absolute;
-  display: block;
-  left: 8%;
-  top: 8%;
-  width: 80%;
+  width: 100%;
+  text-align: center;
   @include transition (all .2s ease-in-out);
 
   & h3 {
     font-size: 16px;
     margin-bottom: 5px;
-    color: #fff;
+    margin-top: 15px;
+    color: #111;
   }
 
   & a {
-    color: #fff;
+    color: #111;
   }
 
   & span {
     font-size: 13px;
-    color: #fff;
+    color: #111;
     display: inline-block;
   }
-}
-
-
-.work-description h3,
-.work-description span {
-  @include transform (translateX(-360px));
-  @include transition (all .2s ease-in-out);
 }
 
 .work-item:hover img {
@@ -1763,14 +1754,14 @@ input.searchbox:focus {
   top: 50%;
 }
 
-.works-grid.titles .work-description h3,
-.works-grid.titles .work-description span,
+.work-description h3,
+.work-description span,
 #owl-related-works .work-description h3,
 #owl-related-works .work-description span {
   @include transform (none);
 }
 
-.works-grid.titles .work-description,
+.work-description,
 #owl-related-works .work-description {
   position: relative;
   top: 0;
@@ -1780,7 +1771,7 @@ input.searchbox:focus {
   text-align: center;
 }
 
-.works-grid.titles .work-description a,
+.work-description a,
 #owl-related-works .work-description a {
   color: $heading-color;
 
@@ -2293,4 +2284,16 @@ ol.numbers {
 
 .section-columns p {
   margin-bottom: 40px;
+}
+
+/* Team Info
+-------------------------------------------------------*/
+
+.member-description {
+  width: 100%;
+  text-align: center;
+  margin-top: -24px;
+  top: 50%;
+  left: 0;
+  padding: 0 15px;
 }
