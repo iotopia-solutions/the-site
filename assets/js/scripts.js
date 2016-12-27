@@ -428,16 +428,28 @@
             // Custom Navigation Events
             $(".next").on('click',function(){
                 owlPromo.trigger('owl.next');
-                owlBlog.trigger('owl.next');
                 owlRelated.trigger('owl.next');
-                owlTeam.trigger('owl.next');
             })
             $(".prev").on('click',function(){
                 owlPromo.trigger('owl.prev');
-                owlBlog.trigger('owl.prev');
                 owlRelated.trigger('owl.prev');
+            });
+
+            // Custom Navigation Events: Team carousel
+            $(".team-prev").on('click',function(){
                 owlTeam.trigger('owl.prev');
             });
+            $(".team-next").on('click',function(){
+                owlTeam.trigger('owl.next');
+            })
+
+            // Custom Navigation Events: Blog carousel
+            $(".blog-prev").on('click',function(){
+                owlBlog.trigger('owl.prev');
+            });
+            $(".blog-next").on('click',function(){
+                owlBlog.trigger('owl.next');
+            })
             
 
             // Testimonials
