@@ -22,7 +22,7 @@ export const team
   = () => {
     const renderTeam = compile(teamPageHtml)
     return (req, res) =>
-      res.send(renderTeam(transformTeam(teamMembersObj)))
+      res.send(renderTeam({teamMembers: transformTeam(teamMembersObj)}))
   }
 
 export const member
@@ -41,6 +41,8 @@ const transformToViewData
   })
 
 const transformTeam 
-  = (teamMembersObj) => ({
-    teamMembers: renderToStaticMarkup(teamView(teamMembersObj))
-    })
+  = (teamMembersObj) => {
+      const id = ""
+      const styles = "col-md-4 col-xs-6 work-item web-design mockups"
+      return renderToStaticMarkup(teamView(teamMembersObj, id, styles))
+    }

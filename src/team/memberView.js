@@ -2,9 +2,9 @@ import React from 'react'
 import teamMembersObj from './teamMembers'
 // A React element that displays all team members
 
-export default (member)  => 
+export default (member, styles)  => 
   (
-    <div className="col-md-4 col-xs-6 work-item web-design mockups">
+    <div className={styles}>
       <div className="work-container">
        <a href={"/team/" + member}>
         <div className="work-img">
