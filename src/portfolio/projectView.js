@@ -16,7 +16,7 @@ export default (project)  =>
         </div>
       </div>
       <div className="work-description">
-        <h3><a href={"/portfolio/" + project.toLowerCase().replace(/\s+/g, '')}>{project}</a></h3>
+        <h3><a href={"/portfolio/" + project}>{portfolioObj[project].clientName}</a></h3>
         <span><a href="#">{portfolioObj[project].category}</a></span>
       </div>
     </div> 
