@@ -3,8 +3,8 @@ export const portfolioObj = {
   {
     clientName: "Dog Watch",
     category: "category1",
-    projectTitle: "projectTitle",
-    technologies: "echnologies",
+    projectTitle: "Project Title",
+    technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
     {
@@ -18,8 +18,8 @@ export const portfolioObj = {
   {
     clientName: "Farmobile",
     category: "category2",
-    projectTitle: "projectTitle",
-    technologies: "echnologies",
+    projectTitle: "Project Title",
+    technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
     {
@@ -33,8 +33,8 @@ export const portfolioObj = {
   {
     clientName: "Perkin Elmer",
     category: "category3",
-    projectTitle: "projectTitle",
-    technologies: "echnologies",
+    projectTitle: "Project Title",
+    technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
     {
@@ -48,8 +48,8 @@ export const portfolioObj = {
   {
     clientName: "Humedica",
     category: "category4",
-    projectTitle: "projectTitle",
-    technologies: "echnologies",
+    projectTitle: "Project Title",
+    technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
     {
@@ -63,8 +63,8 @@ export const portfolioObj = {
   {
     clientName: "Harvard Business Review",
     category: "category1",
-    projectTitle: "projectTitle",
-    technologies: "echnologies",
+    projectTitle: "Project Title",
+    technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
     {
@@ -78,8 +78,8 @@ export const portfolioObj = {
   {
     clientName: "Bosch",
     category: "category2",
-    projectTitle: "projectTitle",
-    technologies: "echnologies",
+    projectTitle: "Project Title",
+    technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
     {
@@ -93,8 +93,8 @@ export const portfolioObj = {
   {
     clientName: "ZOLL",
     category: "category3",
-    projectTitle: "projectTitle",
-    technologies: "echnologies",
+    projectTitle: "Project Title",
+    technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
     {
@@ -108,8 +108,8 @@ export const portfolioObj = {
   {
     clientName: "Ayrshire Farms",
     category: "category4",
-    projectTitle: "projectTitle",
-    technologies: "echnologies",
+    projectTitle: "Project Title",
+    technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
     {
