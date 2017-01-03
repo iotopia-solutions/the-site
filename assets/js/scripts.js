@@ -388,8 +388,8 @@
             });
 
             // Blog Gallery Post
-            var owlBlog = $("#owl-blog");
-            owlBlog.owlCarousel({
+            var blogContainer = $("#blog-container");
+            blogContainer.owlCarousel({
             
                 slideSpeed: 300,
                 pagination: false,
@@ -402,6 +402,19 @@
             
             });
 
+            // Team Carousel
+            var teamContainer = $(".landing-page .team-container");
+            teamContainer.owlCarousel({
+            
+                slideSpeed: 300,
+                pagination: false,
+                paginationSpeed: 400,
+                itemsCustom: [
+                  [0, 2],      
+                  [700, 3]
+                ],
+            
+            });
 
             var owlRelated = $("#owl-related-works"); 
             owlRelated.owlCarousel({
@@ -418,14 +431,28 @@
             // Custom Navigation Events
             $(".next").on('click',function(){
                 owlPromo.trigger('owl.next');
-                owlBlog.trigger('owl.next');
                 owlRelated.trigger('owl.next');
             })
             $(".prev").on('click',function(){
                 owlPromo.trigger('owl.prev');
-                owlBlog.trigger('owl.prev');
                 owlRelated.trigger('owl.prev');
             });
+
+            // Custom Navigation Events: Team carousel
+            $(".team-prev").on('click',function(){
+                teamContainer.trigger('owl.prev');
+            });
+            $(".team-next").on('click',function(){
+                teamContainer.trigger('owl.next');
+            })
+
+            // Custom Navigation Events: Blog carousel
+            $(".blog-prev").on('click',function(){
+                blogContainer.trigger('owl.prev');
+            });
+            $(".blog-next").on('click',function(){
+                blogContainer.trigger('owl.next');
+            })
             
 
             // Testimonials

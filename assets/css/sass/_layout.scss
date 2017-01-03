@@ -173,10 +173,11 @@
 }
 
 .promo-section .customNavigation > a,
-.from-blog .customNavigation > a {
+.from-blog .customNavigation > a, 
+.our-team .customNavigation > a {
   background-color: transparent;
   cursor: pointer;
-  color: #fff;
+  color: #111;
   font-size: 24px;
 
   &:first-child,
@@ -186,7 +187,7 @@
 
   &:hover,
   &:hover {
-    opacity: .8;
+    color: $main-color;
   }
 }
 
@@ -228,7 +229,7 @@
 .work-img {
   position: relative;
   overflow: hidden;
-
+  max-height: 360px;
   & img {
     overflow: hidden;
     width: 100%;
@@ -265,35 +266,26 @@
 }
 
 .work-description {
-  position: absolute;
-  display: block;
-  left: 8%;
-  top: 8%;
-  width: 80%;
+  width: 100%;
+  text-align: center;
   @include transition (all .2s ease-in-out);
 
   & h3 {
     font-size: 16px;
     margin-bottom: 5px;
-    color: #fff;
+    margin-top: 15px;
+    color: #111;
   }
 
   & a {
-    color: #fff;
+    color: #111;
   }
 
   & span {
     font-size: 13px;
-    color: #fff;
+    color: #111;
     display: inline-block;
   }
-}
-
-
-.work-description h3,
-.work-description span {
-  @include transform (translateX(-360px));
-  @include transition (all .2s ease-in-out);
 }
 
 .work-item:hover img {
@@ -568,7 +560,7 @@
   }
 
   & .entry-img {
-    height: 150px;
+    height: 325px;
   }
 }
 
@@ -1763,14 +1755,14 @@ input.searchbox:focus {
   top: 50%;
 }
 
-.works-grid.titles .work-description h3,
-.works-grid.titles .work-description span,
+.work-description h3,
+.work-description span,
 #owl-related-works .work-description h3,
 #owl-related-works .work-description span {
   @include transform (none);
 }
 
-.works-grid.titles .work-description,
+.work-description,
 #owl-related-works .work-description {
   position: relative;
   top: 0;
@@ -1780,7 +1772,7 @@ input.searchbox:focus {
   text-align: center;
 }
 
-.works-grid.titles .work-description a,
+.work-description a,
 #owl-related-works .work-description a {
   color: $heading-color;
 
@@ -2293,4 +2285,35 @@ ol.numbers {
 
 .section-columns p {
   margin-bottom: 40px;
+}
+
+/* Team Info
+-------------------------------------------------------*/
+
+.member-container {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+}
+
+.landing-page {
+  .member-container {
+    @media (min-width: 992px) {
+      width: 100%;
+    } 
+  }
+}
+
+.team-page {
+  .member-container {
+    width: 50%;
+    .work-img {
+      height: 319px;
+    }
+    @media (min-width: 992px) {
+      width: 33.33333333%;
+    } 
+  }
 }
