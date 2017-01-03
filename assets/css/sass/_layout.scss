@@ -2289,8 +2289,31 @@ ol.numbers {
 
 /* Team Info
 -------------------------------------------------------*/
-#owl-team {
-  .work-img {
-    height: 319px;
+
+.member-container {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+}
+
+.landing-page {
+  .member-container {
+    @media (min-width: 992px) {
+      width: 100%;
+    } 
+  }
+}
+
+.team-page {
+  .member-container {
+    width: 50%;
+    .work-img {
+      height: 319px;
+    }
+    @media (min-width: 992px) {
+      width: 33.33333333%;
+    } 
   }
 }

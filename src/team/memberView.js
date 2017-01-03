@@ -3,8 +3,8 @@ import {teamMembersObj} from './teamMembers'
 
 // A React element that displays a team member
 
-export default (member, styles)  => 
-  <div className={styles}>
+export default (member)  => 
+  <div className="member-container">
     <div className="work-container">
      <a href={"/team/" + member}>
       <div className="work-img">

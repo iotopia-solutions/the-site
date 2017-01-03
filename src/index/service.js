@@ -66,6 +66,5 @@ const formatError
 
 const transformTeam 
   = (teamMembersObj) => {
-    const styles = "col-md-12"
-    return renderToStaticMarkup(teamView(teamMembersObj, styles))
+    return renderToStaticMarkup(teamView(teamMembersObj))
   }

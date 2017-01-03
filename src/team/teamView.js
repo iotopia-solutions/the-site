@@ -3,7 +3,7 @@ import teamMemberView from './memberView'
 
 // A React element that displays all team members
 
-export default (teamMembersObj, styles)  => 
+export default (teamMembersObj)  => 
   <div className="team-container">
-    {Object.keys(teamMembersObj).map(member => (teamMemberView(member, styles)))}
+    {Object.keys(teamMembersObj).map(member => (teamMemberView(member)))}
   </div>
