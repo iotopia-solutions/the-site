@@ -42,7 +42,6 @@ const transformToViewData
 
 const transformTeam 
   = (teamMembersObj) => {
-      const id = ""
       const styles = "col-md-4 col-xs-6 work-item web-design mockups"
-      return renderToStaticMarkup(teamView(teamMembersObj, id, styles))
+      return renderToStaticMarkup(teamView(teamMembersObj, styles))
     }

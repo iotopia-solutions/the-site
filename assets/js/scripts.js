@@ -403,8 +403,8 @@
             });
 
             // Team Carousel
-            var owlTeam = $("#owl-team");
-            owlTeam.owlCarousel({
+            var teamContainer = $(".landing-page .team-container");
+            teamContainer.owlCarousel({
             
                 slideSpeed: 300,
                 pagination: false,
@@ -437,10 +437,10 @@
 
             // Custom Navigation Events: Team carousel
             $(".team-prev").on('click',function(){
-                owlTeam.trigger('owl.prev');
+                teamContainer.trigger('owl.prev');
             });
             $(".team-next").on('click',function(){
-                owlTeam.trigger('owl.next');
+                teamContainer.trigger('owl.next');
             })
 
             // Custom Navigation Events: Blog carousel
