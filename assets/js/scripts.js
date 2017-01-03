@@ -388,8 +388,8 @@
             });
 
             // Blog Gallery Post
-            var owlBlog = $("#owl-blog");
-            owlBlog.owlCarousel({
+            var blogContainer = $("#blog-container");
+            blogContainer.owlCarousel({
             
                 slideSpeed: 300,
                 pagination: false,
@@ -409,7 +409,10 @@
                 slideSpeed: 300,
                 pagination: false,
                 paginationSpeed: 400,
-                items: 3,
+                itemsCustom: [
+                  [0, 2],      
+                  [700, 3]
+                ],
             
             });
 
@@ -445,10 +448,10 @@
 
             // Custom Navigation Events: Blog carousel
             $(".blog-prev").on('click',function(){
-                owlBlog.trigger('owl.prev');
+                blogContainer.trigger('owl.prev');
             });
             $(".blog-next").on('click',function(){
-                owlBlog.trigger('owl.next');
+                blogContainer.trigger('owl.next');
             })
             
 
