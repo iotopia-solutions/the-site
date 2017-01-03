@@ -4,6 +4,7 @@ export const portfolioObj = {
     clientName: "Dog Watch",
     category: "category1",
     projectTitle: "Project Title",
+    projectSubtitle: "Project Subtitle",
     technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
@@ -19,6 +20,7 @@ export const portfolioObj = {
     clientName: "Farmobile",
     category: "category2",
     projectTitle: "Project Title",
+    projectSubtitle: "Project Subtitle",
     technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
@@ -34,6 +36,7 @@ export const portfolioObj = {
     clientName: "Perkin Elmer",
     category: "category3",
     projectTitle: "Project Title",
+    projectSubtitle: "Project Subtitle",
     technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
@@ -49,6 +52,7 @@ export const portfolioObj = {
     clientName: "Humedica",
     category: "category4",
     projectTitle: "Project Title",
+    projectSubtitle: "Project Subtitle",
     technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
@@ -64,6 +68,7 @@ export const portfolioObj = {
     clientName: "Harvard Business Review",
     category: "category1",
     projectTitle: "Project Title",
+    projectSubtitle: "Project Subtitle",
     technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
@@ -79,6 +84,7 @@ export const portfolioObj = {
     clientName: "Bosch",
     category: "category2",
     projectTitle: "Project Title",
+    projectSubtitle: "Project Subtitle",
     technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
@@ -94,6 +100,7 @@ export const portfolioObj = {
     clientName: "ZOLL",
     category: "category3",
     projectTitle: "Project Title",
+    projectSubtitle: "Project Subtitle",
     technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 
@@ -109,6 +116,23 @@ export const portfolioObj = {
     clientName: "Ayrshire Farms",
     category: "category4",
     projectTitle: "Project Title",
+    projectSubtitle: "Project Subtitle",
+    technologies: "technologies",
+    projectLink: "projectLink",
+    projectImages: 
+    {
+      image1: "img/project_1.jpg", 
+      image2: "img/project_2.jpg"
+
+    },
+    description: "project description"
+  },
+  "kronos": 
+  {
+    clientName: "Kronos",
+    category: "category4",
+    projectTitle: "Project Title",
+    projectSubtitle: "Project Subtitle",
     technologies: "technologies",
     projectLink: "projectLink",
     projectImages: 

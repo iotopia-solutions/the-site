@@ -10,8 +10,10 @@ export default (project)  =>
         <img src="img/project_1.jpg" alt=""/>
         <div className="portfolio-overlay">
           <div className="project-icons">
-            <a href="img/project_1_big.jpg" className="lightbox-gallery" title="Poster Mockup"><i className="fa fa-search"></i></a>
-            <a href="portfolio-single.html" className="project-icon"><i className="fa fa-link"></i></a>
+            <div><a href={"/portfolio/" + project}>{portfolioObj[project].projectTitle}</a>
+            </div>
+            <div><a href={"/portfolio/" + project}>{portfolioObj[project].projectSubtitle}</a>
+            </div>
         </div>
         </div>
       </div>
