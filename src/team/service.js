@@ -39,7 +39,8 @@ const transformToViewData
     memberRole: teamMembersObj[id].memberRole,
     memberBio: teamMembersObj[id].memberBio,
     memberImg: teamMembersObj[id].memberImg,
-    linkedInLink: teamMembersObj[id].linkedInLink
+    linkedInLink: teamMembersObj[id].linkedInLink,
+    githubLink: teamMembersObj[id].githubLink
   })
 
 const transformTeam 
