@@ -2158,6 +2158,16 @@ input.searchbox:focus {
   padding-left: 7%;
 }
 
+.about-me {
+  i {
+    font-size: 20px;
+    color: #111;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
 
 /*-------------------------------------------------------*/
 /* Youtube Video bg
