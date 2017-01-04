@@ -1,20 +1,19 @@
-import mergeEnv from './mergeEnv'
-
 // Returns a function that provides the default webserver configuration
 // with overrides from env vars.
-export const config
-  = mergeEnv(
-    {
-      port: 5001,
-      host: '0.0.0.0'
-    },
-    { port: 'PORT', host: 'HOST' }
-  )
+export const config =
+  (port, host) => 
+    ({
+      port: port || 5001,
+      host: host || '0.0.0.0'
+    })
 
-// TODO: validate web server configuration.
-export const validate
-  = cfg => cfg
-
-export const show
-  = cfg =>
-    JSON.stringify(cfg)
+// Createa validator for web server configuration.
+export const validator =
+  assert => cfg => {
+    assert(typeof cfg === 'object', `Invalid web config: ${ typeof cfg }.`)
+    assert(
+      !isNaN(cfg.port) && cfg.port > 0, 
+      `Invalid port: ${JSON.stringify(cfg.port)}`)
+    assert(cfg.host, `Invalid host: ${JSON.stringify(cfg.host)}`)
+    return cfg
+  }
