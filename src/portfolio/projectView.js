@@ -10,16 +10,16 @@ export default (project)  =>
         <img src="img/project_1.jpg" alt=""/>
         <div className="portfolio-overlay">
           <div className="project-icons">
-            <div><a href={"/portfolio/" + project}>{portfolioObj[project].projectTitle}</a>
-            </div>
-            <div><a href={"/portfolio/" + project}>{portfolioObj[project].projectSubtitle}</a>
-            </div>
-        </div>
+            <a href={"/portfolio/" + project}>
+              <h4 className="title">{portfolioObj[project].projectTitle}</h4>
+              <p className="subtitle">{portfolioObj[project].projectSubtitle}</p>
+            </a>
+          </div>
         </div>
       </div>
       <div className="work-description">
         <h3><a href={"/portfolio/" + project}>{portfolioObj[project].clientName}</a></h3>
-        <span><a href="#">{portfolioObj[project].category}</a></span>
+        <span>{portfolioObj[project].category}</span>
       </div>
     </div> 
   </div>
