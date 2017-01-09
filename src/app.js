@@ -1,18 +1,18 @@
 "use strict"
 import express          from 'express'
 import path             from 'path'
+import assert           from 'assert'
 import favicon          from 'serve-favicon' // TODO: are we using this?
 import logger           from 'morgan'
 import cookieParser     from 'cookie-parser'
 import bodyParser       from 'body-parser'
 import router           from './router'
-import
-  configure, { show as showConfig }
-  from './app/configure'
+import configure, { validator } from './app/configure'
 
-const config = configure(process.env)
+const validate = validator(assert)
+const config = validate(configure(process.env))
 
-console.log(`App started with configuration: ${showConfig(config)}`)
+console.log(`App started with configuration: ${JSON.stringify(config)}`)
 
 const app = express()
 
