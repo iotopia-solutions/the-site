@@ -107,29 +107,34 @@
     <!-- Portfolio Single -->
     <section class="section-wrap portfolio-single">
       <div class="container">
-      <h2>${projectTitle}</h2>
-        <div class="row">
-
-          <div class="col-md-4">
-            <div class="item">
+      <h1 class="mb-30">${projectTitle}</h1>
+        <div class="row">                                                                                     
+        <div class="col-md-4">
+            <div class="item mb-30">
               <img src="img/project_1.jpg" alt="">
             </div>
-            <div>
-              <a href="#" class="btn btn-sm btn-dark mt-40">View Project</a>
-            </div>
-          </div>
-
-          <div class="col-md-8">
             <div class="portfolio-description">
-              <p>${description}</p>
               <ul>
                 <li><span>Categories:</span> ${category}</li>
                 <li><span>Technologies:</span><a href="#"> ${technologies}</a></li>
                 <li><span>Client:</span><a href="#"> ${clientName}</a></li>
               </ul>
-            </div>    
+            </div>
+            <div>
+              <a href="#" class="btn btn-m btn-dark">View Project</a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <h4>Overview</h4>
+            <div class="portfolio-description">
+              <p>${description}</p>
+            </div>
+            <hr>
+            <h4 class="mt-30">The Problem</h4>
+            <p>Here in lies the problem</p>
+            <h4 class="mt-30">The Solution</h4>
+            <p>Here in lies the solution</p>
           </div> <!-- end description -->
-          
         </div>
       </div>
     </section> <!-- end portfolio single -->
