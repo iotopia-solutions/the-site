@@ -22,9 +22,9 @@ export const portfolio
 
 export const project
   = () => {
-    const renderPortfolio = compile(projectPageHtml)
+    const renderProject = compile(projectPageHtml)
     return (req, res) =>
-      res.send(renderPortfolio(transformToViewData(req.params.id)))
+      res.send(renderProject(transformToViewData(req.params.id)))
   }
 
   const transformToViewData
@@ -36,6 +36,7 @@ export const project
     projectLink: portfolioObj[id].projectLink,
     projectImages: portfolioObj[id].projectImages,
     description: portfolioObj[id].description,
+    projects: transformProjects(portfolioObj)
   })
 
   const transformProjects
