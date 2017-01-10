@@ -34,7 +34,8 @@ const transformToViewData
     memberBio: teamMembersObj[id].memberBio,
     memberImg: teamMembersObj[id].memberImg,
     linkedInLink: teamMembersObj[id].linkedInLink,
-    githubLink: teamMembersObj[id].githubLink
+    githubLink: teamMembersObj[id].githubLink,
+    githubLinkShow: teamMembersObj[id].githubLink ? "show" : "hide"
   })
 
 const transformTeam 
