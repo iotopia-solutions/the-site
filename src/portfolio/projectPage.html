@@ -107,21 +107,22 @@
     <!-- Portfolio Single -->
     <section class="section-wrap portfolio-single">
       <div class="container">
-      <h1 class="mb-30">${projectTitle}</h1>
+      <h1>${projectTitle}</h1>
+      <h2 class="portfolio-subtitle mb-40">${projectSubtitle}</h2>
         <div class="row">                                                                                     
         <div class="col-md-4">
-            <div class="item mb-30">
-              <img src="img/project_1.jpg" alt="">
+            <div class="item">
+              <img src=${projectImage} alt="" class="mb-30">
             </div>
             <div class="portfolio-description">
               <ul>
-                <li><span>Categories:</span> ${category}</li>
-                <li><span>Technologies:</span><a href="#"> ${technologies}</a></li>
-                <li><span>Client:</span><a href="#"> ${clientName}</a></li>
+                <li><span class="descriptor">Categories:</span> ${category}</li>
+                <li><span class="descriptor">Technologies:</span> ${technologies}</li>
+                <li><span class="descriptor">Client:</span> ${clientName}</li>
               </ul>
             </div>
             <div>
-              <a href="#" class="btn btn-m btn-dark mb-40">View Project</a>
+              <a href=${projectLink} class="btn btn-m btn-dark mb-40">View Project</a>
             </div>
           </div>
           <div class="col-md-8">
@@ -131,9 +132,9 @@
             </div>
             <hr>
             <h4 class="mt-30">The Problem</h4>
-            <p>The problem we were presented with...</p>
+            <p>${problem}</p>
             <h4 class="mt-30">The Solution</h4>
-            <p>Our approach to resolving it...</p>
+            <p>${solution}</p>
           </div> <!-- end description -->
         </div>
       </div>
@@ -141,7 +142,7 @@
 
 
     <!-- Related Projects -->
-    <section class="related-projects pb-90" data-filter=.${category}>
+    <section class="related-projects pb-90" data-filter=${categoryFilter}>
       <div class="container">
         <h4 class="heading-inline">Related Projects</h4>
         <div class="customNavigation right">

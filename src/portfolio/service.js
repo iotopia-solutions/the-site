@@ -31,11 +31,15 @@ export const project
   = (id) => ({
     clientName: portfolioObj[id].clientName,
     category: portfolioObj[id].category,
+    categoryFilter: portfolioObj[id].categoryFilter,
     projectTitle: portfolioObj[id].projectTitle,
+    projectSubtitle: portfolioObj[id].projectSubtitle,
     technologies: portfolioObj[id].technologies,
     projectLink: portfolioObj[id].projectLink,
-    projectImages: portfolioObj[id].projectImages,
+    projectImage: portfolioObj[id].projectImage,
     description: portfolioObj[id].description,
+    problem: portfolioObj[id].details.problem,
+    solution: portfolioObj[id].details.solution,
     projects: transformProjects(portfolioObj)
   })
 
