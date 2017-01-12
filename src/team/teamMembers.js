@@ -44,15 +44,6 @@ export const teamMembersObj = {
     memberBio: "April specializes in developing scheduling, inventory and sales systems designed to make organizations more efficient. She embraces the challenges that come with growing a small business and relishes finding novel solutions that make businesses run more efficiently. Before entering the tech industry, she worked in the art world where she collaborated with artists to produce exhibitions and get their work into the hands of collectors. When away from her desk, April spends her time dabbling with pens and paints, cooking traditional Dominican dishes, and hanging out with her sweet pup, Lefty. April is Iotopia’s director of business operations.",
     memberImg: "img/team/april.jpg"
   },
-  "helen":
-  {
-    memberFullName: "Helen Thi",
-    memberRole: "Web Developer",
-    linkedInLink:"helenthi",
-    githubLink: "hthi",
-    memberBio: "Helen is a web developer with an insatiable appetite for research and problem solving. She specializes in front-end/UI development and is a strong proponent of tools that promote componentization and manageability. She brings onboard an attentiveness to detail and fine eye for both software and graphic design. When not working, she swings a mean tennis racket and loves the teamwork it takes to solve a particularly challenging game of Boda Borg. Helen is a web developer at Iotopia.",
-    memberImg: "img/team/helen.png"
-  },
   "camilia":
   {
     memberFullName: "Camilia Miccolis",
