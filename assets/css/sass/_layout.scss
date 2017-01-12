@@ -2314,6 +2314,8 @@ ol.numbers {
 -------------------------------------------------------*/
 
 .member-container {
+  display: flex;
+  justify-content: center;
   position: relative;
   min-height: 1px;
   padding-right: 15px;
