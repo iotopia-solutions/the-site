@@ -229,7 +229,7 @@
 .work-img {
   position: relative;
   overflow: hidden;
-  max-height: 318px;
+  max-height: 210px;
   & img {
     overflow: hidden;
     width: 100%;
@@ -1783,6 +1783,12 @@ input.searchbox:focus {
   }
 }
 
+.portfolio-subtitle {
+  text-transform: none;
+  color: #7a7a7a;
+  font-weight: 200;
+}
+
 
 /* Call to Action Style-2
 -------------------------------------------------------*/
@@ -2021,7 +2027,8 @@ input.searchbox:focus {
 
   & ul > li {
     line-height: 30px;
-    color: $heading-color;
+    color: #7a7a7a;
+    margin-bottom: 10px;
   }
 
   & ul > li a {
@@ -2030,6 +2037,11 @@ input.searchbox:focus {
 
   & ul > li a:hover {
     color: $main-color;
+  }
+
+  .descriptor {
+    font-weight: 700;
+    color: $heading-color;
   }
 }
 
@@ -2309,6 +2321,12 @@ ol.numbers {
   float: left;
 }
 
+.member-img {
+  img {
+    max-height: 318px;
+  }
+}
+
 .landing-page {
   .member-container {
     @media (min-width: 992px) {
@@ -2319,6 +2337,25 @@ ol.numbers {
 
 .team-page {
   .member-container {
+    width: 50%;
+    @media (min-width: 992px) {
+      width: 33.33333333%;
+    } 
+  }
+}
+
+.works-container {
+  .project-container {
+    width: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.portfolio-page {
+  .project-container {
     width: 50%;
     @media (min-width: 992px) {
       width: 33.33333333%;
