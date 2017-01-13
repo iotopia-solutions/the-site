@@ -4,10 +4,10 @@ import { portfolioObj } from './portfolio'
 // A React element that displays a portfolio item
 
 export default (project)  => 
-  <div className={"col-md-4 col-xs-6 work-item mockups " + portfolioObj[project].category}>
+  <div className={"project-container work-item mockups " + portfolioObj[project].category}>
     <div className="work-container">
       <div className="work-img">
-        <img src="img/project_1.jpg" alt=""/>
+        <img src={portfolioObj[project].projectImage[0]} alt=""/>
         <div className="portfolio-overlay">
           <div className="project-icons">
             <a href={"/portfolio/" + project}>

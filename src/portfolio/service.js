@@ -5,6 +5,8 @@ import compile from '../template/compile'
 import { renderToStaticMarkup} from 'react-dom/server'
 import portfolioView from './portfolioView'
 import {portfolioObj} from './portfolio'
+import projectImg from './projectImages'
+
 
 // Load these early and sync, just like module dependencies.
 const requireTemplate = requireText(__dirname)
@@ -36,14 +38,21 @@ export const project
     projectSubtitle: portfolioObj[id].projectSubtitle,
     technologies: portfolioObj[id].technologies,
     projectLink: portfolioObj[id].projectLink,
+    projectLinkShow: portfolioObj[id].projectLink ? "show-inline" : "hide",
     projectImage: portfolioObj[id].projectImage,
     description: portfolioObj[id].description,
     problem: portfolioObj[id].details.problem,
     solution: portfolioObj[id].details.solution,
-    projects: transformProjects(portfolioObj)
+    projects: transformProjects(portfolioObj),
+    projectImages: transformProjectImgs(portfolioObj[id].projectImage)
   })
 
   const transformProjects
     = (portfolioObj) => {
       return renderToStaticMarkup(portfolioView(portfolioObj))
+    }
+
+  const transformProjectImgs
+    = (projectImage) => {
+      return renderToStaticMarkup(projectImg(projectImage))
     }
