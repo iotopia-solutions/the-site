@@ -416,8 +416,12 @@
             
             });
 
-            var worksContainer = $(".related-projects .works-container").isotope({ filter: $(".related-projects").attr('data-filter') });
-            // worksContainer.owlCarousel({
+            var $worksContainer = $(".related-projects .works-container");
+            $worksContainer.imagesLoaded( function() {
+                $worksContainer.isotope({ filter: $(".related-projects").attr('data-filter') })
+            });
+
+            // $worksContainer.owlCarousel({
 
             //   slideSpeed: 300,
             //   paginationSpeed: 400,
@@ -427,6 +431,7 @@
             //   pagination: false
 
             // });
+
 
             // Custom Navigation Events
             $(".next").on('click',function(){
