@@ -2,47 +2,47 @@ export const portfolioObj = {
   "dog-watch": 
   {
     clientName: "Dog Watch",
-    category: "category1",
-    categoryFilter: ".category1",
-    projectTitle: "Project Title",
-    projectSubtitle: "Project Subtitle",
-    technologies: "technologies",
-    projectLink: "",
+    category: "Connected Devices",
+    categoryFilter: ".connected-devices",
+    projectTitle: "SmartFence",
+    projectSubtitle: "",
+    technologies: "Hardware Design, Embedded Linux, Python, 900MHz Wireless",
+    projectLink: "http://www.dogwatch.com/",
     projectImage: ["/img/portfolio/placeholder_1300_894.png"],
     description: "Dog Watch manufactures hidden electronic pet fences that keep pets safe. We helped them develop an intelligent collar that combines both hidden fence and activity measuring capabilities so owners can keep their pets safe while ensuring they get enough exercise. The collar allows pets to play securely in their own yard while owners track their activities from either a web site or a dedicated mobile app. The collar is an unusual mix of active radio transmitters that communicate with a local portal connected to the user’s home network via WiFi or Ethernet. The portal communicates directly with a cloud service that converts raw data to JSON messages. It passes these messages to a web server, which serves both the web site and the app. With our expertise in IoT, we developed the portal and the cloud-based system. The portal runs on Raspberry Pi and the cloud system runs on Amazon’s Web Services. Both are Python based.",
     details:
     {
-      problem: "",
-      solution: ""
+      problem: "Dogwatch wanted to make a “smart” connected system to enhance the successful systems that they have been building for years.  They wanted a way to allow the system to alert its users and dealers to issues related to the systems’ status or their dogs so that they can reduce house calls and keep pets stay safe.",
+      solution: "Iotopia Solutions helped Dogwatch to design and develop a smart, connected system.  Iotopia provided Dogwatch with the knowledge and talent to develop a system-level solution that incorporates smart, connected embedded-linux systems with a robust back-end to connect these devices."
     }
   },
   "farmobile": 
   {
     clientName: "Farmobile",
-    category: "category2",
-    categoryFilter: ".category2",
-    projectTitle: "Project Title",
-    projectSubtitle: "Project Subtitle",
-    technologies: "technologies",
-    projectLink: "",
-    projectImage: ["/img/portfolio/placeholder_1300_894.png"],
+    category: "Connected Devices, Big Data, Fault Tolerant",
+    categoryFilter: ".connected-devices, .big-data, .fault-tolerant",
+    projectTitle: "PUC - Passive Uplink Connection",
+    projectSubtitle: "",
+    technologies: "Embedded Linux, Cellular, Wifi, Python, MQTT, Embedded Database",
+    projectLink: "https://www.farmobile.com/",
+    projectImage: ["/img/portfolio/farmobile_thumb.png"],
     description: "Agriculture has become an increasingly data-driven industry.  Machinery vendors have added big-data capabilities to their products but walled them off from farmers. Farmobile allows farmers to access, control and monetize the agronomic data captured by the machinery they use. We developed Farmobile’s “PUC” (Passive Uplink Connection), an IoT device that plugs into the data bus of agricultural equipment. The PUC records and transmits the time, position and other relevant agricultural information generated when cultivating a field. It can be used in devices located anywhere and remotely managed, and has store-and-forward capability when it can’t find a cellular or wifi connection. It’s transparent to the machinery that it’s connected to and only captures data. We provided software and hardware development for Farmobile and trained their staff so that when the PUC entered production they were able to take ownership of software development.",
     details:
     {
-      problem: "",
-      solution: ""
+      problem: "Farming machinery has become smart.  Companies producing agricultural equipment control this machinery and the data that it generates.  Farmers need an open way to capture and store their own data, allowing them to use the data the way they want.  This data is valuable and allows them to make decisions to improve their yields and hence profitability.",
+      solution: "The Farmobile PUC allows farmers to collect data while planting, spraying and harvesting from their fields. This allows them to control and document all aspects of their activities.  We provided the engineering knowledge to develop the PUC enabling seamless, fault-tolerant data collection and storage into the cloud."
     }
   },
   "perkin-elmer": 
   {
     clientName: "Perkin Elmer",
-    category: "web",
+    category: "Web",
     categoryFilter: ".web",
     projectTitle: "Elements Web Application Re-architecture",
-    projectSubtitle: "Project Subtitle",
+    projectSubtitle: "",
     technologies: "ReactJS, Redux, Webpack, Pattern Lab, Sass CSS",
     projectLink: "http://elements.perkinelmer.com",
-    projectImage: ["/img/portfolio/pe_thumb.png"],
+    projectImage: ["/img/portfolio/pe_thumb.png", "/img/portfolio/pe_2.png", "/img/portfolio/pe_3.png"],
     description: "Electronic lab books have become a key tool used by drug companies in their development process. Perkin Elmer hired us to evaluate and update their Elements Electronic Lab Notebook, which stores information on chemistry, images and revision history. They had recently purchased a cloud-based application, which was experiencing performance issues, from a small startup. The application’s development cycle was costly because of an old and unsupported technology stack. We evaluated it from front end to back, including all of its ancillary applications and libraries and made numerous recommendations for improvements. The roadmap we developed became a guide for future revisions.",
     details: 
     {
@@ -53,7 +53,7 @@ export const portfolioObj = {
   "humedica": 
   {
     clientName: "Humedica",
-    category: "web big-data",
+    category: "Web, Big Data",
     categoryFilter: ".web, .big-data",
     projectTitle: "Analysis of Optum One Analytics",
     projectSubtitle: "Migrating from Adobe Flex to HTML",
@@ -70,7 +70,7 @@ export const portfolioObj = {
   "hbr": 
   {
     clientName: "Harvard Business Review",
-    category: "web",
+    category: "Web",
     categoryFilter: ".web",
     projectTitle: "Harvard Business Review: The Big Idea",
     projectSubtitle: "Developing in an Experimental Endeavor",
@@ -87,7 +87,7 @@ export const portfolioObj = {
   "bosch": 
   {
     clientName: "Bosch",
-    category: "connected-devices",
+    category: "Connected Devices",
     categoryFilter: ".connected-devices",
     projectTitle: "Bosch CCU",
     projectSubtitle: "Connected RV demonstration",
@@ -104,7 +104,7 @@ export const portfolioObj = {
   "zoll": 
   {
     clientName: "ZOLL",
-    category: "web connected-devices data-visualization telemedicine IoT cloud I18N",
+    category: "Web, Connected Devices, Data Visualization, Telemedicine, IoT, Cloud, I18N",
     categoryFilter: ".web, .connected-devices, .data-visualization, .telemedicine, .IoT, .cloud, .I18N",
     projectTitle: "ZOLL WebConsole",
     projectSubtitle: "Cloud server Push System",
@@ -121,18 +121,18 @@ export const portfolioObj = {
   "kronos": 
   {
     clientName: "Kronos",
-    category: "web big-data",
+    category: "Web, Big Data",
     categoryFilter: ".web, .big-data",
     projectTitle: "Creating a New Path",
     projectSubtitle: "Filling the performance and communication gaps",
     technologies: "AngularJS, NodeJS, Big data management",
     projectLink: "https://www.kronos.com/products/workforce-central-suite",
-    projectImage: ["/img/portfolio/placeholder_1300_894.png"],
+    projectImage: ["/img/portfolio/kronos_thumb.png", "/img/portfolio/kronos_2.png"],
     description: "Kronos Workforce Central is a commercial Web application focused on timekeeping, scheduling, attendance, and other human resources and time management needs. It uses real-time information to allow managers to track work status, cost, time and more in order to ensure compliance with pay rules and other regulations. We evaluated the software applications that comprise Kronos’ Workforce Suite, looking specifically at its technology standards, team communication and its development cycle. We also evaluated the performance of several other applications i.e. Workforce Timekeeper,  Workforce Scheduler, Workforce Absence Manager, Workforce HR, and Workforce HR in order to examine the technology being used and ensure that proper front end development standards are being used.",
     details:
     {
-      problem: "",
-      solution: ""
+      problem: "As Kronos was slowly migrating from their legacy application, which was built in Adobe Flex, to a new browser based platform; they were confronted with some performance issues in the implementation. Iotopia Solutions was brought in to help evaluate the current state and provide recommendations to help with current performance issues and help set the proper infrastructure to combat future issues.",
+      solution: "Our goal for this project was to evaluate their current state and recommend solutions. Our team performed the following:<ol><li>Evaluated the multiple teams that make up the individual applications of the Workforce Suite. The areas that were evaluated were:<ol type='a'><li>Technology standards</li><li>Team communication</li><li>Software development cycle</li></ol></li><li>Evaluated performance issues within different applications<ol type='a'><li>Technology used and best standards</li><li>Ensuring that proper front end development standards are implemented</li></ol></li></ol>"
     }
   }
 }
