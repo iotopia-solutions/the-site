@@ -36,15 +36,16 @@ export const project
     categoryFilter: portfolioObj[id].categoryFilter,
     projectTitle: portfolioObj[id].projectTitle,
     projectSubtitle: portfolioObj[id].projectSubtitle,
+    projectSubtitleShow: portfolioObj[id].projectSubtitle ? "show" : "hide",
     technologies: portfolioObj[id].technologies,
     projectLink: portfolioObj[id].projectLink,
     projectLinkShow: portfolioObj[id].projectLink ? "show-inline" : "hide",
-    projectImage: portfolioObj[id].projectImage,
+    projectImageThumb: portfolioObj[id].projectImageThumb, 
     description: portfolioObj[id].description,
     problem: portfolioObj[id].details.problem,
     solution: portfolioObj[id].details.solution,
     projects: transformProjects(portfolioObj),
-    projectImages: transformProjectImgs(portfolioObj[id].projectImage)
+    projectImages: transformProjectImgs(portfolioObj[id].projectImages)
   })
 
   const transformProjects

@@ -8,7 +8,8 @@ export const portfolioObj = {
     projectSubtitle: "",
     technologies: "Hardware Design, Embedded Linux, Python, 900MHz Wireless",
     projectLink: "http://www.dogwatch.com/",
-    projectImage: ["/img/portfolio/placeholder_1300_894.png"],
+    projectImageThumb: "/img/portfolio/placeholder_1300_894.png",
+    projectImages: [""],
     description: "Dog Watch manufactures hidden electronic pet fences that keep pets safe. We helped them develop an intelligent collar that combines both hidden fence and activity measuring capabilities so owners can keep their pets safe while ensuring they get enough exercise. The collar allows pets to play securely in their own yard while owners track their activities from either a web site or a dedicated mobile app. The collar is an unusual mix of active radio transmitters that communicate with a local portal connected to the user’s home network via WiFi or Ethernet. The portal communicates directly with a cloud service that converts raw data to JSON messages. It passes these messages to a web server, which serves both the web site and the app. With our expertise in IoT, we developed the portal and the cloud-based system. The portal runs on Raspberry Pi and the cloud system runs on Amazon’s Web Services. Both are Python based.",
     details:
     {
@@ -25,7 +26,8 @@ export const portfolioObj = {
     projectSubtitle: "",
     technologies: "Embedded Linux, Cellular, Wifi, Python, MQTT, Embedded Database",
     projectLink: "https://www.farmobile.com/",
-    projectImage: ["/img/portfolio/farmobile_thumb.png"],
+    projectImageThumb: "/img/portfolio/farmobile_thumb.png",
+    projectImages: ["/img/portfolio/farmobile_thumb.png"],
     description: "Agriculture has become an increasingly data-driven industry.  Machinery vendors have added big-data capabilities to their products but walled them off from farmers. Farmobile allows farmers to access, control and monetize the agronomic data captured by the machinery they use. We developed Farmobile’s “PUC” (Passive Uplink Connection), an IoT device that plugs into the data bus of agricultural equipment. The PUC records and transmits the time, position and other relevant agricultural information generated when cultivating a field. It can be used in devices located anywhere and remotely managed, and has store-and-forward capability when it can’t find a cellular or wifi connection. It’s transparent to the machinery that it’s connected to and only captures data. We provided software and hardware development for Farmobile and trained their staff so that when the PUC entered production they were able to take ownership of software development.",
     details:
     {
@@ -42,7 +44,8 @@ export const portfolioObj = {
     projectSubtitle: "",
     technologies: "ReactJS, Redux, Webpack, Pattern Lab, Sass CSS",
     projectLink: "http://elements.perkinelmer.com",
-    projectImage: ["/img/portfolio/pe_thumb.png", "/img/portfolio/pe_2.png", "/img/portfolio/pe_3.png"],
+    projectImageThumb: "/img/portfolio/pe_thumb.png",
+    projectImages: ["/img/portfolio/pe_thumb.png", "/img/portfolio/pe_2.png", "/img/portfolio/pe_3.png"],
     description: "Electronic lab books have become a key tool used by drug companies in their development process. Perkin Elmer hired us to evaluate and update their Elements Electronic Lab Notebook, which stores information on chemistry, images and revision history. They had recently purchased a cloud-based application, which was experiencing performance issues, from a small startup. The application’s development cycle was costly because of an old and unsupported technology stack. We evaluated it from front end to back, including all of its ancillary applications and libraries and made numerous recommendations for improvements. The roadmap we developed became a guide for future revisions.",
     details: 
     {
@@ -59,7 +62,8 @@ export const portfolioObj = {
     projectSubtitle: "Migrating from Adobe Flex to HTML",
     technologies: "HTML & CSS (Pattern Lab, HTML5 best practices, Sass CSS), JavaScript Framework (ReactJS, Redux, NodeJS/NGinX servers), Helpers (ESLint, WebPack, Babel, Unit Test Mocha + Chai, Yeoman Generators)",
     projectLink: "https://www.optum.com/solutions/data-analytics.html",
-    projectImage: ["img/portfolio/humedica_thumb.png", "img/portfolio/humedica_2.png", "img/portfolio/humedica_3.png", "img/portfolio/humedica_4.png"],
+    projectImageThumb: "img/portfolio/humedica_thumb.png",
+    projectImages: ["img/portfolio/humedica_thumb.png", "img/portfolio/humedica_2.png", "img/portfolio/humedica_3.png", "img/portfolio/humedica_4.png"],
     description: "Big data helps deliver the best healthcare to patients. Humedica’s Optum One is a healthcare analytics system that allows medical researchers to query large data sets and produce tables, charts and other types of data visualization. We created a proof of concept for the migration of Optum One from Adobe Flex to JavaScript. After evaluating the current state of the application, we developed a roadmap for the implementation of JavaScript and our POC became the template for future development of the legacy application.",
     details: 
     {
@@ -76,7 +80,8 @@ export const portfolioObj = {
     projectSubtitle: "Developing in an Experimental Endeavor",
     technologies: "Custom JS framework, Sass CSS, JQuery, HTML, BrowserStack, WordPress",
     projectLink: "http://hbr.org/rebel",
-    projectImage: ["img/portfolio/hbr_thumb.png"],
+    projectImageThumb: "img/portfolio/hbr_thumb.png",
+    projectImages: ["img/portfolio/hbr_thumb.png"],
     description: "Harvard Business Review (HBR) started as a well-known print source for business and management experts. Their effort to make the articles, case studies, and resources available online broadened the accessibility and audience to these publications. More recently Harvard Business Review decided to decrease the number of magazines issued a year from ten to six. To boost enthusiasm and involvement, HBR sought to provide subscribers with a new and more engaging experience to complement each print in an online series called 'The Big Idea'.",
     details: 
     {
@@ -93,7 +98,8 @@ export const portfolioObj = {
     projectSubtitle: "Connected RV demonstration",
     technologies: "CAN, MQTT, Python, embedded Linux, Raspberry Pi",
     projectLink: "",
-    projectImage:["img/portfolio/bosch_thumb.jpg"],
+    projectImageThumb: "img/portfolio/bosch_thumb.jpg",
+    projectImages:["img/portfolio/bosch_thumb.jpg"],
     description: "Americans love to go camping, and RVs make it fun and convenient.  As a nation, we enjoy more than <a href='https://www.reserveamerica.com/outdoors/a-short-history-of-camping.htm'>2 million RV excursions</a> in our homes-away-from-home every year.  But as IoT has allowed homes to become smarter and more convenient, can RVs keep up?  Bosch thought so, and they planned to prove it at the upcoming <a href='http://www.rviashow.org'>RVIA 2016 trade show</a> – <i>in two weeks</i>.",
     details: 
     {
@@ -110,7 +116,8 @@ export const portfolioObj = {
     projectSubtitle: "Cloud server Push System",
     technologies: "Python, Twisted, ZOPE, JavaScript, Dojo, HTML5, WebSockets, PDF generation",
     projectLink: "https://dojotoolkit.org/blog/case-study-zoll-web-console",
-    projectImage: ["img/portfolio/zoll_thumb.png"],
+    projectImageThumb: "img/portfolio/zoll_thumb.png",
+    projectImages: ["img/portfolio/zoll_thumb.png"],
     description: "It’s a simple fact of life that there will always be more people needing medical care than there are medical professionals to care for them. This is particularly true in the aftermaths of disasters or in emergency situations. ZOLL is a worldwide leader in resuscitation technology, and their <a href='https://www.zoll.com/medical-products/defibrillators/x-series/EMS/'>X Series</a> defibrillator / monitor is widely considered one of the most capable such devices on the planet. One of its standout features is its communications capability, as it has not just the ability to stream out live data using standard Web technologies using human-readable formats, but also serves a Web app via local networking that can display this live data or dump it out in PDF reports. This WebConsole solution enables a single medical professional to quickly see the vitals and waveforms for many patients in an efficient manner. The ZOLL WebConsole is used by the two U.S. Navy ships <a href='http://www.med.navy.mil/sites/usnscomfort/'>USNS Comfort</a> (the world’s largest hospital ship) and the <a href='http://www.med.navy.mil/sites/usnsmercy/'>USNS Mercy</a>.",
     details: 
     {
@@ -127,7 +134,8 @@ export const portfolioObj = {
     projectSubtitle: "Filling the performance and communication gaps",
     technologies: "AngularJS, NodeJS, Big data management",
     projectLink: "https://www.kronos.com/products/workforce-central-suite",
-    projectImage: ["/img/portfolio/kronos_thumb.png", "/img/portfolio/kronos_2.png"],
+    projectImageThumb: "/img/portfolio/kronos_thumb.png",
+    projectImages: ["/img/portfolio/kronos_thumb.png", "/img/portfolio/kronos_2.png"],
     description: "Kronos Workforce Central is a commercial Web application focused on timekeeping, scheduling, attendance, and other human resources and time management needs. It uses real-time information to allow managers to track work status, cost, time and more in order to ensure compliance with pay rules and other regulations. We evaluated the software applications that comprise Kronos’ Workforce Suite, looking specifically at its technology standards, team communication and its development cycle. We also evaluated the performance of several other applications i.e. Workforce Timekeeper,  Workforce Scheduler, Workforce Absence Manager, Workforce HR, and Workforce HR in order to examine the technology being used and ensure that proper front end development standards are being used.",
     details:
     {
