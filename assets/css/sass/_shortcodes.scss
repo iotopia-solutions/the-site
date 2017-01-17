@@ -134,7 +134,7 @@
   backface-visibility: hidden;
 
   &.btn-color {
-    background-color: $main-color;
+    background-color: $secondary-color;
   }
 
   &.btn-transparent {
@@ -149,7 +149,7 @@
   }
 
   &.btn-dark {
-    background-color: #333;
+    background-color: $secondary-color;
   }
 
   &.btn-white {
@@ -165,7 +165,7 @@
   &:hover {
     @include transition (all .2 ease-in-out);
     color: #fff;
-    background-color: $main-color;
+    background-color: $accent-color;
     border-color: transparent;
   }
 
@@ -179,7 +179,7 @@
   }
 
   &.btn-color:hover {
-    background-color: $heading-color;
+    background-color: #a7a9ac;
   }
 }
 

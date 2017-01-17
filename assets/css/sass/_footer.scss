@@ -25,13 +25,19 @@
 }
 
 .socials {
+  a {
+    color: $secondary-color;
+    &:hover {
+      color: $accent-color;
+    }
+  }
 
   &.footer-socials a {
     margin: 0 2px;
 
     &:hover i {
       color: #fff;
-      background-color: $main-color;
+      background-color: $secondary-color;
     }
   }
 
@@ -55,7 +61,7 @@
 /*-------------------------------------------------------*/
 
 .footer.footer-type-2 {
-  background-color: $heading-color;
+  background-color: $main-color;
 }
 
 .footer-widgets {
@@ -204,14 +210,14 @@ p.footer-address {
 
   & .footer-socials a:hover i {
     background-color: transparent;
-    color: $heading-color;
+    color: $secondary-color;
   }
 
   & a {
-    color: $text-color;
+    color: $secondary-color;
 
     &:hover {
-      color: $heading-color;
+      color: $main-color;
     }
   }
 }
