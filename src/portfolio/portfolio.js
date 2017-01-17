@@ -1,22 +1,22 @@
 export const portfolioObj = {
-  "dog-watch": 
-  {
-    clientName: "Dog Watch",
-    category: "Connected Devices",
-    categoryFilter: ".connected-devices",
-    projectTitle: "SmartFence",
-    projectSubtitle: "",
-    technologies: "Hardware Design, Embedded Linux, Python, 900MHz Wireless",
-    projectLink: "http://www.dogwatch.com/",
-    projectImageThumb: "/img/portfolio/placeholder_1300_894.png",
-    projectImages: [""],
-    description: "Dog Watch manufactures hidden electronic pet fences that keep pets safe. We helped them develop an intelligent collar that combines both hidden fence and activity measuring capabilities so owners can keep their pets safe while ensuring they get enough exercise. The collar allows pets to play securely in their own yard while owners track their activities from either a web site or a dedicated mobile app. The collar is an unusual mix of active radio transmitters that communicate with a local portal connected to the user’s home network via WiFi or Ethernet. The portal communicates directly with a cloud service that converts raw data to JSON messages. It passes these messages to a web server, which serves both the web site and the app. With our expertise in IoT, we developed the portal and the cloud-based system. The portal runs on Raspberry Pi and the cloud system runs on Amazon’s Web Services. Both are Python based.",
-    details:
-    {
-      problem: "Dogwatch wanted to make a “smart” connected system to enhance the successful systems that they have been building for years.  They wanted a way to allow the system to alert its users and dealers to issues related to the systems’ status or their dogs so that they can reduce house calls and keep pets stay safe.",
-      solution: "Iotopia Solutions helped Dogwatch to design and develop a smart, connected system.  Iotopia provided Dogwatch with the knowledge and talent to develop a system-level solution that incorporates smart, connected embedded-linux systems with a robust back-end to connect these devices."
-    }
-  },
+  // "dog-watch": 
+  // {
+  //   clientName: "Dog Watch",
+  //   category: "Connected Devices",
+  //   categoryFilter: ".connected-devices",
+  //   projectTitle: "SmartFence",
+  //   projectSubtitle: "",
+  //   technologies: "Hardware Design, Embedded Linux, Python, 900MHz Wireless",
+  //   projectLink: "http://www.dogwatch.com/",
+  //   projectImageThumb: "/img/portfolio/placeholder_1300_894.png",
+  //   projectImages: [""],
+  //   description: "Dog Watch manufactures hidden electronic pet fences that keep pets safe. We helped them develop an intelligent collar that combines both hidden fence and activity measuring capabilities so owners can keep their pets safe while ensuring they get enough exercise. The collar allows pets to play securely in their own yard while owners track their activities from either a web site or a dedicated mobile app. The collar is an unusual mix of active radio transmitters that communicate with a local portal connected to the user’s home network via WiFi or Ethernet. The portal communicates directly with a cloud service that converts raw data to JSON messages. It passes these messages to a web server, which serves both the web site and the app. With our expertise in IoT, we developed the portal and the cloud-based system. The portal runs on Raspberry Pi and the cloud system runs on Amazon’s Web Services. Both are Python based.",
+  //   details:
+  //   {
+  //     problem: "Dogwatch wanted to make a “smart” connected system to enhance the successful systems that they have been building for years.  They wanted a way to allow the system to alert its users and dealers to issues related to the systems’ status or their dogs so that they can reduce house calls and keep pets stay safe.",
+  //     solution: "Iotopia Solutions helped Dogwatch to design and develop a smart, connected system.  Iotopia provided Dogwatch with the knowledge and talent to develop a system-level solution that incorporates smart, connected embedded-linux systems with a robust back-end to connect these devices."
+  //   }
+  // },
   "farmobile": 
   {
     clientName: "Farmobile",
