@@ -2185,6 +2185,9 @@ input.searchbox:focus {
 
 .about-me .my-photo {
   width: 100%;
+  @media (max-width: 991px) {
+    width: 60%;
+  }
 }
 
 .about-me .info {
