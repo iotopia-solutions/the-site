@@ -71,7 +71,25 @@ export const portfolioObj = {
       solution: "After evaluating the current infrastructure, we provided our research and report that outlined several different solutions. With the partnership with the internal team, we recommended a new front end technology stack and worked closely with the team to implement a proof of concept on a small scale."
     }
   },
-  "hbr": 
+  "hbr-1": 
+  {
+    clientName: "Harvard Business Review",
+    category: "Web",
+    categoryFilter: ".web",
+    projectTitle: "Harvard Redesign and Development",
+    projectSubtitle: "",
+    technologies: "Custom JS framework, Modular Components, Pattern Lab, Sass CSS, E-Commerce",
+    projectLink: "http://hbr.org/",
+    projectImageThumb: "img/portfolio/hbr-1_thumb.png",
+    projectImages: ["img/portfolio/hbr-1_thumb.png", "img/portfolio/hbr-1_2.png", "img/portfolio/hbr-1_3.png", "img/portfolio/hbr-1_4.png"],
+    description: "The Harvard Business Review (HBR) team were looking to adopt new technologies for both the front end and back end that were not only designed to push the capabilities of the product forward, but chosen in close collaboration with business stakeholders with a deep understanding of where the business is heading. HBR's goals are similar to any other magazine/publishing/media company, to grow the business by creating and retaining subscribers and simultaneously meet the changing needs of digital advertising as print revenues potentially decline. As the primary place where more and more people and clients engage with HBR, HBR.org has become the center of the business strategy.",
+    details: 
+    {
+      problem: "The major goal of this project was to update the hbr.org site with technology, user experience, user interface design that will bring the site into a new toolset and also this technology toolset should be extensible.",
+      solution: "After <a href='http://www.hugeinc.com/'>HUGE</a> created the new design for the site, in collaboration with the internal development team and <a href='http://bocoup.com'>Bocoup</a> we implemented Pattern Lab and a new custom JavaScript framework. Our goal was to create a modular component based architecture that can fulfill the requirements of the project (extensible technology stack). <a href='http://patternlab.io'>Pattern Lab</a> allowed for the translation of the design into code using 'Atomic Design' principles. The modular development was also extended to the JavaScript layer of the site, allowing for component based development that will make the site ready for future implementation of patterns and libararies like React."
+    }
+  },
+  "hbr-2": 
   {
     clientName: "Harvard Business Review",
     category: "Web",
