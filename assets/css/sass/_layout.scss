@@ -1044,13 +1044,16 @@
 }
 
 .entry-item {
-  display: flex;
+  display: block;
   margin-bottom: 60px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.09);
   padding: 12px;
+  @media (min-width: 991px) {
+    display: flex;
+  }
 }
 
 .blog-standard {

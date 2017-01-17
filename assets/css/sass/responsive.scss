@@ -19,6 +19,16 @@
 
 
 @media (max-width: 991px) {
+    .entry-item {
+    display: block;
+    .entry-img {
+      height: 300px;
+      max-width: 450px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+    }
+  }
 
   .section-wrap,
   .section-wrap-mp {
@@ -407,7 +417,6 @@
       max-height: 500px;
     }
   }
-
 }
 
 

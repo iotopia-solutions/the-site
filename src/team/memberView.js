@@ -12,8 +12,10 @@ export default (member)  =>
       </div>
       </a>
       <div className="work-description">
-        <h3><a href={"/team/" + member}>{teamMembersObj[member].memberFullName}</a></h3>
-        <span><a href={"/team/" + member}>{teamMembersObj[member].memberRole}</a></span>
+      <a href={"/team/" + member}>
+        <h3>{teamMembersObj[member].memberFullName}</h3>
+        <span>{teamMembersObj[member].memberRole}</span>
+      </a>
       </div>
     </div>
   </div>

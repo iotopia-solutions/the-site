@@ -108,7 +108,7 @@
     <section class="section-wrap portfolio-single">
       <div class="container">
       <h1>${projectTitle}</h1>
-      <h2 class="portfolio-subtitle mb-40">${projectSubtitle}</h2>
+      <h2 class="portfolio-subtitle mb-40 ${projectSubtitleShow}">${projectSubtitle}</h2>
         <div class="row">
 
                                                                                              
@@ -134,9 +134,9 @@
               <p>${description}</p>
             </div>
             <hr>
-            <h4 class="mt-30">The Problem</h4>
+            <h4 class="mt-30">Problem to solve</h4>
             <p>${problem}</p>
-            <h4 class="mt-30">The Solution</h4>
+            <h4 class="mt-30">How we did it</h4>
             <p>${solution}</p>
           </div> <!-- end description -->
         </div>
@@ -148,7 +148,7 @@
     <section class="related-projects pb-90" data-filter=${categoryFilter}>
       <div class="container">
         <h4 class="heading-inline">Related Projects</h4>
-        <div class="customNavigation right">
+        <div class="customNavigation right hide">
           <a class="btn works-prev"><i class="fa fa-angle-left"></i></a>
           <a class="btn works-next"><i class="fa fa-angle-right"></i></a>
         </div>
