@@ -421,17 +421,6 @@
                 $worksContainer.isotope({ filter: $(".related-projects").attr('data-filter') })
             });
 
-            // $worksContainer.owlCarousel({
-
-            //   slideSpeed: 300,
-            //   paginationSpeed: 400,
-            //   items: 3,
-            //   itemsDesktop: [1199,3],
-            //   itemsDesktopSmall: [979,3],
-            //   pagination: false
-
-            // });
-
 
             // Custom Navigation Events
             $(".next").on('click',function(){
