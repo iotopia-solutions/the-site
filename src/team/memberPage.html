@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <base href="../">
-  <title>Iotopia Solutions Inc Blog &amp; News - ${title}</title>
+  <title>Iotopia Solutions Inc Team - ${memberFullName}</title>
 
   <meta charset="utf-8" />
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -103,7 +103,7 @@
   </header> <!-- end navigation -->
 
 
-  <div class="main-wrapper pt-50 oh">
+  <div class="main-wrapper oh">
   
     <!-- About Me -->
     <section class="section-wrap about-me">
@@ -117,32 +117,17 @@
           <div class="col-lg-6 col-md-5">
             <div class="info mt-40">
               <h2>${memberFullName}</h2>
+              <h6>${memberRole}</h6>
               <p class="subheading mt-20">Hello, my name is ${memberFullName}.</p>
 
               <p class="mb-40 mt-20">${memberBio}</p>
 
-              <div class="skills-progress">
-                <h6>Design <span>85%</span></h6>
-                <div class="progress-solid meter">
-                      <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" class="progress-bar" role="progressbar">
-                          <span class="sr-only">85% Complete</span>
-                      </div>
-                    </div>
+              <p class="mb-40 mt-20">
+              <h6>Learn more about me!</h6>
+              <a href="http://linkedin.com/in/${linkedInLink}" target="_blank" class="socials"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+              <a href="http://github.com/${githubLink}" target="_blank" class="socials ${githubLinkShow}"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+              </p>
 
-                    <h6>Photography <span>65%</span></h6>
-                <div class="progress-solid meter">
-                      <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" class="progress-bar" role="progressbar">
-                          <span class="sr-only">65% Complete</span>
-                      </div>
-                    </div>
-
-                    <h6>Web Development <span>93%</span></h6>
-                <div class="progress-solid meter" id="animated-skills">
-                      <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="93" class="progress-bar" role="progressbar">
-                          <span class="sr-only">93% Complete</span>
-                      </div>
-                    </div>
-              </div>
 
             </div>
           </div>
@@ -151,169 +136,19 @@
       </div>
     </section> <!-- end about me-->
 
-    <!-- Results -->
-    <section class="result-boxes">
-      <div class="container-fluid">
-        <div class="row">
-
-          <div class="col-md-4 nopadding">
-            <div class="statistic result-box result-box-first">
-              <div class="result-wrap clearfix">
-                <i class="icon icon-ChemicalGlass"></i>
-                <span class="timer" data-from="0" data-to="1200"></span>
-                <span class="counter-text">Design Experiments</span>
-              </div>              
+    <section class="call-to-action">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-xs-12">
+              <h2>Learn more about us!</h2>
             </div>
-          </div> <!-- end first result box -->
-
-          <div class="col-md-4 nopadding">
-            <div class="statistic result-box result-box-second">
-              <div class="result-wrap clearfix">
-                <i class="icon icon-Cup"></i>
-                <span class="timer" data-from="0" data-to="578"></span>
-                <span class="counter-text">Awards Won</span>
-              </div>            
-            </div>
-          </div> <!-- end second result box -->
-
-          <div class="col-md-4 nopadding">
-            <div class="statistic result-box result-box-third">
-              <div class="result-wrap clearfix">
-                <i class="icon icon-Mail"></i>
-                <span class="timer" data-from="0" data-to="12489"></span>
-                <span class="counter-text">Messages Sent</span> 
-              </div>            
-            </div>
-          </div> <!-- end third result box -->
-
-        </div>
-      </div>
-    </section> <!-- end results-->
-
-    <!-- Testimonials -->
-    <section class="section-wrap testimonials style-2">
-
-      <div class="row heading mb-20">
-        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-          <h2 class="text-center">Happy Clients</h2>
-        </div>
-      </div>
-
-      <div id="owl-testimonials" class="owl-carousel owl-theme text-center">
-
-        <div class="item">
-          <div class="container testimonial">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1">
-                <p class="testimonial-text">I’am amazed, I should say thank you so much for your awesome template. Design is so good and neat, every detail has been taken care these team are realy amazing and talented! I will work only with enigma agency. I will rate it 5 Stars!</p>
-                <span>John C. Marshall, Art Director</span>
-              </div>
+            <div class="col-md-3 col-xs-12 cta-button">
+              <a href="/team" class="btn btn-lg btn-color">Meet the team</a>
             </div>
           </div>
         </div>
-
-        <div class="item">
-          <div class="container testimonial">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1">
-                <p class="testimonial-text">I’am amazed, I should say thank you so much for your awesome template. Design is so good and neat, every detail has been taken care these team are realy amazing and talented! I will work only with enigma agency. I will rate it 5 Stars!</p>
-                <span>Jessica Green, CEO of Company</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="container testimonial">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1">
-                <p class="testimonial-text">I’am amazed, I should say thank you so much for your awesome template. Design is so good and neat, every detail has been taken care these team are realy amazing and talented! I will work only with enigma agency. I will rate it 5 Stars!</p>
-                <span>Chandler Bing, Google</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section> <!-- end testimonials -->
-
-
-    <!-- Partners -->
-    <section class="section-wrap bg-light">
-      <div class="container">
-
-        <div class="row">
-
-          <div id="owl-partners" class="owl-carousel owl-theme">
-
-            <div class="item">
-              <a href="#">
-                <img src="img/client_logo_1.png" alt="">
-              </a>
-            </div> <!-- end first logo -->
-
-            <div class="item">
-              <a href="#">
-                <img src="img/client_logo_2.png" alt="">
-              </a>
-            </div> <!-- end second logo -->
-
-            <div class="item">
-              <a href="#">
-                <img src="img/client_logo_3.png" alt="">
-              </a>
-            </div> <!-- end third logo -->
-
-            <div class="item">
-              <a href="#">
-                <img src="img/client_logo_4.png" alt="">
-              </a>
-            </div> <!-- end fourth logo -->
-
-            <div class="item">
-              <a href="#">
-                <img src="img/client_logo_5.png" alt="">
-              </a>
-            </div> <!-- end fifth logo -->
-
-            <div class="item">
-              <a href="#">
-                <img src="img/client_logo_6.png" alt="">
-              </a>
-            </div> <!-- end sixth logo -->
-
-            <div class="item">
-              <a href="#">
-                <img src="img/client_logo_1.png" alt="">
-              </a>
-            </div> <!-- end seventh logo -->
-
-            <div class="item">
-              <a href="#">
-                <img src="img/client_logo_2.png" alt="">
-              </a>
-            </div> <!-- end eighth logo -->
-
-          </div> <!-- end carousel -->
-          
-        </div>
-      </div>
-    </section> <!-- end partners -->
-
-    <!-- Call to Action Style-2 -->
-    <section class="section-wrap call-to-action style-2" style="background-image: url(img/cta_bg.jpg)">
-      <div class="container text-center">
-        <div class="row">
-
-          <div class="col-xs-12"> 
-            <h2>Are You Ready Work With Me?</h2>
-            <a href="#" class="btn btn-lg btn-transparent">Download CV</a>
-            <a href="portfolio-contact.html" class="btn btn-lg btn-white">Contact Me</a>
-          </div>
-
-        </div>
-      </div>
-    </section> <!-- end call to action -->
+      </section>
+    </section>
 
 
     <!-- Footer -->

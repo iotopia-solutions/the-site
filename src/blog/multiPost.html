@@ -7,17 +7,17 @@
       <span>${date}</span>
     </div>
 
-    <div class="entry-title">
+    <div class="entry-title mt-20">
       <h2>
         <a href="blog/${id}">${title}</a>
       </h2>
     </div>
     <ul class="entry-meta">
       <li class="entry-date">
-        <a>${date}</a>
+        <span>${date}</span>
       </li>
       <li class="entry-author">
-        by <a>${author}</a>
+        by <span>${author}</span>
       </li>
       <!-- <li class="entry-category">
         in <a href="#">Photography</a>
@@ -30,8 +30,7 @@
     <div class="entry">
       <div class="entry-content">
         ${excerpt}
-        <a href="blog/${id}" class="read-more">Read More</a>
-        <i class="icon arrow_right"></i>
+        <a href="blog/${id}" class="read-more">Read More <i class="icon arrow_right"></i></a>
       </div>
     </div>
   </div>

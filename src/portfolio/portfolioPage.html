@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <base href="../">
-  <title>Iotopia Solutions Inc Blog &amp; News - ${title}</title>
+  <title>Iotopia Solutions Inc Portfolio</title>
 
   <meta charset="utf-8" />
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -32,7 +32,7 @@
 
 </head>
 
-<body data-spy="scroll" data-offset="60" data-target=".navbar-fixed-top">
+<body style="font-family: 'Open Sans', sans-serif;">
 
   <!-- Preloader -->
   <div class="loader-mask">
@@ -41,9 +41,8 @@
     </div>
   </div>
 
-  <!-- Navigation -->
+   <!-- Navigation -->
   <header class="nav-type-1" id="home">
-
     <nav class="navbar navbar-fixed-top">
       <div class="navigation-overlay">
         <div class="container-fluid relative">
@@ -70,16 +69,14 @@
 
             <div class="col-md-8 col-xs-12 nav-wrap">
               <div class="collapse navbar-collapse text-center" id="navbar-collapse">
-
                 <ul class="nav navbar-nav local-scroll text-center">
-
                   <li>
                     <a href="/">Home</a>
                   </li>
                   <li>
                     <a href="/#services">Services</a>
                   </li>
-                  <li>
+                  <li class="active">
                     <a href="/portfolio">Works</a>
                   </li>
                   <li>
@@ -88,13 +85,12 @@
                   <li>
                     <a href="/team">Team</a>
                   </li>
-                  <li class="active">
+                  <li>
                     <a href="/blog">Blog</a>
                   </li>
                   <li>
                     <a href="/#contact">Contact</a>
                   </li>
-
                 </ul>
               </div>
             </div> <!-- end col -->
@@ -106,48 +102,57 @@
   </header> <!-- end navigation -->
 
 
-  <div class="main-wrapper-onepage main oh">
+  <div class="main-wrapper-mp oh">
 
-    <!-- Page Title -->
-    <!-- <section class="page-title text-center" style="background-image: url(img/blog/blog_title_bg.jpg);">
-      <div class="container relative clearfix">
-        <div class="title-holder">
-          <div class="title-text">
-            <h1 class="color-white heading-frame">${title}</h1>
-            <ol class="breadcrumb">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/blog">Blog</a>
-              </li>
-              <li class="active">
-                ${title}
-              </li>
-            </ol>
+    <!-- Portfolio -->
+    <section class="portfolio-page section-wrap pb-50">
+      <div class="container">
+
+        <!-- filter -->
+        <div class="row"> 
+          <div class="col-md-12">
+            <div class="portfolio-filter">
+              <a href="#" class="filter active" data-filter="*">All</a>
+              <a href="#" class="filter" data-filter=".web">Web</a>
+              <a href="#" class="filter" data-filter=".connected-devices">Connected Devices</a>
+              <a href="#" class="filter" data-filter=".data-visualization">Data Visualization</a>
+              <a href="#" class="filter" data-filter=".big-data">Big Data</a>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>  -->
-    <!-- end page title -->
+        </div> <!-- end filter -->
 
-
-    <!-- Blog Single -->
-    <section class="section-wrap pb-100 blog-single">
-      <div class="container relative">
         <div class="row">
 
-          <!-- content -->
-          <div class="col-sm-12 blog-content">
-            ${blogPost}
-          </div> <!-- end col -->
+          <div class="works-grid titles">
 
-        </div> <!-- end row -->
+          ${projects}
 
-      </div> <!-- end container -->
-    </section> <!-- end blog single -->
+          </div>
 
-    <!-- Footer -->
+        </div>    
+      </div>
+    </section> <!-- end portfolio-->
+
+
+    <!-- Call to Action -->
+    <section class="call-to-action bg-light">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-9 col-xs-12">    
+            <h2>Are you ready to work with us?</h2>
+          </div>
+          
+          <div class="col-md-3 col-xs-12 cta-button">
+            <a href="/#contact" class="btn btn-lg btn-color">Contact Us</a>
+          </div>
+
+        </div>
+      </div>
+    </section> <!-- end call to action -->
+
+
+        <!-- Footer -->
     <footer class="footer minimal bg-dark">
       <div class="container">
         <div class="row">
@@ -179,7 +184,7 @@
     </div>
 
   </div> <!-- end main-wrapper -->
-
+  
   <!-- jQuery Scripts -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>

@@ -12,12 +12,6 @@ const teamPageHtml = requireTemplate('./teamPage.html')
 const memberPageHtml = requireTemplate('./memberPage.html')
 
 // Handles a GET request
-// export const team
-//   = () => {
-//     return (req, res) =>
-//       res.send(teamPageHtml)
-//   }
-
 export const team
   = () => {
     const renderTeam = compile(teamPageHtml)
@@ -33,13 +27,19 @@ export const member
     }
   }
 
+//TO-DO: create a better way to handle this data---esp for fields where data may not exist (maybe a React element)
 const transformToViewData
   = (id) => ({
     memberFullName: teamMembersObj[id].memberFullName,
+    memberRole: teamMembersObj[id].memberRole,
     memberBio: teamMembersObj[id].memberBio,
-    memberImg: teamMembersObj[id].memberImg
+    memberImg: teamMembersObj[id].memberImg,
+    linkedInLink: teamMembersObj[id].linkedInLink,
+    githubLink: teamMembersObj[id].githubLink,
+    githubLinkShow: teamMembersObj[id].githubLink ? "show" : "hide"
   })
 
+//Render React element for team members section
 const transformTeam 
   = (teamMembersObj) => {
       return renderToStaticMarkup(teamView(teamMembersObj))

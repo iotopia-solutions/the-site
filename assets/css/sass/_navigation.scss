@@ -62,7 +62,7 @@
 }
 
 .nav-wrap {
-  width: 60%;
+  width: 70%;
 }
 
 .menu-socials {
@@ -88,7 +88,7 @@
   }
 
   & li > a:hover {
-    border-color: $main-color;
+    border-color: $secondary-color;
   }
 }
 
@@ -133,7 +133,7 @@
 .navbar-nav > .active > a:hover,
 .menu-socials li > a:hover {
   opacity: 1;
-  color: $main-color !important;
+  color: $secondary-color !important;
 }
 
 .navbar-collapse {
@@ -210,7 +210,7 @@
   margin-right: 5px;
 
   & .icon-bar {
-    background-color: #fff;
+    background-color: #7a7a7a;
     width: 18px;
   }
 
@@ -221,7 +221,7 @@
 
   &:focus .icon-bar,
   &:hover .icon-bar {
-    background-color: #f2f2f2;
+    background-color: #7a7a7a;
   }
   
 }
@@ -254,7 +254,7 @@
     width: 40px;
     height: 40px;
     display: block;
-    color: $heading-color;
+    color: $main-color;
   }
 
   &.show {
@@ -262,7 +262,7 @@
   }
 
   &:hover {
-    background-color: $heading-color;
+    background-color: $main-color;
   }
 
   &:hover i {
@@ -291,11 +291,11 @@
 
   & .navbar-toggle:focus .icon-bar,
   & .navbar-toggle:hover .icon-bar {
-    background-color: $heading-color;
+    background-color: $main-color;
   }
 
   & .navbar-nav > li > a {
-    color: $heading-color;
+    color: $main-color;
     @include transition (color .3s ease-in-out);
   }
 }
@@ -351,7 +351,7 @@
   min-width: 200px;
   margin: 0;
   padding: 10px 0;
-  border-top: 3px solid $main-color;
+  border-top: 3px solid $secondary-color;
   border-left: 1px solid #ebebeb;
   border-right: 1px solid #ebebeb;
   border-bottom: none;
@@ -369,7 +369,7 @@
   & > li > a:focus,
   & > li > a:hover {
     background-color: transparent;
-    color: $main-color;
+    color: $secondary-color;
   }
 
   & .megamenu-wrap ul > li > a {
@@ -607,7 +607,7 @@
 
   & ul li.active > a,
   & ul li a:hover {
-    color: $main-color;
+    color: $secondary-color;
   }
 }
 
@@ -635,7 +635,7 @@
     position: absolute;
     height: 2px;
     width: 100%;
-    background: $heading-color;
+    background: $main-color;
     opacity: 1;
     left: 0;
     @include transform (rotate(0deg));
@@ -756,14 +756,14 @@
   & .navbar-nav > li > a {
     padding: 17px 0;
     line-height: 1;
-    color: $heading-color;
+    color: $main-color;
   }
 
   & .social-icons a {
     float: none !important;
 
     &:hover {
-      color: $heading-color;
+      color: $main-color;
     }
   }
 }

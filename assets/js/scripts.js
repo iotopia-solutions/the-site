@@ -416,26 +416,18 @@
             
             });
 
-            var owlRelated = $("#owl-related-works"); 
-            owlRelated.owlCarousel({
-
-              slideSpeed: 300,
-              paginationSpeed: 400,
-              items: 3,
-              itemsDesktop: [1199,3],
-              itemsDesktopSmall: [979,3],
-              pagination: false
-
+            var $worksContainer = $(".related-projects .works-container");
+            $worksContainer.imagesLoaded( function() {
+                $worksContainer.isotope({ filter: $(".related-projects").attr('data-filter') })
             });
+
 
             // Custom Navigation Events
             $(".next").on('click',function(){
                 owlPromo.trigger('owl.next');
-                owlRelated.trigger('owl.next');
             })
             $(".prev").on('click',function(){
                 owlPromo.trigger('owl.prev');
-                owlRelated.trigger('owl.prev');
             });
 
             // Custom Navigation Events: Team carousel
@@ -454,6 +446,13 @@
                 blogContainer.trigger('owl.next');
             })
             
+            // Custom Navigation Events: Related works carousel
+            $(".works-prev").on('click',function(){
+                worksContainer.trigger('owl.prev');
+            });
+            $(".works-next").on('click',function(){
+                worksContainer.trigger('owl.next');
+            })
 
             // Testimonials
             $("#owl-testimonials").owlCarousel({

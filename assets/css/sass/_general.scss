@@ -32,7 +32,7 @@ a {
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $text-color;
+    color: $secondary-color;
     outline: none;
   }
 }
@@ -162,3 +162,17 @@ p {
 
 @-webkit-keyframes load8 { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); } 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }}
 @keyframes load8 { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); } 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }}
+
+.show-inline {
+  display: inline-block;
+}
+
+.hide {
+  display: none;
+}
+
+em {
+  font-weight: 700;
+  color: #111;
+  font-style: normal;
+}

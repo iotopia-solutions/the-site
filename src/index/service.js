@@ -7,6 +7,9 @@ import compile from '../template/compile'
 import requireText from '../requireText'
 import teamView from '../team/teamView'
 import {teamMembersObj} from '../team/teamMembers'
+import {portfolioObj} from '../portfolio/portfolio'
+import portfolioView from '../portfolio/portfolioView'
+
 
 // Load this early and sync, just like module dependencies.
 const requireTemplate = requireText(__dirname)
@@ -25,7 +28,7 @@ export default
         // .then(x => (console.log(x), x))
         .then(transformToViewData)
         .then(renderViewData)
-        .then(text => ({ blogPostExcerpts: text, teamMembers: transformTeam(teamMembersObj)}))
+        .then(text => ({ blogPostExcerpts: text, teamMembers: transformTeam(teamMembersObj), projects: transformPortfolio(portfolioObj)}))
         .then(renderPage)
         .catch(formatError)
         .then(pageHtml => res.send(pageHtml))
@@ -64,7 +67,14 @@ const formatError
   = err =>
     '<p>Unable to fetch blog posts at this time.</p><!-- ' + err + '-->'
 
+//Render React element for team members section
 const transformTeam 
   = (teamMembersObj) => {
     return renderToStaticMarkup(teamView(teamMembersObj))
+  }
+
+//Render React element for portfolio section
+const transformPortfolio 
+  = (portfolioObj) => {
+    return renderToStaticMarkup(portfolioView(portfolioObj))
   }

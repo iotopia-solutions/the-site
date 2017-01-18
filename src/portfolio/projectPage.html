@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <base href="../">
-  <title>Iotopia Solutions Inc Blog &amp; News - ${title}</title>
+  <title>Iotopia Solutions Inc Portfolio - ${projectTitle}</title>
 
   <meta charset="utf-8" />
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -32,7 +32,7 @@
 
 </head>
 
-<body data-spy="scroll" data-offset="60" data-target=".navbar-fixed-top">
+<body style="font-family: 'Open Sans', sans-serif;">
 
   <!-- Preloader -->
   <div class="loader-mask">
@@ -41,9 +41,8 @@
     </div>
   </div>
 
-  <!-- Navigation -->
+   <!-- Navigation -->
   <header class="nav-type-1" id="home">
-
     <nav class="navbar navbar-fixed-top">
       <div class="navigation-overlay">
         <div class="container-fluid relative">
@@ -70,16 +69,14 @@
 
             <div class="col-md-8 col-xs-12 nav-wrap">
               <div class="collapse navbar-collapse text-center" id="navbar-collapse">
-
                 <ul class="nav navbar-nav local-scroll text-center">
-
                   <li>
                     <a href="/">Home</a>
                   </li>
                   <li>
                     <a href="/#services">Services</a>
                   </li>
-                  <li>
+                  <li class="active">
                     <a href="/portfolio">Works</a>
                   </li>
                   <li>
@@ -88,13 +85,12 @@
                   <li>
                     <a href="/team">Team</a>
                   </li>
-                  <li class="active">
+                  <li>
                     <a href="/blog">Blog</a>
                   </li>
                   <li>
                     <a href="/#contact">Contact</a>
                   </li>
-
                 </ul>
               </div>
             </div> <!-- end col -->
@@ -106,48 +102,76 @@
   </header> <!-- end navigation -->
 
 
-  <div class="main-wrapper-onepage main oh">
+  <div class="main-wrapper-mp oh">
 
-    <!-- Page Title -->
-    <!-- <section class="page-title text-center" style="background-image: url(img/blog/blog_title_bg.jpg);">
-      <div class="container relative clearfix">
-        <div class="title-holder">
-          <div class="title-text">
-            <h1 class="color-white heading-frame">${title}</h1>
-            <ol class="breadcrumb">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/blog">Blog</a>
-              </li>
-              <li class="active">
-                ${title}
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>  -->
-    <!-- end page title -->
-
-
-    <!-- Blog Single -->
-    <section class="section-wrap pb-100 blog-single">
-      <div class="container relative">
+    <!-- Portfolio Single -->
+    <section class="section-wrap portfolio-single">
+      <div class="container">
+      <h1>${projectTitle}</h1>
+      <h2 class="portfolio-subtitle mb-40 ${projectSubtitleShow}">${projectSubtitle}</h2>
         <div class="row">
 
-          <!-- content -->
-          <div class="col-sm-12 blog-content">
-            ${blogPost}
-          </div> <!-- end col -->
+                                                                                             
+        <div class="col-md-4">
+         
+            
+              ${projectImages}
+            
+            <div class="portfolio-description">
+              <ul>
+                <li><span class="descriptor">Categories:</span> ${category}</li>
+                <li><span class="descriptor">Technologies:</span> ${technologies}</li>
+                <li><span class="descriptor">Client:</span> ${clientName}</li>
+              </ul>
+            </div>
+            <div>
+              <a href=${projectLink} class="btn btn-m btn-dark mb-40 ${projectLinkShow}">View Project</a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <h4>Overview</h4>
+            <div class="portfolio-description">
+              <p>${description}</p>
+            </div>
+            <hr>
+            <h4 class="mt-30">Problem to solve</h4>
+            <p>${problem}</p>
+            <h4 class="mt-30">How we did it</h4>
+            <p>${solution}</p>
+          </div> <!-- end description -->
+        </div>
+      </div>
+    </section> <!-- end portfolio single -->
 
-        </div> <!-- end row -->
 
-      </div> <!-- end container -->
-    </section> <!-- end blog single -->
+    <!-- Related Projects -->
+    <section class="related-projects pb-90" data-filter=${categoryFilter}>
+      <div class="container">
+        <h4 class="heading-inline">Related Projects</h4>
+        <div class="row mt-20">        
 
-    <!-- Footer -->
+
+          ${projects} 
+
+        </div>
+      </div>
+    </section> <!-- end related projects-->
+
+    <section class="call-to-action">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-xs-12">
+          <h2>Have You Fallen In Love Already With Our Works?</h2>
+        </div>
+        <div class="col-md-3 col-xs-12 cta-button">
+          <a href="/portfolio" class="btn btn-lg btn-color">View All Work</a>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+        <!-- Footer -->
     <footer class="footer minimal bg-dark">
       <div class="container">
         <div class="row">
@@ -179,12 +203,12 @@
     </div>
 
   </div> <!-- end main-wrapper -->
-
+  
   <!-- jQuery Scripts -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>
-  <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
 
 </body>
 </html>

@@ -19,6 +19,16 @@
 
 
 @media (max-width: 991px) {
+  .entry-item {
+    display: block;
+    .entry-img {
+      height: 300px;
+      max-width: 450px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+    }
+  }
 
   .section-wrap,
   .section-wrap-mp {
@@ -402,6 +412,11 @@
     margin-bottom: 12px !important;
   }
 
+  .landing-page {
+    .work-img {
+      max-height: 500px;
+    }
+  }
 }
 
 
@@ -453,9 +468,5 @@
   .works-grid .work-item {
     width: 100%;
   }
-
-}
-
-@media (max-width: 380px) {
 
 }
