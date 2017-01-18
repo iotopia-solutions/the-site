@@ -9,7 +9,7 @@ export default (project)  =>
       <div className="work-img">
         <img src={portfolioObj[project].projectImageThumb} alt={portfolioObj[project].projectTitle + " thumbnail"}/>
         <div className="portfolio-overlay">
-          <div className="project-icons">
+          <div className="project-info__rollover">
             <a href={"/portfolio/" + project}>
               <h4 className="title">{portfolioObj[project].projectTitle}</h4>
               <p className={"subtitle " + portfolioObj[project].projectSubtitleShow}>{portfolioObj[project].projectSubtitle}</p>

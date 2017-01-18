@@ -1,6 +1,6 @@
 import React from 'react'
 
-// A React element that displays all portfolio items
+// A React element that displays all images for a project in a carousel
 
 export default (projectImage)  => (
   <div id="owl-slider-one-img" className="owl-carousel owl-theme oh">

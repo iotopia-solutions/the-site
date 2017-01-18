@@ -67,11 +67,13 @@ const formatError
   = err =>
     '<p>Unable to fetch blog posts at this time.</p><!-- ' + err + '-->'
 
+//Render React element for team members section
 const transformTeam 
   = (teamMembersObj) => {
     return renderToStaticMarkup(teamView(teamMembersObj))
   }
 
+//Render React element for portfolio section
 const transformPortfolio 
   = (portfolioObj) => {
     return renderToStaticMarkup(portfolioView(portfolioObj))

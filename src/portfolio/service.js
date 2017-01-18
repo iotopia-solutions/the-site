@@ -29,6 +29,7 @@ export const project
       res.send(renderProject(transformToViewData(req.params.id)))
   }
 
+//TO-DO: create a better way to handle this data---esp for fields where data may not exist (maybe a React element)
   const transformToViewData
   = (id) => ({
     clientName: portfolioObj[id].clientName,
@@ -40,19 +41,21 @@ export const project
     technologies: portfolioObj[id].technologies,
     projectLink: portfolioObj[id].projectLink,
     projectLinkShow: portfolioObj[id].projectLink ? "show-inline" : "hide",
-    projectImageThumb: portfolioObj[id].projectImageThumb, 
+    projectImageThumb: portfolioObj[id].projectImageThumb,
+    projectImages: transformProjectImgs(portfolioObj[id].projectImages), 
     description: portfolioObj[id].description,
     problem: portfolioObj[id].details.problem,
     solution: portfolioObj[id].details.solution,
-    projects: transformProjects(portfolioObj),
-    projectImages: transformProjectImgs(portfolioObj[id].projectImages)
+    projects: transformProjects(portfolioObj)
   })
 
+//Render React element for portfolio items
   const transformProjects
     = (portfolioObj) => {
       return renderToStaticMarkup(portfolioView(portfolioObj))
     }
 
+//Render React element for project images in a carousel
   const transformProjectImgs
     = (projectImage) => {
       return renderToStaticMarkup(projectImg(projectImage))

@@ -27,6 +27,7 @@ export const member
     }
   }
 
+//TO-DO: create a better way to handle this data---esp for fields where data may not exist (maybe a React element)
 const transformToViewData
   = (id) => ({
     memberFullName: teamMembersObj[id].memberFullName,
@@ -38,6 +39,7 @@ const transformToViewData
     githubLinkShow: teamMembersObj[id].githubLink ? "show" : "hide"
   })
 
+//Render React element for team members section
 const transformTeam 
   = (teamMembersObj) => {
       return renderToStaticMarkup(teamView(teamMembersObj))
