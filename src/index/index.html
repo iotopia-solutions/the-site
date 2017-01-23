@@ -656,7 +656,7 @@
   <!-- jQuery Scripts -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBevpQip9_Lf0XoaNhuJuKYK7TzUlVmVXA&region=Boston,MA,USA"></script>
   <script type="text/javascript" src="js/gmap3.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>
   <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
@@ -671,8 +671,6 @@
       var gmapDiv = $("#google-map");
       var gmapMarker = gmapDiv.attr("data-address");
 
-      $.gmap3({ key: 'AIzaSyBevpQip9_Lf0XoaNhuJuKYK7TzUlVmVXA' });
-        
       gmapDiv.gmap3({
         zoom: 16,
         address: gmapMarker,
