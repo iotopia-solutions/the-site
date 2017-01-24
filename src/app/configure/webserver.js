@@ -3,7 +3,7 @@
 export const config =
   (port, host) => 
     ({
-      port: port || 5001,
+      port: port || 5000,
       host: host || '0.0.0.0'
     })
 
