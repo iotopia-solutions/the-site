@@ -86,7 +86,7 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest('assets/img'));
 });
 
-gulp.task('serve', ['babel', 'minifyhtml'], function() {
+gulp.task('serve', ['babel', 'sass', 'minifyhtml'], function() {
   return nodemon({
     script: path.join(paths.build, 'app.js'),
     ext: 'js html',
