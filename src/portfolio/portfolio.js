@@ -131,7 +131,7 @@ export const portfolioObj = {
     category: "Web, Connected Devices, Data Visualization, Telemedicine, IoT, Cloud, I18N",
     categoryFilter: ".web, .connected-devices, .data-visualization, .telemedicine, .IoT, .cloud, .I18N",
     projectTitle: "ZOLL WebConsole",
-    projectSubtitle: "Cloud server Push System",
+    projectSubtitle: "IoT Streaming Web Data",
     technologies: "Python, Twisted, ZOPE, JavaScript, Dojo, HTML5, WebSockets, PDF generation",
     projectLink: "https://dojotoolkit.org/blog/case-study-zoll-web-console",
     projectImageThumb: "img/portfolio/zoll_thumb.png",
@@ -139,8 +139,8 @@ export const portfolioObj = {
     description: "It’s a simple fact of life that there will always be more people needing medical care than there are medical professionals to care for them. This is particularly true in the aftermaths of disasters or in emergency situations. ZOLL is a worldwide leader in resuscitation technology, and their <a href='https://www.zoll.com/medical-products/defibrillators/x-series/EMS/'>X Series</a> defibrillator / monitor is widely considered one of the most capable such devices on the planet. One of its standout features is its communications capability, as it has not just the ability to stream out live data using standard Web technologies using human-readable formats, but also serves a Web app via local networking that can display this live data or dump it out in PDF reports. This WebConsole solution enables a single medical professional to quickly see the vitals and waveforms for many patients in an efficient manner. The ZOLL WebConsole is used by the two U.S. Navy ships <a href='http://www.med.navy.mil/sites/usnscomfort/'>USNS Comfort</a> (the world’s largest hospital ship) and the <a href='http://www.med.navy.mil/sites/usnsmercy/'>USNS Mercy</a>.",
     details: 
     {
-      problem: "1) The original WebConsole (which Iotopia personnel helped design and develop, too) was designed to function as a server over local Ethernet or WiFi networks. To fully realize the vision of telemedicine though it is necessary to make the WebConsole act like a client and push this data out to a cloud-based server for retransmission via the cellular network in an emergency response vehicle to facilities with specialists.<br>2) The original WebConsole was English-only. There is demand for it in many other markets, too.",
-      solution: "1) We added a new mode of operation to the X Series that allowed it to stream its data to a custom cloud server that could in turn stream the data down to medical personnel using ordinary browsers. We worked closely with multiple ZOLL teams in three states to integrate this in with both their existing solutions and new software made to support the effort.<br>2) Using internationalization features in both Python and Dojo we added the necessary translation strings and format changes."
+      problem: "There will always be more patients than doctors, and the doctors cannot always be in the optimal place to serve the patients.",
+      solution: "Learn more about ZOLL’s Web Console via the view project link."
     }
   },
   "kronos": 
