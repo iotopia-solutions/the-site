@@ -35,14 +35,14 @@ export const teamMembersObj = {
     memberBio: "John built his first suite of rich web apps in 1996, long before most people realized that the web would become such a powerful application platform. Since then, he's led over eighty enterprise-scale apps and open source projects. His innovations include a patented application of Ajax five years before the now ubiquitous technique even had a name (US Patent 7,016,751), and he continues to be obsessed with architectural patterns that foster robust products, team scalability, and code scalability. On weekends, when he's not running or mountain unicycling, he's working on wicked cool science, IoT, or construction projects with his kids. John is a senior software architect at Iotopia.",
     memberImg: "img/team/john.png"
   },
-  "april":
+  "michael":
   {
-    memberFullName: "April Hart",
+    memberFullName: "Michael Cullinan",
     memberRole: "Director of Business Operation",
-    linkedInLink:"aprilnicolehart",
+    linkedInLink:"mikeculli",
     githubLink: "",
-    memberBio: "April specializes in developing scheduling, inventory and sales systems designed to make organizations more efficient. She embraces the challenges that come with growing a small business and relishes finding novel solutions that make businesses run more efficiently. Before entering the tech industry, she worked in the art world where she collaborated with artists to produce exhibitions and get their work into the hands of collectors. When away from her desk, April spends her time dabbling with pens and paints, cooking traditional Dominican dishes, and hanging out with her sweet pup, Lefty. April is Iotopia’s director of business operations.",
-    memberImg: "img/team/april.jpg"
+    memberBio: "Michael is a business development strategist and operations linchpin focused on taking technology, marketing, and service to the next level. His experience spans three continents, and numerous industries including international trade and economic development, venture capital, financial services, clean tech, software development, and e-commerce. He received his Master's degree in Social Entrepreneurship & Market-Based Approaches to Development from the New School in Manhattan and a BA from Trinity College. In his spare time he enjoys running, all things Boston sports, and hanging out with his family.",
+    memberImg: "img/team/michael.jpg"
   },
   "camilia":
   {
