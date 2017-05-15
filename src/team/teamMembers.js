@@ -26,15 +26,6 @@ export const teamMembersObj = {
     memberBio: "Eric’s software has been launched aboard the space shuttle, carried up Mt. Everest, and strapped to the heads of Formula 1 drivers.  Over the past twenty years, he’s led multiple teams in the development of network, embedded, desktop, and mobile software. After early work developing intranet pages for large companies, he started creating server-side Web applications. More recently he’s been a pioneer in porting standard Web server technologies onto embedded IoT devices. In addition to articles on software techniques, he has written about latent fingerprint analysis and local Massachusetts history. Eric is a principal partner at Iotopia.",
     memberImg: "img/team/eric.png"
   },
-  "john":
-  {
-    memberFullName: "John Hann",
-    memberRole: "Senior Software Architect Consultant",
-    linkedInLink:"johnhann",
-    githubLink: "unscriptable",
-    memberBio: "John built his first suite of rich web apps in 1996, long before most people realized that the web would become such a powerful application platform. Since then, he's led over eighty enterprise-scale apps and open source projects. His innovations include a patented application of Ajax five years before the now ubiquitous technique even had a name (US Patent 7,016,751), and he continues to be obsessed with architectural patterns that foster robust products, team scalability, and code scalability. On weekends, when he's not running or mountain unicycling, he's working on wicked cool science, IoT, or construction projects with his kids. John is a senior software architect at Iotopia.",
-    memberImg: "img/team/john.png"
-  },
   "michael":
   {
     memberFullName: "Michael Cullinan",
