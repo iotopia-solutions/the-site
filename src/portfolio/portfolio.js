@@ -17,24 +17,24 @@ export const portfolioObj = {
   //     solution: "Iotopia Solutions helped Dogwatch to design and develop a smart, connected system.  Iotopia provided Dogwatch with the knowledge and talent to develop a system-level solution that incorporates smart, connected embedded-linux systems with a robust back-end to connect these devices."
   //   }
   // },
-  "farmobile": 
-  {
-    clientName: "Farmobile",
-    category: "Connected Devices, Big Data, Fault Tolerant",
-    categoryFilter: ".connected-devices, .big-data, .fault-tolerant",
-    projectTitle: "PUC - Passive Uplink Connection",
-    projectSubtitle: "",
-    technologies: "Embedded Linux, Cellular, Wifi, Python, MQTT, Embedded Database",
-    projectLink: "https://www.farmobile.com/",
-    projectImageThumb: "/img/portfolio/farmobile_thumb.png",
-    projectImages: ["/img/portfolio/farmobile_thumb.png"],
-    description: "Agriculture has become an increasingly data-driven industry.  Machinery vendors have added big-data capabilities to their products but walled them off from farmers. Farmobile allows farmers to access, control and monetize the agronomic data captured by the machinery they use. We developed Farmobile’s “PUC” (Passive Uplink Connection), an IoT device that plugs into the data bus of agricultural equipment. The PUC records and transmits the time, position and other relevant agricultural information generated when cultivating a field. It can be used in devices located anywhere and remotely managed, and has store-and-forward capability when it can’t find a cellular or wifi connection. It’s transparent to the machinery that it’s connected to and only captures data. We provided software and hardware development for Farmobile and trained their staff so that when the PUC entered production they were able to take ownership of software development.",
-    details:
-    {
-      problem: "Farming machinery has become smart.  Companies producing agricultural equipment control this machinery and the data that it generates.  Farmers need an open way to capture and store their own data, allowing them to use the data the way they want.  This data is valuable and allows them to make decisions to improve their yields and hence profitability.",
-      solution: "The Farmobile PUC allows farmers to collect data while planting, spraying and harvesting from their fields. This allows them to control and document all aspects of their activities.  We provided the engineering knowledge to develop the PUC enabling seamless, fault-tolerant data collection and storage into the cloud."
-    }
-  },
+  // "farmobile": 
+  // {
+  //   clientName: "Farmobile",
+  //   category: "Connected Devices, Big Data, Fault Tolerant",
+  //   categoryFilter: ".connected-devices, .big-data, .fault-tolerant",
+  //   projectTitle: "PUC - Passive Uplink Connection",
+  //   projectSubtitle: "",
+  //   technologies: "Embedded Linux, Cellular, Wifi, Python, MQTT, Embedded Database",
+  //   projectLink: "https://www.farmobile.com/",
+  //   projectImageThumb: "/img/portfolio/farmobile_thumb.png",
+  //   projectImages: ["/img/portfolio/farmobile_thumb.png"],
+  //   description: "Agriculture has become an increasingly data-driven industry.  Machinery vendors have added big-data capabilities to their products but walled them off from farmers. Farmobile allows farmers to access, control and monetize the agronomic data captured by the machinery they use. We developed Farmobile’s “PUC” (Passive Uplink Connection), an IoT device that plugs into the data bus of agricultural equipment. The PUC records and transmits the time, position and other relevant agricultural information generated when cultivating a field. It can be used in devices located anywhere and remotely managed, and has store-and-forward capability when it can’t find a cellular or wifi connection. It’s transparent to the machinery that it’s connected to and only captures data. We provided software and hardware development for Farmobile and trained their staff so that when the PUC entered production they were able to take ownership of software development.",
+  //   details:
+  //   {
+  //     problem: "Farming machinery has become smart.  Companies producing agricultural equipment control this machinery and the data that it generates.  Farmers need an open way to capture and store their own data, allowing them to use the data the way they want.  This data is valuable and allows them to make decisions to improve their yields and hence profitability.",
+  //     solution: "The Farmobile PUC allows farmers to collect data while planting, spraying and harvesting from their fields. This allows them to control and document all aspects of their activities.  We provided the engineering knowledge to develop the PUC enabling seamless, fault-tolerant data collection and storage into the cloud."
+  //   }
+  // },
   "perkin-elmer": 
   {
     clientName: "Perkin Elmer",
