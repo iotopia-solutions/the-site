@@ -36,7 +36,11 @@ const transformToViewData
     memberImg: teamMembersObj[id].memberImg,
     linkedInLink: teamMembersObj[id].linkedInLink,
     githubLink: teamMembersObj[id].githubLink,
-    githubLinkShow: teamMembersObj[id].githubLink ? "show" : "hide"
+    githubLinkShow: teamMembersObj[id].githubLink ? "show" : "hide",
+    stackOverflowLink: teamMembersObj[id].stackOverflowLink,
+    stackOverflowLinkShow: teamMembersObj[id].stackOverflowLink ? "show" : "hide",
+    homePageLink: teamMembersObj[id].homePageLink,
+    homePageLinkShow: teamMembersObj[id].homePageLink ? "show" : "hide"
   })
 
 //Render React element for team members section

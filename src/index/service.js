@@ -9,6 +9,9 @@ import teamView from '../team/teamView'
 import {teamMembersObj} from '../team/teamMembers'
 import {portfolioObj} from '../portfolio/portfolio'
 import portfolioView from '../portfolio/portfolioView'
+import trainingView from '../training/trainingView'
+import {coursesObj} from '../training/courses'
+console.log(coursesObj);
 
 
 // Load this early and sync, just like module dependencies.
@@ -28,7 +31,7 @@ export default
         // .then(x => (console.log(x), x))
         .then(transformToViewData)
         .then(renderViewData)
-        .then(text => ({ blogPostExcerpts: text, teamMembers: transformTeam(teamMembersObj), projects: transformPortfolio(portfolioObj)}))
+        .then(text => ({ blogPostExcerpts: text, teamMembers: transformTeam(teamMembersObj), projects: transformPortfolio(portfolioObj), training: transformTraining(coursesObj)}))
         .then(renderPage)
         .catch(formatError)
         .then(pageHtml => res.send(pageHtml))
@@ -78,3 +81,10 @@ const transformPortfolio
   = (portfolioObj) => {
     return renderToStaticMarkup(portfolioView(portfolioObj))
   }
+
+//Render React element for training section
+const transformTraining 
+  = (coursesObj) => {
+    return renderToStaticMarkup(trainingView(coursesObj))
+  }
+

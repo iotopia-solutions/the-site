@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <base href="../">
-  <title>Iotopia Solutions Inc Team - ${memberFullName}</title>
+  <title>Iotopia Solutions Inc Training Course - ${courseFullName}</title>
 
   <meta charset="utf-8" />
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <meta name="description" content="" />
+  <meta name="description" content="Iotopia Solutions Training: ${courseFullName}" />
 
   <!-- Google Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet'>
@@ -79,11 +79,11 @@
                   <li>
                     <a href="/#portfolio">Works</a>
                   </li>
+                  <li class="active">
+                    <a href="/#training">Training</a>
+                  </li>
                   <li>
                     <a href="/#clients">Clients</a>
-                  </li>
-                  <li class="active">
-                    <a href="/team">Team</a>
                   </li>
                   <li>
                     <a href="/blog">Blog</a>
@@ -105,47 +105,42 @@
 
   <div class="main-wrapper oh">
   
-    <!-- About Me -->
+    <!-- About Course -->
     <section class="section-wrap about-me">
       <div class="container">
         <div class="row">
 
           <div class="col-lg-6 col-md-7">
-            <img class="my-photo" src=${memberImg} alt="">
+            <img class="my-photo" src=${courseImg} alt="[${courseFullName}]">
           </div>
 
           <div class="col-lg-6 col-md-5">
             <div class="info mt-40">
-              <h2>${memberFullName}</h2>
-              <h6>${memberRole}</h6>
-              <p class="subheading mt-20">Hello, my name is ${memberFullName}.</p>
-
-              <p class="mb-40 mt-20">${memberBio}</p>
-
-              <p class="mb-40 mt-20">
-              <h6>Learn more about me!</h6>
-              <a href="https://linkedin.com/in/${linkedInLink}" target="_blank" class="socials"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-              <a href="https://github.com/${githubLink}" target="_blank" class="socials ${githubLinkShow}"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-              <a href="https://stackoverflow.com/users/${stackOverflowLink}" target="_blank" class="socials ${stackOverflowLinkShow}"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-              <a href="${homePageLink}" target="_blank" class="socials ${homePageLinkShow}"><i class="fa fa-home" aria-hidden="true"></i></a>
+              <h2>${courseFullName}</h2>
+              <h6>${courseBlurb}</h6>
+              <p class="mb-40 mt-20">${courseDescription}</p>
+              <p class="subheading mt-20">Level: ${courseLevel}</p>
+              <p class="subheading mt-20">
+                Download the syllabus for ${courseFullName} as
+                <a href="${courseSyllabusPDF}" title="Download a PDF of the syllabus for ${courseFullName}"><span class="fa-file-pdf-o"></span> a PDF</a>
+                or
+                <a href="${courseSyllabusEPub}" title="Download an ePub of the syllabus for ${courseFullName}"><span class="icon_book"></span> an ePub</a>
               </p>
-
-
             </div>
           </div>
           
         </div>
       </div>
-    </section> <!-- end about me-->
+    </section> <!-- end about course-->
 
     <section class="call-to-action">
         <div class="container">
           <div class="row">
             <div class="col-md-9 col-xs-12">
-              <h2>Learn more about us!</h2>
+              <h2>Learn more about our training offerings!</h2>
             </div>
             <div class="col-md-3 col-xs-12 cta-button">
-              <a href="/team" class="btn btn-lg btn-color">Meet the team</a>
+              <a href="/training" class="btn btn-lg btn-color">Our courses</a>
             </div>
           </div>
         </div>
